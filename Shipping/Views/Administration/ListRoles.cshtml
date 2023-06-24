@@ -25,7 +25,8 @@
                 <form method="post" asp-controller="Administration" asp-action="DeleteRole" asp-route-RoleId="@role.Id">
 
                     <a asp-controller="Administration" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
-
+                    <a asp-controller="Administration" asp-action="ManagePermissions" asp-route-roleId="@role.Id" class="btn btn-primary">ManagePermissions</a>
+                    
                     <span id="DeleteSpan_@role.Id">
                         <a onclick="confirmDelete('@role.Id',true)" class="btn btn-danger">Delete</a>
                     </span>

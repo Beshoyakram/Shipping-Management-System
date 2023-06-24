@@ -1,6 +1,8 @@
 using Shipping.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Shipping.Filters;
 
 namespace Shipping
 {
@@ -12,6 +14,13 @@ namespace Shipping
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
+            builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
+
+            builder.Services.Configure<SecurityStampValidatorOptions>(
+
+                options => { options.ValidationInterval = TimeSpan.Zero; }
+                ) ;
 
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
