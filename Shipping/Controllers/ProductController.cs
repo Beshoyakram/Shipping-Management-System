@@ -12,6 +12,8 @@ namespace Shipping.Controllers
             return View();
         }
 
+
+
         [Authorize(Permissions.Products.Edit)]
          public IActionResult Edit()
         {
