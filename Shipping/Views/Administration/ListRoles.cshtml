@@ -12,6 +12,16 @@
 {
     <a asp-controller="Administration" asp-action="CreateRole" class="btn btn-primary mb-3">Add New Role</a>
 
+
+
+
+    @using (Html.BeginForm("Search", "Administration", FormMethod.Get))
+    {
+
+        <input type="text" name="query" />
+        <input type="submit" class="btn btn-primary" value="Search" />
+    }
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -22,7 +32,7 @@
                
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tb">
            
             
             @foreach (var role in Model)

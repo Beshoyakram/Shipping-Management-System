@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Shipping.Constants;
 using Shipping.ViewModels.ClaimsPermissions;
 using System.Security.Claims;
+using System.Data;
 
 namespace Shipping.Controllers
 {
@@ -207,6 +208,24 @@ namespace Shipping.Controllers
 
             return Ok();
         }
+        #endregion
+
+        #region Search role
+
+        public async Task <IActionResult> Search(string query)
+        {
+            List<IdentityRole> roles;
+            if (string.IsNullOrWhiteSpace(query))
+            {  roles = await _roleManager.Roles.ToListAsync(); }
+            else
+            {
+                 roles= await _roleManager.Roles.Where(r => r.Name.Contains(query)).ToListAsync();
+                
+
+            }
+            return View("ListRoles", roles);
+        }
+
         #endregion
 
         /*----------------- Cliams ---------------*/
