@@ -2,9 +2,10 @@
 {
     public enum Modules
     {
+        Controls,
         Products,
-            Stock,
-            Categories
+        Stock,
+        Categories
 
     }
 }

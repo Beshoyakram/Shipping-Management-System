@@ -19,8 +19,8 @@ namespace Shipping.Models
             base.OnModelCreating(modelBuilder);
 
             #region Seeding Data For ApplicationUser table with Role Admin
-            string ADMIN_ID = "02174cf0–9412–4cfe-afbf-59f706d72cf6";
-            string ROLE_ID =  "341743f0-asd2–42de-afbf-59kmkkmk72cf6";
+            string ADMIN_ID = Guid.NewGuid().ToString();
+            string ROLE_ID = Guid.NewGuid().ToString();
 
             ApplicationUser admin = new ApplicationUser
             {
@@ -32,6 +32,7 @@ namespace Shipping.Models
                 NormalizedUserName = "admin@gmail.com".ToUpper(),
                 Address = "Cairo",
                 LockoutEnabled = true,
+                ConcurrencyStamp = DateTime.Now.ToString()
 
             };
             var hasher = new PasswordHasher<ApplicationUser>();
@@ -46,18 +47,53 @@ namespace Shipping.Models
                     Id = ROLE_ID,
                     Name = "Admin",
                     NormalizedName = "Admin".ToUpper(),
-                    ConcurrencyStamp = ROLE_ID
+                    ConcurrencyStamp = DateTime.Now.ToString()
                 });
             modelBuilder.Entity<IdentityRole>().HasData(
                new IdentityRole
                {
                    Name = "User",
-                   NormalizedName = "User".ToUpper()
+                   NormalizedName = "User".ToUpper(),
+                   ConcurrencyStamp = DateTime.Now.ToString()
                });
             //Connect An admin to Role Admin
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 { RoleId = ROLE_ID, UserId = ADMIN_ID });
+
+            //Add Permissions
+            modelBuilder.Entity<IdentityRoleClaim<string>>().HasData(
+                new IdentityRoleClaim<string>
+                {
+                    Id = 1,
+                    ClaimType = "Permissions",
+                    ClaimValue = "Permissions.Controls.View",
+                    RoleId = ROLE_ID
+                },
+                new IdentityRoleClaim<string>
+                {
+                    Id = 2,
+                    ClaimType = "Permissions",
+                    ClaimValue = "Permissions.Controls.Edit",
+                    RoleId = ROLE_ID
+                },
+                new IdentityRoleClaim<string>
+                {
+                    Id = 3,
+                    ClaimType = "Permissions",
+                    ClaimValue = "Permissions.Controls.Delete",
+                    RoleId = ROLE_ID
+                },
+                new IdentityRoleClaim<string>
+                {
+                    Id = 4,
+                    ClaimType = "Permissions",
+                    ClaimValue = "Permissions.Controls.Create",
+                    RoleId = ROLE_ID
+                }
+                );
+
+
             #endregion
 
         }

@@ -28,6 +28,13 @@ namespace Shipping.Constants
 
             return allPermissions;
         }
+        public static class Controls
+        {
+            public const string View = "Permissions.Controls.View";
+            public const string Create = "Permissions.Controls.Create";
+            public const string Edit = "Permissions.Controls.Edit";
+            public const string Delete = "Permissions.Controls.Delete";
+        }
         public static class Products
         {
             public const string View = "Permissions.Products.View";
@@ -35,5 +42,6 @@ namespace Shipping.Constants
             public const string Edit = "Permissions.Products.Edit";
             public const string Delete = "Permissions.Products.Delete";
         }
+
     }
 }
