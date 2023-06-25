@@ -24,11 +24,13 @@ namespace Shipping.Controllers
             _userManager = userManager;
         }
 
+        [Authorize(Permissions.Controls.View)]
         [HttpGet]
         public IActionResult Index()
         { return View(); }
-
+        /*------------------------------- Roles --------------------------------------------------*/
         #region ListRoles
+        [Authorize(Permissions.Controls.View)]
         [HttpGet]
         public async Task<IActionResult> ListRoles()
         {
@@ -39,12 +41,14 @@ namespace Shipping.Controllers
         #endregion
 
         #region Add Role
+        [Authorize(Permissions.Controls.Create)]
         [HttpGet]
         public IActionResult CreateRole()
         {
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel RoleVM)
         {
             if (ModelState.IsValid)
@@ -69,6 +73,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region Edit Roles
+        [Authorize(Permissions.Controls.Edit)]
         [HttpGet]
         public async Task<IActionResult> EditRole(string ID)
         {
@@ -91,6 +96,7 @@ namespace Shipping.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
             var role = await _roleManager.FindByIdAsync(model.RoleId);
@@ -121,7 +127,9 @@ namespace Shipping.Controllers
         #endregion
 
         #region Delete Role
+        [Authorize(Permissions.Controls.Delete)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteRole(string RoleId)
         {
             var role = await _roleManager.FindByIdAsync(RoleId);
@@ -150,7 +158,7 @@ namespace Shipping.Controllers
         }
         #endregion
 
-
+        /*------------------------------- Users Role --------------------------------------------------*/
         #region ListUsers
         [HttpGet]
         public async Task<IActionResult> ListUsers()
@@ -188,6 +196,7 @@ namespace Shipping.Controllers
 
         #region Manage User Role
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateUserRole(string userId, string roleId)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -228,8 +237,10 @@ namespace Shipping.Controllers
 
         #endregion
 
-        /*----------------- Cliams ---------------*/
-
+        /*------------------------------- Cliams --------------------------------------------------*/
+        #region Manage Permissions
+        [HttpGet]
+        [Authorize(Permissions.Controls.View)]
         public async Task<IActionResult> ManagePermissions(string roleId) 
         {
             var role = await _roleManager.FindByIdAsync(roleId);
@@ -260,6 +271,7 @@ namespace Shipping.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Controls.View)]
         public async Task<IActionResult> ManagePermissions(PermissionsFormViewModel model)
         {
             var role = await _roleManager.FindByIdAsync(model.RoleId);
@@ -280,7 +292,7 @@ namespace Shipping.Controllers
             return RedirectToAction("Index");
         }
 
-
+        #endregion
 
     }
 }

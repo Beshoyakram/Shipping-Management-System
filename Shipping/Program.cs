@@ -17,10 +17,12 @@ namespace Shipping
             builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
             builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
+            //For igonring reload page when change permissions
             builder.Services.Configure<SecurityStampValidatorOptions>(
-
-                options => { options.ValidationInterval = TimeSpan.Zero; }
-                ) ;
+                options =>
+                {
+                    options.ValidationInterval = TimeSpan.Zero;
+                }) ;
 
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
@@ -44,11 +46,12 @@ namespace Shipping
 
             app.UseRouting();
 
+            /*app.UseAuthentication();*/
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=Login}/{id?}");
+                pattern: "{controller=Account}/{action=Register}/{id?}");
 
             app.Run();
         }

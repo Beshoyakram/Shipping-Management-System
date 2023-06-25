@@ -41,7 +41,7 @@
                 <tr>
                     <td>@counter</td>
                     <td>@role.Name</td>
-                    <td>date</td>
+                    <td>@role.ConcurrencyStamp</td>
                     <td>
                         <form method="post" asp-controller="Administration" asp-action="DeleteRole" asp-route-RoleId="@role.Id">
 
