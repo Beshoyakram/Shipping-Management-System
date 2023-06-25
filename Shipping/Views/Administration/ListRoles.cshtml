@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "List of Roles";
+    int counter = 0;
 }
 
 <h3 class="display-4">All Roles</h3>
@@ -10,35 +11,65 @@
 @if(Model.Any())
 {
     <a asp-controller="Administration" asp-action="CreateRole" class="btn btn-primary mb-3">Add New Role</a>
-    
-    foreach (var role in Model)
+
+
+
+
+    @using (Html.BeginForm("Search", "Administration", FormMethod.Get))
     {
-        <div class="card mb-2">
-            <div class="card-header">
-                Role Id : @role.Id
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">@role.Name</h5>
-            </div>
-            <div class="card-footer">
 
-                <form method="post" asp-controller="Administration" asp-action="DeleteRole" asp-route-RoleId="@role.Id">
-
-                    <a asp-controller="Administration" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">Edit</a>
-
-                    <span id="DeleteSpan_@role.Id">
-                        <a onclick="confirmDelete('@role.Id',true)" class="btn btn-danger">Delete</a>
-                    </span>
-                    <span id="ConfirmDeleteSpan_@role.Id" style="display:none">
-                        <span>Are you sure you want to delete this role ? </span>
-                        <button type="submit" class="btn btn-danger">Yes</button>
-                        <a onclick="confirmDelete('@role.Id',false)" class="btn btn-primary">No</a>
-                    </span>
-                    
-                </form>
-            </div>
-        </div>
+        <input type="text" name="query" />
+        <input type="submit" class="btn btn-primary" value="Search" />
     }
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Role Name</th>
+                <th>Adding Date</th>
+                <th>Action</th>
+               
+            </tr>
+        </thead>
+        <tbody id="tb">
+           
+            
+            @foreach (var role in Model)
+            {
+                counter++;
+                <tr>
+                    <td>@counter</td>
+                    <td>@role.Name</td>
+                    <td>date</td>
+                    <td>
+                        <form method="post" asp-controller="Administration" asp-action="DeleteRole" asp-route-RoleId="@role.Id">
+
+                            <a asp-controller="Administration" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-warning">E</a>
+                            <a asp-controller="Administration" asp-action="ManagePermissions" asp-route-roleId="@role.Id" class="btn btn-primary">M</a>
+
+                            <span id="DeleteSpan_@role.Id">
+                                <a onclick="confirmDelete('@role.Id',true)" class="btn btn-danger">D</a>
+                            </span>
+                            <span id="ConfirmDeleteSpan_@role.Id" style="display:none">
+                                <span>Are you sure you want to delete this role ? </span>
+                                <button type="submit" class="btn btn-danger">Yes</button>
+                                <a onclick="confirmDelete('@role.Id',false)" class="btn btn-primary">No</a>
+                            </span>
+
+                        </form>
+                    </td>
+                </tr>
+
+
+            }
+
+              
+        </tbody>
+    </table>
+
+    
+ 
    
 }
 else
