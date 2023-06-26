@@ -22,104 +22,6 @@ namespace Shipping.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "11834cfa-20d6-42c2-a5c7-655f9cb57b14",
-                            ConcurrencyStamp = "25/06/2023 03:04:54 م",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "e10a6216-5cf4-4e5c-9e04-a3b6e79cdd40",
-                            ConcurrencyStamp = "25/06/2023 03:04:54 م",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        });
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetRoleClaims", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ClaimType = "Permissions",
-                            ClaimValue = "Permissions.Controls.View",
-                            RoleId = "11834cfa-20d6-42c2-a5c7-655f9cb57b14"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ClaimType = "Permissions",
-                            ClaimValue = "Permissions.Controls.Edit",
-                            RoleId = "11834cfa-20d6-42c2-a5c7-655f9cb57b14"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ClaimType = "Permissions",
-                            ClaimValue = "Permissions.Controls.Delete",
-                            RoleId = "11834cfa-20d6-42c2-a5c7-655f9cb57b14"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ClaimType = "Permissions",
-                            ClaimValue = "Permissions.Controls.Create",
-                            RoleId = "11834cfa-20d6-42c2-a5c7-655f9cb57b14"
-                        });
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -184,8 +86,8 @@ namespace Shipping.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "49f70d8b-5901-46e5-9afc-042665a1c5b9",
-                            RoleId = "11834cfa-20d6-42c2-a5c7-655f9cb57b14"
+                            UserId = "76f86073-b51c-47c4-b7fa-731628055ebb",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
                         });
                 });
 
@@ -206,6 +108,114 @@ namespace Shipping.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Shipping.Models.ApplicationRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Date")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
+                            Date = "26/06/2023 05:31:24 م",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "c1af8ae6-77df-414d-b081-3d79a10a490e",
+                            Date = "26/06/2023 05:31:24 م",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
+                });
+
+            modelBuilder.Entity("Shipping.Models.ApplicationRoleCliams", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ArabicName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ArabicName = "الصلاحيات",
+                            ClaimType = "Permissions",
+                            ClaimValue = "Permissions.Controls.View",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ArabicName = "الصلاحيات",
+                            ClaimType = "Permissions",
+                            ClaimValue = "Permissions.Controls.Edit",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ArabicName = "الصلاحيات",
+                            ClaimType = "Permissions",
+                            ClaimValue = "Permissions.Controls.Delete",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ArabicName = "الصلاحيات",
+                            ClaimType = "Permissions",
+                            ClaimValue = "Permissions.Controls.Create",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
+                        });
                 });
 
             modelBuilder.Entity("Shipping.Models.ApplicationUser", b =>
@@ -278,30 +288,21 @@ namespace Shipping.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "49f70d8b-5901-46e5-9afc-042665a1c5b9",
+                            Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
                             Address = "Cairo",
-                            ConcurrencyStamp = "25/06/2023 03:04:53 م",
+                            ConcurrencyStamp = "9877dd21-6998-4259-a356-75b7704f0b53",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOOUaghKt6jIDUVsZLbcAqnlXB7d47CHr9e7plz0Uzfjhe0sHA7fDWdDQwX69kmo+w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMJ+WSti06r2Lq9HXtoSrMyu/Ikh0xvG7YHL6tMM33RZqop2M6/V+3eXq7H7dhTiGA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c08e451d-aab2-4d7b-9fbd-4f025c67f0de",
+                            SecurityStamp = "5edb2c85-f9e9-4a26-84b3-d115f5224618",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -324,7 +325,7 @@ namespace Shipping.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                    b.HasOne("Shipping.Models.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -342,6 +343,15 @@ namespace Shipping.Migrations
                     b.HasOne("Shipping.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Shipping.Models.ApplicationRoleCliams", b =>
+                {
+                    b.HasOne("Shipping.Models.ApplicationRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

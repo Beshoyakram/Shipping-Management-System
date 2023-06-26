@@ -21,25 +21,14 @@ namespace Shipping.Controllers
         }
 
 
-        [Authorize(Roles = "Admin , SV")]
-        public IActionResult Pageee()
+
+
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
         {
-            return View();
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-        [Authorize(Roles = "Admin")]
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-
-        /*
-                [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-                public IActionResult Error()
-                {
-                    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-                }*/
     }
 }

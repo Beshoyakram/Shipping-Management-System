@@ -8,9 +8,9 @@ namespace Shipping.Filters
         {
 
             if (context.User == null)
-                return;
+                return; 
 
-            var canAccess = context.User.Claims.Any(c => c.Type == "Permission"&& c.Value==requirement.Permission&&c.Issuer=="LOCAL AUTHORITY");
+            var canAccess = context.User.Claims.Any(c => c.Type == "Permissions" && c.Value == requirement.Permission && c.Issuer == "LOCAL AUTHORITY");
             if (canAccess)
             {
                 context.Succeed(requirement);

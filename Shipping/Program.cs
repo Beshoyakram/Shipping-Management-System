@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Shipping.Filters;
+using Shipping.Repository.ArabicNamesColumnIntoRoleClaimsTable;
 
 namespace Shipping
 {
@@ -14,8 +15,17 @@ namespace Shipping
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<MyContext>(o =>
+            o.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
+
             builder.Services.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>();
             builder.Services.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>();
+
+
+            builder.Services.AddScoped<IAddArabicNamesToRoleCaimsTable, AddArabicNamesToRoleCaimsTable>();
+
+
 
             //For igonring reload page when change permissions
             builder.Services.Configure<SecurityStampValidatorOptions>(
@@ -25,15 +35,12 @@ namespace Shipping
                 }) ;
 
 
-            builder.Services.AddIdentity<ApplicationUser, IdentityRole>(
+            builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(
                 option =>
                 {
                     option.Password.RequireUppercase = false;
                 }
                 ).AddEntityFrameworkStores<MyContext>();
-
-            builder.Services.AddDbContext<MyContext>(o => 
-            o.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
             var app = builder.Build();
 
@@ -46,12 +53,12 @@ namespace Shipping
 
             app.UseRouting();
 
-            /*app.UseAuthentication();*/
+            /*app.UseAuthentication();*/   
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=Register}/{id?}");
+                pattern: "{controller=Account}/{action=Login}/{id?}");
 
             app.Run();
         }

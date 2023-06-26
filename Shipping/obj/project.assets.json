@@ -11515,11 +11515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+      "projectUniqueName": "F:\\Shipping-Management-System\\Shipping\\Shipping.csproj",
       "projectName": "Shipping",
-      "projectPath": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+      "projectPath": "F:\\Shipping-Management-System\\Shipping\\Shipping.csproj",
       "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
-      "outputPath": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\",
+      "outputPath": "F:\\Shipping-Management-System\\Shipping\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Beshoy\\AppData\\Roaming\\NuGet\\NuGet.Config",

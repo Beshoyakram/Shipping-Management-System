@@ -8,26 +8,25 @@ using Shipping.Constants;
 using Shipping.ViewModels.ClaimsPermissions;
 using System.Security.Claims;
 using System.Data;
+using Shipping.Repository.ArabicNamesColumnIntoRoleClaimsTable;
 
 namespace Shipping.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class AdministrationController : Controller
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<ApplicationRole> _roleManager;
 
         public UserManager<ApplicationUser> _userManager { get; }
+        public IAddArabicNamesToRoleCaimsTable IAddArabicNamesToRoleCaimsTable { get; }
 
-        public AdministrationController(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager)
+        public AdministrationController(RoleManager<ApplicationRole> roleManager,
+            UserManager<ApplicationUser> userManager, IAddArabicNamesToRoleCaimsTable _IAddArabicNamesToRoleCaimsTable)
         {
             _roleManager = roleManager;
             _userManager = userManager;
+            IAddArabicNamesToRoleCaimsTable = _IAddArabicNamesToRoleCaimsTable;
         }
 
-        [Authorize(Permissions.Controls.View)]
-        [HttpGet]
-        public IActionResult Index()
-        { return View(); }
         /*------------------------------- Roles --------------------------------------------------*/
         #region ListRoles
         [Authorize(Permissions.Controls.View)]
@@ -47,18 +46,22 @@ namespace Shipping.Controllers
         {
             return View();
         }
+
+        [Authorize(Permissions.Controls.Create)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel RoleVM)
         {
             if (ModelState.IsValid)
             {
-                IdentityRole identityRole = new IdentityRole();
-                identityRole.Name = RoleVM.RoleName;
-                var result = await _roleManager.CreateAsync(identityRole);
+                ApplicationRole applicationRole = new ApplicationRole();
+                applicationRole.Id = Guid.NewGuid().ToString();
+                applicationRole.Name = RoleVM.RoleName;
+                applicationRole.Date = DateTime.Now.ToString();
+                var result = await _roleManager.CreateAsync(applicationRole);
                 if (result.Succeeded)
                 {
-                    return View("Index");
+                    return RedirectToAction("ListRoles");
                 }
                 else
                 {
@@ -83,6 +86,8 @@ namespace Shipping.Controllers
                 ViewBag.ErrorMessage = $"Role with id : {ID} can't be found.";
                 return View("Notfound");
             }
+            else if (role.Name == "Admin")
+            { return View("NotAllowed"); }
             else
             {
                 var model = new EditRoleViewModel()
@@ -96,6 +101,7 @@ namespace Shipping.Controllers
         }
 
         [HttpPost]
+        [Authorize(Permissions.Controls.Edit)]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
@@ -105,6 +111,8 @@ namespace Shipping.Controllers
                 ViewBag.ErrorMessage = $"Role with id : {model.RoleId} can't be found.";
                 return View("Notfound");
             }
+            else if (role.Name == "Admin")
+            { return View("NotAllowed"); }
             else
             {
                 role.Name = model.RoleName;
@@ -138,6 +146,8 @@ namespace Shipping.Controllers
                 ViewBag.ErrorMessage = $"Role with id : {RoleId} can't be found.";
                 return View("NotFound");
             }
+            else if (role.Name == "Admin")
+            { return View("NotAllowed"); }
             else
             {
                 var result = await _roleManager.DeleteAsync(role);
@@ -158,112 +168,34 @@ namespace Shipping.Controllers
         }
         #endregion
 
-        /*------------------------------- Users Role --------------------------------------------------*/
-        #region ListUsers
-        [HttpGet]
-        public async Task<IActionResult> ListUsers()
-        {
-            List<UserRoleViewModel> model = new List<UserRoleViewModel>();
-            List<ApplicationUser> users = _userManager.Users.ToList();
-            for (int i = 0; i < users.Count; i++)
-            {
-                UserRoleViewModel user = new UserRoleViewModel()
-                {
-                    Id = users[i].Id,
-                    Address = users[i].Address,
-                    Email = users[i].Email,
-                    UserName = users[i].UserName,
-                    PhoneNumber = users[i].PhoneNumber,
-                };
-                //get Role Name
-                var userRole = await _userManager.GetRolesAsync(users[i]);
-                user.RoleName = userRole[0];
-
-                //get Role Id
-                var RoleData = await _roleManager.FindByNameAsync(user.RoleName);
-                user.RoleId = RoleData.Id;
-
-                //add to model
-                model.Add(user);
-            }
-
-            List<IdentityRole> roles = _roleManager.Roles.ToList();
-            ViewBag.Roles = roles;
-
-            return View(model);
-        }
-        #endregion
-
-        #region Manage User Role
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateUserRole(string userId, string roleId)
-        {
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-            {
-                return View("Error");
-            }
-            //get Role Name
-            var userRole = await _userManager.GetRolesAsync(user);
-            var oldRole = _roleManager.Roles.FirstOrDefault(r => r.Name == userRole[0]);
-
-
-
-            var newRole = _roleManager.Roles.FirstOrDefault(r => r.Id == roleId);
-
-            await _userManager.RemoveFromRoleAsync(user, oldRole.Name);
-            await _userManager.AddToRoleAsync(user, newRole.Name);
-
-            return Ok();
-        }
-        #endregion
-
-        #region Search role
-
-        public async Task <IActionResult> Search(string query)
-        {
-            List<IdentityRole> roles;
-            if (string.IsNullOrWhiteSpace(query))
-            {  roles = await _roleManager.Roles.ToListAsync(); }
-            else
-            {
-                 roles= await _roleManager.Roles.Where(r => r.Name.Contains(query)).ToListAsync();
-                
-
-            }
-            return View("ListRoles", roles);
-        }
-
-        #endregion
-
         /*------------------------------- Cliams --------------------------------------------------*/
-        #region Manage Permissions
+        #region Manage Permissions on roles
         [HttpGet]
         [Authorize(Permissions.Controls.View)]
-        public async Task<IActionResult> ManagePermissions(string roleId) 
+        public async Task<IActionResult> ManagePermissions(string roleId)
         {
             var role = await _roleManager.FindByIdAsync(roleId);
             if (role == null)
-             return NotFound(); 
+                return NotFound();
 
 
             var roleClaims = _roleManager.GetClaimsAsync(role).Result.Select(c => c.Value).ToList();
 
             var allClaims = Permissions.GenerateAllPermissions();
+
             var allPermissions = allClaims.Select(p => new CheckBoxViewModel { DisplayValue = p }).ToList();
 
             foreach (var permission in allPermissions)
             {
-                if (roleClaims.Any(c => c == permission.DisplayValue)) 
-                permission.IsSelected = true;
+                if (roleClaims.Any(c => c == permission.DisplayValue))
+                    permission.IsSelected = true;
             }
             var viewModel = new PermissionsFormViewModel
             {
-                RoleId=roleId,
-                RoleName=role.Name,
-                RoleCalims=allPermissions
-               
+                RoleId = roleId,
+                RoleName = role.Name,
+                RoleCalims = allPermissions
+
 
             };
             return View(viewModel);
@@ -286,13 +218,31 @@ namespace Shipping.Controllers
 
             var selectedClaims = model.RoleCalims.Where(c => c.IsSelected).ToList();
 
+
+            
             foreach (var claim in selectedClaims)
-                await _roleManager.AddClaimAsync(role, new Claim("Permission", claim.DisplayValue));
+            {
+                var arabicName = "";
+                foreach (var item in EnglishVsArabic.ModulesInEn_AR)
+                {
+                    if(item.Key == claim.DisplayValue.Split(".")[1])
+                    {
+                        arabicName = item.Value;
+                        break;
+                    }
+                }
+                await _roleManager.AddClaimAsync(role, new Claim("Permissions", claim.DisplayValue));
 
-            return RedirectToAction("Index");
+                var result = IAddArabicNamesToRoleCaimsTable.AddArabicNamesToRoleCaims(role, arabicName, claim.DisplayValue);
+                if (!result)
+                    return View("NotFound");
+                
+            }
+
+            return RedirectToAction("ListRoles");
         }
-
         #endregion
+
 
     }
 }

@@ -5,7 +5,8 @@ using System.Reflection.Emit;
 
 namespace Shipping.Models
 {
-    public class MyContext:IdentityDbContext<ApplicationUser>
+    public class MyContext:IdentityDbContext<ApplicationUser, ApplicationRole,string,IdentityUserClaim<string>,
+        IdentityUserRole<string>, IdentityUserLogin<string>, ApplicationRoleCliams,IdentityUserToken<string>>
     {
 
         public MyContext():base()
@@ -19,8 +20,8 @@ namespace Shipping.Models
             base.OnModelCreating(modelBuilder);
 
             #region Seeding Data For ApplicationUser table with Role Admin
-            string ADMIN_ID = Guid.NewGuid().ToString();
-            string ROLE_ID = Guid.NewGuid().ToString();
+            string ADMIN_ID = "76f86073-b51c-47c4-b7fa-731628055ebb";
+            string ROLE_ID = "5ab58670-8727-4b67-85d5-4199912a70bf";
 
             ApplicationUser admin = new ApplicationUser
             {
@@ -31,9 +32,7 @@ namespace Shipping.Models
                 UserName = "admin",
                 NormalizedUserName = "admin@gmail.com".ToUpper(),
                 Address = "Cairo",
-                LockoutEnabled = true,
-                ConcurrencyStamp = DateTime.Now.ToString()
-
+                LockoutEnabled = true
             };
             var hasher = new PasswordHasher<ApplicationUser>();
             admin.PasswordHash = hasher.HashPassword(admin, password: "@Admin123");
@@ -41,55 +40,54 @@ namespace Shipping.Models
 
 
             //Admin Role
-            modelBuilder.Entity<IdentityRole>().HasData(
-                new IdentityRole
+            modelBuilder.Entity<ApplicationRole>().HasData(
+                new ApplicationRole
                 {
                     Id = ROLE_ID,
                     Name = "Admin",
-                    NormalizedName = "Admin".ToUpper(),
-                    ConcurrencyStamp = DateTime.Now.ToString()
+                    NormalizedName = "ADMIN",
+                    Date = DateTime.Now.ToString()
                 });
-            modelBuilder.Entity<IdentityRole>().HasData(
-               new IdentityRole
-               {
-                   Name = "User",
-                   NormalizedName = "User".ToUpper(),
-                   ConcurrencyStamp = DateTime.Now.ToString()
-               });
+
             //Connect An admin to Role Admin
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 { RoleId = ROLE_ID, UserId = ADMIN_ID });
 
             //Add Permissions
-            modelBuilder.Entity<IdentityRoleClaim<string>>().HasData(
-                new IdentityRoleClaim<string>
+            modelBuilder.Entity<ApplicationRoleCliams>().HasData(
+                new ApplicationRoleCliams
                 {
                     Id = 1,
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.View",
-                    RoleId = ROLE_ID
+                    RoleId = ROLE_ID,
+                    ArabicName ="الصلاحيات"
+                  
                 },
-                new IdentityRoleClaim<string>
+                new ApplicationRoleCliams
                 {
                     Id = 2,
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Edit",
-                    RoleId = ROLE_ID
+                    RoleId = ROLE_ID,
+                    ArabicName = "الصلاحيات"
                 },
-                new IdentityRoleClaim<string>
+                new ApplicationRoleCliams
                 {
                     Id = 3,
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Delete",
-                    RoleId = ROLE_ID
+                    RoleId = ROLE_ID,
+                    ArabicName = "الصلاحيات"
                 },
-                new IdentityRoleClaim<string>
+                new ApplicationRoleCliams
                 {
                     Id = 4,
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Create",
-                    RoleId = ROLE_ID
+                    RoleId = ROLE_ID,
+                    ArabicName = "الصلاحيات"
                 }
                 );
 

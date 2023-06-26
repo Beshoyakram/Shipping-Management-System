@@ -17,54 +17,6 @@ namespace Shipping.Controllers
             _signInManager = signInManager;
         }
 
-        #region Register
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel registerVM)
-        {
-            //Check if there is account with the same email
-            var res = await _userManager.FindByEmailAsync(registerVM.Email);
-            if (res != null)
-            { ModelState.AddModelError("", "Account already exist"); }
-
-            if (ModelState.IsValid)
-            {
-                ApplicationUser newUser = new ApplicationUser();
-                newUser.Address = registerVM.Address;
-                newUser.PhoneNumber = registerVM.PhoneNumber;
-                newUser.Email = registerVM.Email;
-                newUser.UserName = registerVM.UserName;
-                newUser.PasswordHash = registerVM.Password;
-
-                var result = await _userManager.CreateAsync(newUser, registerVM.Password);
-                if (result.Succeeded)
-                {
-                    //Assign to user role
-                    await _userManager.AddToRoleAsync(newUser, "User");
-
-                    //create cookie
-                    await _signInManager.SignInAsync(newUser, isPersistent: false);
-                    return RedirectToAction("Login");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-
-                }
-            }
-            return View(registerVM);
-        }
-        #endregion
-
 
         #region Login
         [HttpGet]
@@ -110,7 +62,6 @@ namespace Shipping.Controllers
             return RedirectToAction("Login");
         }
         #endregion
-
 
         #region Change Password
         [Authorize]

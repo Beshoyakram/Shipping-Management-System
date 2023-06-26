@@ -3,17 +3,16 @@
 @{
     ViewData["Title"] = "Create New Role";
 }
-<h3 class="display-4">Create New Role</h3>
+<h3 class="display-4">اضافه مجموعه</h3>
 <form asp-controller="Administration" asp-action="CreateRole" method="post">
 
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group mb-2">
-        <label asp-for="RoleName" class="form-label"></label>
         <input asp-for="RoleName" class="form-control" />
         <span asp-validation-for="RoleName" class="text-danger"></span>
     </div>
     
 
-    <button type="submit" class="btn btn-primary">Create Role</button>
+    <button type="submit" class="btn btn-primary">اضافه</button>
 
 </form>

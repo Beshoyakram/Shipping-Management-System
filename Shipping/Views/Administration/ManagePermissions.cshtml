@@ -1,4 +1,5 @@
-﻿@model PermissionsFormViewModel
+﻿@using Shipping.Constants;
+@model PermissionsFormViewModel
 
 @{
     ViewData["Title"] = "Manage Permissions";
@@ -12,47 +13,55 @@
         </div>
         <div class="card-body">
             <input type="hidden" asp-for="RoleId" />
-            <table class="table table-striped">
+            <table class="table table-striped text-center">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th>View</th>
-                        <th>Create</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>الصلاحيه</th>
+                        <th>عرض</th>
+                        <th>اضافه</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for (int j = 0; j < Model.RoleCalims.Count; j+=4){
-                        <tr>
-                            <td>@Model.RoleCalims[j].DisplayValue.Split('.')[1]</td>
-                    @for (int i = 0; i < Model.RoleCalims.Count; i++)
+                    @for (int j = 0; j < Model.RoleCalims.Count; j += 4)
                     {
-
+                        <tr>
+                            @foreach (var item in EnglishVsArabic.ModulesInEn_AR)
+                            {
+                                if (item.Key == Model.RoleCalims[j].DisplayValue.Split('.')[1])
+                                {
+                                    <td>@item.Value</td>
+                                    break;
+                                }
+                            }
+                            
+                            @for (int i = 0; i < Model.RoleCalims.Count; i++)
+                            {
                                 if (@Model.RoleCalims[j].DisplayValue.Split('.')[1] != @Model.RoleCalims[i].DisplayValue.Split('.')[1])
                                 { continue; }
 
-                        
-                            <td>
-                                <div class="form-check m-1">
-                                    <input type="hidden" asp-for="@Model.RoleCalims[i].DisplayValue" />
-                                    <input asp-for="@Model.RoleCalims[i].IsSelected" class="form-check-input" />
-                                   
-                                </div>
-                            </td>
+                                <td class="">
+                                    <div class="form-check m-1 d-flex justify-content-center">
+                                        <input type="hidden" asp-for="@Model.RoleCalims[i].DisplayValue" />
+                                        <input asp-for="@Model.RoleCalims[i].IsSelected" class="form-check-input" />
 
-                          
-                        
-                        }
+                                    </div>
+                                </td>
+
+                            }
                         </tr>
                     }
                 </tbody>
             </table>
             <div asp-validation-summary="All" class="text-danger"></div>
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        <div style="position:relative">
+            <div class="card-footer" style="position:absolute; left:0;top:5px">
+            <button type="submit" class="btn btn-primary">حفظ</button>
+            <a asp-action="ListRoles" class="btn btn-secondary">الغاء</a>
         </div>
+        </div>
+        
     </div>
 </form>
