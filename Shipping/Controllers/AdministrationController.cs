@@ -168,6 +168,22 @@ namespace Shipping.Controllers
         }
         #endregion
 
+        #region Search role
+        public async Task<IActionResult> Search(string query)
+        {
+            List<ApplicationRole> roles;
+            if (string.IsNullOrWhiteSpace(query))
+            { roles = await _roleManager.Roles.ToListAsync(); }
+            else
+            {
+                roles = await _roleManager.Roles.Where(r => r.Name.Contains(query)).ToListAsync();
+
+
+            }
+            return View("ListRoles", roles);
+        }
+        #endregion
+
         /*------------------------------- Cliams --------------------------------------------------*/
         #region Manage Permissions on roles
         [HttpGet]
