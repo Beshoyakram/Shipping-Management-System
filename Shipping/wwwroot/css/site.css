@@ -21,6 +21,8 @@ body {
   margin-bottom: 60px;
 }
 h3{
-    text-align:center;
-    
+    text-align:center;   
+}
+.add.btn {
+    background-color: #00b1f4
 }

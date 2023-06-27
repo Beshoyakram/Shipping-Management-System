@@ -1,0 +1,76 @@
+﻿@model Shipping.ViewModels.DeliveryViewModel
+
+@{
+    ViewData["Title"] = "Edit Delivery";
+}
+<hr />
+<div class="row container">
+    <div class="col-md-12">
+        <form asp-action="Edit" method="post" class="d-flex flex-wrap">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="BranchId">Branch Name</label>
+                <select asp-for="BranchId" class="form-control role-select">
+                    @foreach (var branch in ViewBag.Branchs)
+                    {
+                        <option value="@branch.Id">@branch.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Government" class="control-label"></label>
+                <input asp-for="Government" class="form-control" />
+                <span asp-validation-for="Government" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="DiscountType" class="control-label"></label>
+                <select asp-for="DiscountType" class="form-control" asp-items="Html.GetEnumSelectList<DiscountType>()">
+                    <option value="">---Select Type---</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4 p-3">
+                <label asp-for="CompanyPercentage" class="control-label"></label>
+                <input asp-for="CompanyPercentage" class="form-control" />
+                <span asp-validation-for="CompanyPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-2 align-items-start">
+                <input type="submit" value="Save" class="btn btn-primary " />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to DeliveryList</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

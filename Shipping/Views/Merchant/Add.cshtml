@@ -1,0 +1,75 @@
+﻿@model MerchantViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="bg-light rounded my-4 row">
+    <h2 class="p-4 fw-bold">اضافة تاجر جديد</h2>
+</div>
+
+<div class="row  bg-light rounded my-4">
+    <div class="col-md-12">
+
+        <form asp-controller="Merchant" asp-action="Add" class="" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
+
+            <div class="d-flex flex-wrap">
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Name">الاسم</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Email">البريد الالكتروني</label>
+                    <input type="email" class="form-control" asp-for="Email">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Phone">رقم الهاتف</label>
+                    <input asp-for="Phone" type="text" class="form-control">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="BranchId">الفرع</label>
+                    <select asp-for="BranchId" class="form-control role-select">
+                        @foreach (var branch in ViewBag.Branchs)
+                        {
+                            <option value="@branch.Id">@branch.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label for="Password">الرقم السري</label>
+                    <input type="password" class="form-control" id="Password" name="Password">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Address">العنوان</label>
+                    <input type="text" class="form-control" asp-for="Address">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="City">المدينة</label>
+                    <input type="text" class="form-control" asp-for="City">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Government">المحافظة</label>
+                    <input type="text" class="form-control" asp-for="Government">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="PickUpPrice">سعر pick up</label>
+                    <input type="number" class="form-control" asp-for="PickUpPrice">
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="RefuseCostPercent">تحمل التاجر عند الرفض</label>
+                    <input type="number" class="form-control " asp-for="RefuseCostPercent">
+                </div>
+            </div>
+
+            <div class="m-3" style="position: relative;height: 10vh;">
+                <button type="submit" class="btn btn-primary px-3 " style="position: absolute;left: 0;bottom: 15%;">اضافة</button>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}

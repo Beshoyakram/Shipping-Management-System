@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shipping.Models;
 
@@ -11,9 +12,11 @@ using Shipping.Models;
 namespace Shipping.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20230627145014_AddTablesForEmployessTypes")]
+    partial class AddTablesForEmployessTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,23 +146,9 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "27/06/2023 07:38:05 م",
+                            Date = "27/06/2023 05:50:13 م",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "d646a6ef-743d-41b7-bf3f-6e117678eaba",
-                            Date = "27/06/2023 07:38:05 م",
-                            Name = "المناديب",
-                            NormalizedName = "المناديب"
-                        },
-                        new
-                        {
-                            Id = "79dc327d-2708-4496-ab20-3fef9cd29947",
-                            Date = "27/06/2023 07:38:05 م",
-                            Name = "التجار",
-                            NormalizedName = "التجار"
                         });
                 });
 
@@ -303,16 +292,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "41af7030-2a15-4853-bc2b-3356010e3f08",
+                            ConcurrencyStamp = "bbe3e7e9-2465-463a-a5f0-6fd7d09978d8",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBblRFkhvjVchGpnzUTAkNfyvJfnx5fQ4AQVRMJB5HJRFXuts996PN0ddlFrVoY1Cg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECaPSq7PzeCl/tSznIMSP+cNlHulwuHS2AmGWOjYtQZ0livE/9oPjaXFyay0KDtHtg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "258a6d73-973a-4644-993c-85718584aa9b",
+                            SecurityStamp = "4c1ed4e4-96ac-4b9e-aa2d-9b47e39a5d03",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"

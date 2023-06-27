@@ -10,7 +10,16 @@ namespace Shipping.Models
 
     public class ApplicationUser : IdentityUser
     {
-        public string? Address { get; set; }
+        public string? Name { get; set; }
+        public bool IsDeleted { get; set; } = false;
+        public bool Status { get; set; } = true;
+
+
+        public List<Employee>? Employees { get; set; }
+
+        public List<Merchant>? Merchants { get; set; }
+
+        public List<Delivery>? Deliveries { get; set; }
     }
     
     public class ApplicationRoleCliams : IdentityRoleClaim<string>

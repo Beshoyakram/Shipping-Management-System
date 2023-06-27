@@ -8,7 +8,10 @@ namespace Shipping.Models
     public class MyContext:IdentityDbContext<ApplicationUser, ApplicationRole,string,IdentityUserClaim<string>,
         IdentityUserRole<string>, IdentityUserLogin<string>, ApplicationRoleCliams,IdentityUserToken<string>>
     {
-
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Merchant> Merchants { get; set; }
+        public DbSet<Delivery> Deliveries { get; set; }
+        public DbSet<Branch> Branches { get; set; }
         public MyContext():base()
         {}
         public MyContext(DbContextOptions<MyContext> options)
@@ -31,7 +34,6 @@ namespace Shipping.Models
                 EmailConfirmed = true,
                 UserName = "admin",
                 NormalizedUserName = "admin@gmail.com".ToUpper(),
-                Address = "Cairo",
                 LockoutEnabled = true
             };
             var hasher = new PasswordHasher<ApplicationUser>();
@@ -53,6 +55,24 @@ namespace Shipping.Models
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 { RoleId = ROLE_ID, UserId = ADMIN_ID });
+
+            //Create Static Roles
+            modelBuilder.Entity<ApplicationRole>().HasData(
+                new ApplicationRole
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "المناديب",
+                    NormalizedName = "المناديب",
+                    Date = DateTime.Now.ToString()
+                });
+            modelBuilder.Entity<ApplicationRole>().HasData(
+                new ApplicationRole
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "التجار",
+                    NormalizedName = "التجار",
+                    Date = DateTime.Now.ToString()
+                });
 
             //Add Permissions
             modelBuilder.Entity<ApplicationRoleCliams>().HasData(

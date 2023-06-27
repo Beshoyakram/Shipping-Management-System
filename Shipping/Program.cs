@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Shipping.Filters;
 using Shipping.Repository.ArabicNamesColumnIntoRoleClaimsTable;
+using Shipping.Repository;
 
 namespace Shipping
 {
@@ -24,7 +25,9 @@ namespace Shipping
 
 
             builder.Services.AddScoped<IAddArabicNamesToRoleCaimsTable, AddArabicNamesToRoleCaimsTable>();
-
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddScoped<IMerchantRepository, MerchantRepository>();
+            builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
 
 
             //For igonring reload page when change permissions

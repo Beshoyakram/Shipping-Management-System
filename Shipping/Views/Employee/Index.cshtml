@@ -1,0 +1,97 @@
+﻿@model IEnumerable<EmployeeViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@using (Html.BeginForm("Search", "Employee", FormMethod.Get))
+{
+    <div class="form-group">
+        <label for="searchTerm">Search:</label>
+        <input type="text" name="searchTerm" class="form-control" value="@ViewBag.SearchTerm" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-1">Search</button>
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mt-2">Create New</a>
+</p>
+<table class="table table-hover table-bordered text-center">
+    <tr>
+        <th>
+            الإعدادات
+        </th>
+        <th>
+            الحالة
+        </th>
+        <th>
+            الصلاحية
+        </th>
+        <th>
+            الفرع
+        </th>
+        <th>
+            رقم الهاتف
+        </th>
+        <th>
+            البريد الالكتروني
+        </th>
+
+        <th>
+            الاسم
+        </th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
+
+            </td>
+            <td class="form-switch">
+                <input class="form-check-input" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+            </td>
+            <td>
+                @item.Role
+            </td>
+            <td>
+                @item.BranchName
+            </td>
+            <td>
+                @item.Phone
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.Name
+            </td>
+        </tr>
+    }
+</table>
+
+
+                
+
+@section Scripts {
+    <script>
+        function changeState(checkbox) {
+            var id = $(checkbox).data('id');
+            var status = checkbox.checked;
+            $.ajax({
+                url: '@Url.Action("ChangeState", "Employee")',
+                type: 'POST',
+                data: { id: id, status: status },
+                success: function () {
+                    console.log('State changed successfully!');
+                },
+                error: function () {
+                    console.log('Failed to change state!');
+                }
+            });
+        }
+    </script>
+}
