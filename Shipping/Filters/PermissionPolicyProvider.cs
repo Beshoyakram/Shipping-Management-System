@@ -7,14 +7,14 @@ namespace Shipping.Filters
     public class PermissionPolicyProvider : IAuthorizationPolicyProvider
     {
 
-        private readonly IHttpContextAccessor _httpContextAccessor;
+
         public DefaultAuthorizationPolicyProvider FallbackPlicyProvider { get; }
 
 
-        public PermissionPolicyProvider(IOptions<AuthorizationOptions> options , IHttpContextAccessor httpContextAccessor)
+        public PermissionPolicyProvider(IOptions<AuthorizationOptions> options )
         {
             FallbackPlicyProvider = new DefaultAuthorizationPolicyProvider(options);
-            _httpContextAccessor = httpContextAccessor;
+         
 
         }
 
@@ -25,13 +25,10 @@ namespace Shipping.Filters
 
         public Task<AuthorizationPolicy?> GetFallbackPolicyAsync()
         {
-            var isAuthenticated = _httpContextAccessor.HttpContext?.User.Identity.IsAuthenticated;
-            if (isAuthenticated == true)
-            {
+          
 
                 return FallbackPlicyProvider.GetDefaultPolicyAsync();
-            }
-            else { return Task.FromResult<AuthorizationPolicy>(null); }
+           
         }
 
         public Task<AuthorizationPolicy?> GetPolicyAsync(string policyName)

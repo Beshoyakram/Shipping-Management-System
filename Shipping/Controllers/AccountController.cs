@@ -20,6 +20,7 @@ namespace Shipping.Controllers
 
         #region Login
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Login()
         {
             if (User.Identity.IsAuthenticated)
@@ -29,6 +30,7 @@ namespace Shipping.Controllers
             return View();
         }
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel LoginVM)
         {
