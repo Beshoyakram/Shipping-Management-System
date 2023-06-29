@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Shipping.Models;
 using Shipping.Repository;
 using Shipping.ViewModels;
@@ -10,27 +12,20 @@ namespace Shipping.Controllers
     {
 
         IEmployeeRepository _employeeRepository;
-        public EmployeeController(IEmployeeRepository employeeRepository)
+        private readonly RoleManager<ApplicationRole> _roleManager;
+
+        public EmployeeController(IEmployeeRepository employeeRepository, RoleManager<ApplicationRole> roleManager)
         {
             _employeeRepository = employeeRepository;
+            _roleManager = roleManager;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
 
         {
 
-            return View(_employeeRepository.GetAllEmployees());
+            return View(await _employeeRepository.GetAllEmployees());
         }
-        [HttpPost]
-        public IActionResult Create(EmployeeViewModel employeeViewModel)
-        {
-            
-            _employeeRepository.Add(employeeViewModel);
-            _employeeRepository.save();
-           
-            return RedirectToAction("Index", "Employee");
-        }
-        [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Add()
         {
           
             var employeeViewModel = new EmployeeViewModel();
@@ -42,11 +37,26 @@ namespace Shipping.Controllers
             ViewBag.BranchList = branchList;
 
 
+            var empRoles = await _roleManager.Roles.Where(r=> r.Name!="admin" && r.Name != "التجار" && r.Name != "المناديب").ToListAsync();
+            var empRolesSelect = new SelectList(empRoles, "Name", "Name");
+            ViewBag.empRoles = empRolesSelect;
+
             return View(employeeViewModel);
         }
-        public IActionResult Edit(int id)
+        [HttpPost]
+        public async Task<IActionResult> Add(EmployeeViewModel employeeViewModel)
         {
-            var employee = _employeeRepository.GetEmployeeById(id);
+            if(ModelState.IsValid)
+            {
+                await _employeeRepository.Add(employeeViewModel, employeeViewModel.Role);
+                _employeeRepository.save();
+                return RedirectToAction("Index", "Employee");
+            }
+            return View(employeeViewModel);
+        }
+        public IActionResult Edit(string Id)
+        {
+            var employee = _employeeRepository.GetEmployeeById(Id);
 
             if (employee != null)
             {

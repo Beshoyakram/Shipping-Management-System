@@ -11510,24 +11510,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IENO\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Azzazi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\iti\\shipping managment system Graduation project\\6-27\\hossam_azazy_maged\\singleTone fl m4ro3 b3d el damg\\Shipping\\Shipping.csproj",
+      "projectUniqueName": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj",
       "projectName": "Shipping",
-      "projectPath": "E:\\iti\\shipping managment system Graduation project\\6-27\\hossam_azazy_maged\\singleTone fl m4ro3 b3d el damg\\Shipping\\Shipping.csproj",
-      "packagesPath": "C:\\Users\\IENO\\.nuget\\packages\\",
-      "outputPath": "E:\\iti\\shipping managment system Graduation project\\6-27\\hossam_azazy_maged\\singleTone fl m4ro3 b3d el damg\\Shipping\\obj\\",
+      "projectPath": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+      "packagesPath": "C:\\Users\\Azzazi\\.nuget\\packages\\",
+      "outputPath": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\IENO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Azzazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11535,7 +11530,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11596,7 +11590,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

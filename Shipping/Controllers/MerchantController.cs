@@ -23,11 +23,6 @@ namespace Shipping.Controllers
             return View(merchantViewModels);
         }
 
-        //public async Task<IActionResult> Search(string Name)
-        //{
-        //    var merchantViewModels = await _merchantRepo.GetAll(Name);
-        //    return View(merchantViewModels);
-        //}
         #endregion
 
         #region Adding
@@ -69,6 +64,7 @@ namespace Shipping.Controllers
         public async Task<IActionResult> Edit(string Id)
         {
             var merchant = await _merchantRepo.GetById(Id);
+            var merchantViewModel = await _merchantRepo.MapToViewModel(merchant);
             if (merchant == null)
             {
                 return NotFound();
@@ -79,12 +75,12 @@ namespace Shipping.Controllers
 
 
 
-            return View(merchant);
+            return View(merchantViewModel);
         }
         [HttpPost]
         public async Task<IActionResult> Edit(string Id, MerchantViewModel merchantViewModel)
         {
-            var merchant = _myContext.Merchants.Include(m => m.User).FirstOrDefault(m => m.User.Id == Id);
+            var merchant = await _merchantRepo.GetById(Id);
             if (ModelState.IsValid)
             {
                 _merchantRepo.EditMerchant(merchant, merchantViewModel);
@@ -105,7 +101,7 @@ namespace Shipping.Controllers
         #region changeStatus
         public async Task<IActionResult> ChangeState(string Id, bool status)
         {
-            var merchant = await _myContext.Merchants.Include(m=>m.User).FirstOrDefaultAsync(m=>m.User.Id == Id);
+            var merchant = await _merchantRepo.GetById(Id);
             _merchantRepo.UpdateStatus(merchant, status);
             return RedirectToAction("Index");
         }

@@ -25,11 +25,11 @@
         <input asp-for="Phone" type="text" class="form-control">
     </div>
     <div class="form-group">
-        <label asp-for="BranchId">Branch Name</label>
-        <select asp-for="BranchId" class="form-control role-select">
+        <label asp-for="BranchName">Branch Name</label>
+        <select asp-for="BranchName" class="form-control role-select">
             @foreach (var branch in ViewBag.Branchs)
             {
-                <option value="@branch.Id">@branch.Name</option>
+                <option value="@branch.Name">@branch.Name</option>
             }
         </select>
     </div>

@@ -8,7 +8,9 @@ namespace Shipping.Repository
 
         Task<List<MerchantViewModel>> GetAll(string Name);
 
-        Task<MerchantViewModel> GetById(string id);
+        Task<Merchant> GetById(string id);
+        Task<MerchantViewModel> MapToViewModel(Merchant merchant);
+
         Task<bool> AddMechant(MerchantViewModel merchantViewModel);
 
         void EditMerchant(Merchant merchant, MerchantViewModel merchantViewModel);

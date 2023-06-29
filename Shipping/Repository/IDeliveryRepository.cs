@@ -7,7 +7,7 @@ namespace Shipping.Repository
     {
         Task<List<DeliveryViewModel>> GetAll(string Name);
         Task<DeliveryViewModel> GetById(string id);
-        void AddDelivery(DeliveryViewModel deliveryViewModel);
+        Task<bool> AddDelivery(DeliveryViewModel deliveryViewModel);
         void EditDelivery(Delivery delivery ,DeliveryViewModel deliveryViewModel);
         void Delete(Delivery delivery);
         void UpdateStatus(Delivery delivery,bool status);

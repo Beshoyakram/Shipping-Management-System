@@ -40,10 +40,15 @@ namespace Shipping.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult add(DeliveryViewModel deliveryViewModel) {
+        public async Task<IActionResult> add(DeliveryViewModel deliveryViewModel)
+        {
             if (ModelState.IsValid)
             {
-                _deliveryRepository.AddDelivery(deliveryViewModel);
+                bool res = await _deliveryRepository.AddDelivery(deliveryViewModel);
+                if (!res)
+                {
+                    ModelState.AddModelError("", "Error in your data.");
+                }
             }
             else
             {
@@ -54,7 +59,7 @@ namespace Shipping.Controllers
                 return View(deliveryViewModel);
             }
             return RedirectToAction("Index");
-            }
+        }
         #endregion
 
         #region Edit
@@ -82,7 +87,7 @@ namespace Shipping.Controllers
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
             if (ModelState.IsValid)
             {
-                _deliveryRepository.EditDelivery(delivery,deliveryViewModel);
+                _deliveryRepository.EditDelivery(delivery, deliveryViewModel);
             }
             else
             {
@@ -90,7 +95,7 @@ namespace Shipping.Controllers
 
                 ViewBag.Branchs = Branchs;
 
-                return View("Edit",deliveryViewModel);
+                return View("Edit", deliveryViewModel);
             }
             return RedirectToAction("Index");
         }
@@ -106,10 +111,10 @@ namespace Shipping.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangeState(string Id,bool status)
+        public async Task<IActionResult> ChangeState(string Id, bool status)
         {
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
-            _deliveryRepository.UpdateStatus(delivery,status);
+            _deliveryRepository.UpdateStatus(delivery, status);
             return RedirectToAction("Index");
         }
         #endregion

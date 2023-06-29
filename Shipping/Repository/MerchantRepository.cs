@@ -2,20 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using Shipping.Models;
 using Shipping.ViewModels;
+using static Shipping.Constants.Permissions;
 
 namespace Shipping.Repository
 {
     public class MerchantRepository : IMerchantRepository
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        //private readonly RoleManager<ApplicationRole> _roleManager;
         MyContext _myContext;
         public MerchantRepository(UserManager<ApplicationUser> userManager, MyContext myContext)
         {
             _userManager = userManager;
             _myContext = myContext;
+            //_roleManager = roleManager;
         }
 
-        
+
         #region addMerchant
         public async Task<bool> AddMechant(MerchantViewModel merchantViewModel)
         {
@@ -26,7 +29,8 @@ namespace Shipping.Repository
                 Government = merchantViewModel.Government,
                 PickUpSpecialCost = merchantViewModel.PickUpPrice,
                 RefusedOrderPercent = merchantViewModel.RefuseCostPercent,
-                BranchId = merchantViewModel.BranchId,
+                BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantViewModel.BranchName).Id,
+
 
 
 
@@ -73,23 +77,28 @@ namespace Shipping.Repository
             {
                 merchants = await _myContext.Merchants
                 .Include(m => m.User)
+                .Include(m => m.Branch)
                 .ToListAsync();
             }
             else
             {
                 merchants = await _myContext.Merchants
                 .Include(m => m.User)
+                .Include(m => m.Branch)
                 .Where(m => m.User.Name.Contains(Name))
                 .ToListAsync();
             }
             List<MerchantViewModel> merchantsViewModel = new List<MerchantViewModel>();
             foreach (var merchant in merchants)
             {
+                var roles = await _userManager.GetRolesAsync(merchant.User);
+
+
                 merchantsViewModel.Add(new MerchantViewModel
                 {
                     MerchantId = merchant.User.Id,
                     Address = merchant.Address,
-                    BranchId = merchant.BranchId,
+                    BranchName = merchant.Branch.Name,
                     City = merchant.City,
                     Email = merchant.User.Email,
                     Government = merchant.Government,
@@ -98,7 +107,7 @@ namespace Shipping.Repository
                     Password = merchant.User.PasswordHash,
                     PickUpPrice = merchant.PickUpSpecialCost,
                     RefuseCostPercent = merchant.RefusedOrderPercent,
-                    //Type = merchant.User.Type.ToString(),
+                    Role = roles.FirstOrDefault(),
                     Status = merchant.User.Status
 
 
@@ -111,10 +120,11 @@ namespace Shipping.Repository
 
 
         #region GetById
-        public async Task<MerchantViewModel> GetById(string id)
+        public async Task<Merchant> GetById(string id)
         {
             var merchant = await _myContext.Merchants
             .Include(m => m.User)
+            .Include(m => m.Branch)
             .FirstOrDefaultAsync(m => m.User.Id == id);
 
 
@@ -123,11 +133,12 @@ namespace Shipping.Repository
                 return null;
             }
 
+            var roles = await _userManager.GetRolesAsync(merchant.User);
             var merchantViewModel = new MerchantViewModel
             {
                 MerchantId = merchant.User.Id,
                 Address = merchant.Address,
-                BranchId = merchant.BranchId,
+                BranchName = merchant.Branch.Name,
                 City = merchant.City,
                 Email = merchant.User.Email,
                 Government = merchant.Government,
@@ -136,12 +147,33 @@ namespace Shipping.Repository
                 Password = merchant.User.PasswordHash,
                 PickUpPrice = merchant.PickUpSpecialCost,
                 RefuseCostPercent = merchant.RefusedOrderPercent,
-                //Type = merchant.User.Type.ToString()
+                Role = roles.FirstOrDefault()
+            };
+
+            return merchant;
+        }
+
+        public async Task<MerchantViewModel> MapToViewModel(Merchant merchant)
+        {
+            var roles = await _userManager.GetRolesAsync(merchant.User);
+            var merchantViewModel = new MerchantViewModel
+            {
+                MerchantId = merchant.User.Id,
+                Address = merchant.Address,
+                BranchName = merchant.Branch.Name,
+                City = merchant.City,
+                Email = merchant.User.Email,
+                Government = merchant.Government,
+                Name = merchant.User.Name,
+                Phone = merchant.User.PhoneNumber,
+                Password = merchant.User.PasswordHash,
+                PickUpPrice = merchant.PickUpSpecialCost,
+                RefuseCostPercent = merchant.RefusedOrderPercent,
+                Role = roles.FirstOrDefault()
             };
 
             return merchantViewModel;
         }
-
 
         #endregion
 
@@ -157,7 +189,7 @@ namespace Shipping.Repository
                 merchant.Government = merchantViewModel.Government;
                 merchant.PickUpSpecialCost = merchantViewModel.PickUpPrice;
                 merchant.RefusedOrderPercent = merchantViewModel.RefuseCostPercent;
-                merchant.BranchId = merchantViewModel.BranchId;
+                merchant.BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantViewModel.BranchName).Id;
 
                 merchant.User.Email = merchantViewModel.Email;
                 merchant.User.PhoneNumber = merchantViewModel.Phone;

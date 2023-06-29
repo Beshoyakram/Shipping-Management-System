@@ -2,17 +2,18 @@
 using Microsoft.EntityFrameworkCore;
 using Shipping.Models;
 using Shipping.ViewModels;
+using static Shipping.Constants.Permissions;
 
 namespace Shipping.Repository
 {
     public class DeliveryRepository : IDeliveryRepository
     {
-        MyContext _context;
+        MyContext _myContext;
         private readonly UserManager<ApplicationUser> _userManager;
         //private readonly RoleManager<ApplicationUser> _roleManager;
         public DeliveryRepository(MyContext context,UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _myContext = context;
             _userManager = userManager;
             //_roleManager = roleManager;
         }
@@ -23,14 +24,15 @@ namespace Shipping.Repository
             
             if (Name == null)
             {
-                deliveryList = await _context.Deliveries
-                .Include(m => m.User).Where(m => m.User.IsDeleted==false)
+                deliveryList = await _myContext.Deliveries
+                .Include(m => m.User).Include(d=>d.Branch).Where(m => m.User.IsDeleted==false)
                 .ToListAsync();
             }
             else
             {
-                deliveryList = await _context.Deliveries
+                deliveryList = await _myContext.Deliveries
                 .Include(m => m.User)
+                .Include(m=>m.Branch)
                 .Where(m => m.User.Name.Contains(Name)&&m.User.IsDeleted==false)
                 .ToListAsync();
             }
@@ -44,7 +46,7 @@ namespace Shipping.Repository
                     { 
                         DeliveryId = delivery.User.Id,
                         Address = delivery.Address,
-                        BranchId = delivery.BranchId,
+                        BranchName = delivery.Branch.Name,
                         Email = delivery.User.Email,
                         Government = delivery.Governement,
                         Name = delivery.User.Name,
@@ -63,32 +65,42 @@ namespace Shipping.Repository
         #endregion
 
         #region AddingNewDelivery
-        public async void AddDelivery(DeliveryViewModel deliveryViewModel)
+        public async Task<bool> AddDelivery(DeliveryViewModel deliveryViewModel)
         {
-           var hasher = new PasswordHasher<ApplicationUser>();
-            var user = new ApplicationUser
-            {
-                Name = deliveryViewModel.Name,
-                Email = deliveryViewModel.Email,
-                PhoneNumber = deliveryViewModel.Phone,
-                //Type = TypeOfUser.Merchant
-                
-            };
-            user.PasswordHash = hasher.HashPassword(user, deliveryViewModel.Password);
-            // Create a new Delivery object and set its properties
+
             var delivery = new Delivery
             {
                 Governement = deliveryViewModel.Government,
                 Address = deliveryViewModel.Address,
                 DiscountType = deliveryViewModel.DiscountType,
                 CompanyPercent = deliveryViewModel.CompanyPercentage,
-                BranchId = deliveryViewModel.BranchId
+                BranchId = _myContext.Branches.FirstOrDefault(b=>b.Name == deliveryViewModel.BranchName).Id
             };
-            delivery.User = user;
 
-            // Add the delivery to the database
-            _context.Add(delivery);
-            _context.SaveChanges();
+            var user = new ApplicationUser
+            {
+                Name = deliveryViewModel.Name,
+                Email = deliveryViewModel.Email,
+                PhoneNumber = deliveryViewModel.Phone,
+                UserName = deliveryViewModel.Name
+
+            };
+
+            var result = await _userManager.CreateAsync(user, deliveryViewModel.Password);
+
+            if (result.Succeeded)
+            {
+                var _user = await _userManager.FindByEmailAsync(user.Email);
+                if (_user != null)
+                    await _userManager.AddToRoleAsync(_user, "المناديب");
+
+                delivery.UserId = _user.Id;
+                _myContext.Add(delivery);
+                _myContext.SaveChanges();
+
+                return true;
+            }
+            return false;
         }
         #endregion
 
@@ -96,7 +108,7 @@ namespace Shipping.Repository
 
         public async Task<Delivery> GetDeliveryById(string id)
         {
-            var delivery = await _context.Deliveries
+            var delivery = await _myContext.Deliveries
             .Include(m => m.User).Where(m => m.User.IsDeleted==false)
             .FirstOrDefaultAsync(m => m.User.Id == id);
             if (delivery == null)
@@ -107,7 +119,7 @@ namespace Shipping.Repository
         }
         public async Task<DeliveryViewModel> GetById(string id)
         {
-            var delivery = await _context.Deliveries
+            var delivery = await _myContext.Deliveries
             .Include(m => m.User).Where(m => m.User.IsDeleted==false)
             .FirstOrDefaultAsync(m => m.User.Id == id);
 
@@ -121,7 +133,7 @@ namespace Shipping.Repository
             {
                 DeliveryId = delivery.User.Id,
                 Address = delivery.Address,
-                BranchId = delivery.BranchId,
+                BranchName = delivery.Branch.Name,
                 Email = delivery.User.Email,
                 Government = delivery.Governement,
                 Name = delivery.User.Name,
@@ -144,7 +156,7 @@ namespace Shipping.Repository
             {
                 delivery.Address = deliveryViewModel.Address;
                 delivery.Governement = deliveryViewModel.Government;
-                delivery.BranchId = deliveryViewModel.BranchId;
+                delivery.BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == deliveryViewModel.BranchName).Id;
                 delivery.DiscountType= deliveryViewModel.DiscountType;
                 delivery.CompanyPercent = deliveryViewModel.CompanyPercentage;
 
@@ -154,7 +166,7 @@ namespace Shipping.Repository
                 delivery.User.Name = deliveryViewModel.Name;
 
 
-                _context.SaveChanges();
+                _myContext.SaveChanges();
             }
         }
 
@@ -164,11 +176,11 @@ namespace Shipping.Repository
             if(delivery != null) {
                 delivery.User.IsDeleted = true;
                 }
-             _context.SaveChanges();
+             _myContext.SaveChanges();
         }
 
         public List<Branch> GetAllBranches() {
-            var Branchs = _context.Branches.ToList();
+            var Branchs = _myContext.Branches.ToList();
             return Branchs;
             }
 
@@ -176,7 +188,7 @@ namespace Shipping.Repository
         {
              if(delivery != null) {
                 delivery.User.Status =status;
-                 _context.SaveChanges();
+                 _myContext.SaveChanges();
                 }
         }
     }

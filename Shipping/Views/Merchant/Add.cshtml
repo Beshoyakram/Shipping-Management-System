@@ -17,47 +17,56 @@
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Name">الاسم</label>
                     <input type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Email">البريد الالكتروني</label>
                     <input type="email" class="form-control" asp-for="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Phone">رقم الهاتف</label>
                     <input asp-for="Phone" type="text" class="form-control">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
-                    <label asp-for="BranchId">الفرع</label>
-                    <select asp-for="BranchId" class="form-control role-select">
+                    <label asp-for="BranchName">الفرع</label>
+                    <select asp-for="BranchName" class="form-control dropdown role-select">
                         @foreach (var branch in ViewBag.Branchs)
                         {
-                            <option value="@branch.Id">@branch.Name</option>
+                            <option value="@branch.Name">@branch.Name</option>
                         }
                     </select>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label for="Password">الرقم السري</label>
-                    <input type="password" class="form-control" id="Password" name="Password">
+                    <input type="password" class="form-control" asp-for="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Address">العنوان</label>
                     <input type="text" class="form-control" asp-for="Address">
+                    <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="City">المدينة</label>
                     <input type="text" class="form-control" asp-for="City">
+                    <span asp-validation-for="City" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Government">المحافظة</label>
                     <input type="text" class="form-control" asp-for="Government">
+                    <span asp-validation-for="Government" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="PickUpPrice">سعر pick up</label>
                     <input type="number" class="form-control" asp-for="PickUpPrice">
+                    <span asp-validation-for="PickUpPrice" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="RefuseCostPercent">تحمل التاجر عند الرفض</label>
                     <input type="number" class="form-control " asp-for="RefuseCostPercent">
+                    <span asp-validation-for="RefuseCostPercent" class="text-danger"></span>
                 </div>
             </div>
 

@@ -9,7 +9,7 @@ using Shipping.Repository;
 namespace Shipping
 {
     public class Program
-    {
+    {   
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +28,8 @@ namespace Shipping
             builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             builder.Services.AddScoped<IMerchantRepository, MerchantRepository>();
             builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
+            builder.Services.AddScoped<IStateRepository, StateRepository>();
+            builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 
             //For igonring reload page when change permissions
@@ -37,11 +39,17 @@ namespace Shipping
                     options.ValidationInterval = TimeSpan.Zero;
                 }) ;
 
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.User.AllowedUserNameCharacters = null;
+            });
+
 
             builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(
                 option =>
                 {
                     option.Password.RequireUppercase = false;
+                    option.Password.RequireNonAlphanumeric = false;
                 }
                 ).AddEntityFrameworkStores<MyContext>();
 

@@ -1,0 +1,46 @@
+﻿@model City
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="bg-light rounded my-4 row">
+    <h2 class="p-4 fw-bold">اضافة تاجر جديد</h2>
+</div>
+
+<div class="row  bg-light rounded my-4">
+    <div class="col-md-12">
+
+        <form asp-controller="City" asp-action="Add" class="" method="post">
+            <div asp-validation-summary="All" class="text-danger col-md-12"></div>
+
+            <div class="d-flex flex-wrap">
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Name">اسم المدينة</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="ShippingPrice">تكلفة الشحن العادي</label>
+                    <input type="text" class="form-control" asp-for="ShippingPrice">
+                    <span asp-validation-for="ShippingPrice" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="PickUpPrice">تكلفة شحن ال pick up</label>
+                    <input type="text" class="form-control" asp-for="PickUpPrice">
+                    <span asp-validation-for="PickUpPrice" class="text-danger"></span>
+                </div>
+                <input type="text" class="form-control visually-hidden" asp-for="StateId" value="@ViewBag.stateId">
+            </div>
+
+            <div class="m-3" style="position: relative;height: 10vh;">
+                <button type="submit" class="btn btn-primary px-3 " style="position: absolute;left: 0;bottom: 15%;">اضافة</button>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}
