@@ -1,0 +1,168 @@
+﻿@model List<OrderViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="my-4 bg-light py-2 rounded">
+    <div class="row container d-flex">
+        <div class="col-10">عرض الطلبات</div>
+        <div class="col-2 ">
+            <a asp-action="Add" class="btn btn-primary add">اضافة طلب جديد</a>
+        </div>
+    </div>
+
+</div>
+<div class="my-4 bg-light p-2 px-4 rounded">
+    <div class="row ">
+        <div class="col-4">
+            <select class="form-control showStatus">
+                <option value="">All</option>
+                @foreach (OrderStatus item in Enum.GetValues(typeof(OrderStatus)))
+                {
+                    <option value="@item">@item</option>
+                }
+            </select>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-2">
+            <form method="get" action="/Merchant/Index">
+                <div>
+                    <label>بحث</label>
+                    <input type="text" name="Name" id="Name" class="form form-control" />
+                    <input type="submit" value="بحث" class="btn btn-primary add m-1" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-hover table-bordered text-center my-4">
+        <tr style="background-color:#ddd;">
+            <th>
+                الرقم التسلسلي
+            </th>
+            <th>
+                التاريخ
+            </th>
+            <th>
+                بيانات العميل
+            </th>
+            <th>
+                المحافظة
+            </th>
+            <th>
+                المدينة
+            </th>
+            <th>
+                تكلفة الطلب
+            </th>
+            <th>
+                تعديل الطلب
+            </th>
+            <th>
+                تغيير الحالة
+            </th>
+            <th>
+                حذف
+            </th>
+            <th>
+                طباعة
+            </th>
+
+
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.OrderDate
+                </td>
+                <td>
+                    @item.ClientName
+                    <br />
+                    @item.ClientPhoneNumber1
+
+                </td>
+                <td>
+                    @item.StateName
+                </td>
+                <td>
+                    @item.CityName
+                </td>
+                <td>
+                    @item.OrderCost
+                </td>
+                <td>
+                    <a class="btn btn-info">تعديل</a>
+                </td>
+                <td>
+                    <select class="form-control changeStatus" type="checkbox" data-id="@item.Id">
+                        @foreach (OrderStatus status in Enum.GetValues(typeof(OrderStatus)))
+                        {
+                            <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <a class="btn btn-info">حذف</a>
+                </td>
+                <td>
+                    <a class="btn btn-info">طباعة</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.changeStatus').change(function () {
+                var Id = $(this).data('id');
+                var status = $(this).val();
+
+                $.ajax({
+                    url: '/Order/ChangeStatus',
+                    type: 'POST',
+                    data: { Id: Id, status: status },
+                    success: function (response) {
+
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $('.showStatus').change(function () {
+                var status = $(this).val();
+
+                $.ajax({
+                    url: '/Order/Index',
+                    type: 'POST',
+                    data: { status: status },
+                    success: function (response) {
+
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+
+
+
+    </script>
+}

@@ -22,6 +22,12 @@ namespace Shipping.Repository.CityRepo
             return _myContext.Cities.Where(c => c.StateId == stateId).ToList();
         }
 
+        public List<string> GetAllByStateName(string stateName)
+        {
+            var stateId = _myContext.States.Where(s => s.Name == stateName).FirstOrDefault().Id;
+            return _myContext.Cities.Where(c => c.StateId == stateId).Select(c => c.Name).ToList();
+        }
+
         #region GetById
         public City GetById(int id)
         {

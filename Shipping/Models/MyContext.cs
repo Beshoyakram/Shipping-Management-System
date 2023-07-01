@@ -14,6 +14,8 @@ namespace Shipping.Models
         public DbSet<Branch> Branches { get; set; }
         public DbSet<State> States { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderProducts { get; set; }
 
         public MyContext():base()
         {}
