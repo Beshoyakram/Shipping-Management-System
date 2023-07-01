@@ -1,0 +1,40 @@
+﻿@model Shipping.Models.City
+
+<h2>تعديل بيانات المدينة</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="d-flex flex-wrap">
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="Name">الإسم</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="StateId">المحافظة</label>
+            <select asp-for="StateId" asp-items="@ViewBag.StateList" class="form-control">
+                <option value="">Select a state</option>
+            </select>
+            <span asp-validation-for="StateId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="PickUpPrice">سعر الإستلام من المقر</label>
+            <input asp-for="PickUpPrice" class="form-control" />
+            <span asp-validation-for="PickUpPrice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="ShippingPrice">سعر الشحن</label>
+            <input asp-for="ShippingPrice" class="form-control" />
+            <span asp-validation-for="ShippingPrice" class="text-danger"></span>
+        </div>
+
+    </div>
+  
+    <button type="submit" class="btn btn-primary">حفظ</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">إلغاء</a>
+}

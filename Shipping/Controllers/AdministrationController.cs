@@ -169,6 +169,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region Search role
+        [Authorize(Permissions.Controls.View)]
         public async Task<IActionResult> Search(string query)
         {
             List<ApplicationRole> roles;

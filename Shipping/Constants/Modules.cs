@@ -4,18 +4,27 @@
     {
         Controls,
         Merchants,
-        Representative,
-        Employees
+        Deliveries,
+        Employees,
+        Orders,
+        Branches,
+        Staties,
+        Cities
 
     }
     public static class EnglishVsArabic
     {
         public static readonly Dictionary<string, string> ModulesInEn_AR = new Dictionary<string, string>
         {
-            { "Controls", "الصلاحيات" },
-            { "Merchants", "التجار" },
-            { "Representative", "المناديب" },
-            { "Employees", "الموظفين" }
+            { "Controls", "صلاحيات المجموعات" },
+            { "Merchants", "صلاحيات التجار" },
+            { "Deliveries", "صلاحيات المناديب" },
+            { "Employees", "صلاحيات الموظفين" },
+            { "Orders", "صلاحيات الطلبات" },
+            { "Branches", "صلاحيات الافرع" },
+            { "Staties", "صلاحيات المحافظات" },
+            { "Cities", "صلاحيات المدن" }
+
 
         };
     }

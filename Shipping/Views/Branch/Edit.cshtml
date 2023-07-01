@@ -1,0 +1,72 @@
+﻿@model Branch
+@{
+    ViewData["Title"] = "Add";
+
+    SelectList States = new SelectList(ViewBag.State, "Id", "Name");
+}
+
+<div class="bg-light rounded my-4 row">
+    <h2 class="p-4 fw-bold"> تعديل الفرع</h2>
+</div>
+
+<div class="row  bg-light rounded my-4">
+    <div class="col-md-12">
+
+        <form asp-controller="Branch" asp-action="Edit" class="" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
+
+            <div class="d-flex flex-wrap">
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Name">اسم الفرع</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="StateId" class="control-label">المحافظة</label>
+                    <select asp-for="StateId" class="form-control" asp-items="States" id="my-select" required onchange="DisableErr()">
+                        <option value="0">--اختر المحافظة--</option>
+
+                    </select>
+                    <span id="my-validation-message" class="text-danger" style="display:none;">اختر المحافظة</span>
+                </div>
+
+
+            </div>
+
+            <div class="m-3" style="position: relative;height: 10vh;">
+                <div style="position: absolute;left: 0;bottom: 15%;">
+                    <a href="/branch/index" class="btn btn-secondary px-3 ">إلغاء</a>
+                    <button id="my-submit-button" type="submit" class="btn btn-warning px-3 ">تعديل</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+        <script>
+        $(function () {
+            $('#my-submit-button').click(function (event) {
+                if ($('#my-select').val()==0) {
+                    $('#my-validation-message').show();
+                    event.preventDefault();
+                }
+                
+            });
+        });
+    </script>
+
+    <script>
+        function DisableErr(){
+            var ErrMess = document.getElementById("my-validation-message");
+            ErrMess.style.display='none';
+        
+        }
+    </script>
+}

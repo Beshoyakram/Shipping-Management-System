@@ -3,28 +3,27 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>المحافظات</h1>
+<h3 class="display-4">المحافظات</h3>
 
 
-<div class="my-4 bg-light py-2 rounded">
+<div class=" py-2 rounded">
     <div class="row container d-flex">
-        <div class="col-10"></div>
+        
         <div class="col-2 ">
-            <a asp-action="Add" class="btn btn-primary add">اضافة محافظة جديدة</a>
+            <a asp-action="Add" class="btn btn-primary">اضافة محافظة جديدة</a>
         </div>
     </div>
 
 </div>
-<div class="my-4 bg-light p-2 px-4 rounded">
+<div class=" p-2 px-4 rounded">
     <div class="row ">
-        <div class="col-6"></div>
-        <div class="col-4"></div>
+        
         <div class="col-2">
             <form method="get" action="/Merchant/Index">
                 <div>
                     <label>بحث</label>
                     <input type="text" name="Name" id="Name" class="form form-control" />
-                    <input type="submit" value="بحث" class="btn btn-primary add m-1" />
+                    <input type="submit" value="بحث" class="btn btn-primary m-1" />
                 </div>
 
             </form>
@@ -54,9 +53,9 @@
                     <input class="form-check-input" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
-                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-info">اضافة مدينة</a>
-                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-info">المدن</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">تعديل</a>
+                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-success">اضافة مدينة</a>
+                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-success">المدن</a>
 
                 </td>
             </tr>

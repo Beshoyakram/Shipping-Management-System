@@ -4,21 +4,20 @@
 }
 
 
-<div class="my-4 bg-light py-2 rounded">
+<div class=" py-2 rounded">
     <div class="row container d-flex">
-        <h1>المدن</h1>
+        <h3 class="display-4">المدن</h3>
     </div>
 </div>
-<div class="my-4 bg-light p-2 px-4 rounded">
+<div class=" p-2 px-4 rounded">
     <div class="row ">
-        <div class="col-6"></div>
-        <div class="col-4"></div>
+        
         <div class="col-2">
             <form method="get" action="/Merchant/Index">
                 <div>
                     <label>بحث</label>
                     <input type="text" name="Name" id="Name" class="form form-control" />
-                    <input type="submit" value="بحث" class="btn btn-primary add m-1" />
+                    <input type="submit" value="بحث" class="btn btn-primary  m-1" />
                 </div>
 
             </form>
@@ -48,9 +47,30 @@
                     <input class="form-check-input" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">تعديل</a>
                 </td>
             </tr>
         }
     </table>
 </div>
+@section Scripts {
+    <script>
+        function changeState(checkbox) {
+            var id = $(checkbox).data('id');
+            var status = checkbox.checked;
+            $.ajax({
+                url: '@Url.Action("ChangeState", "City")',
+                type: 'POST',
+                data: { id: id, status: status },
+                success: function () {
+                    console.log('State changed successfully!');
+                },
+                error: function () {
+                    console.log('Failed to change state!');
+                }
+            });
+        }
+
+
+    </script>
+}

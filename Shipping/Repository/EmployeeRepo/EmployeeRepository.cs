@@ -5,26 +5,22 @@ using Shipping.ViewModels;
 using System.Security.Policy;
 using static Shipping.Constants.Permissions;
 
-namespace Shipping.Repository
+namespace Shipping.Repository.EmployeeRepo
 {
     public class EmployeeRepository : IEmployeeRepository
     {
         private readonly UserManager<ApplicationUser> _userManager;
         MyContext _myContext;
-        //private readonly UserManager<ApplicationUser> _userManager;
-        //private readonly RoleManager<ApplicationUser> _roleManager;
-
+      
         public EmployeeRepository(MyContext myContext, UserManager<ApplicationUser> userManager)
         {
             _myContext = myContext;
             _userManager = userManager;
-            //_userManager = userManager;
-            //_roleManager = roleManager;
         }
 
 
         #region add
-        public async Task<bool> Add(EmployeeViewModel employeeViewModel, string role)
+        public async Task<IdentityResult> Add(EmployeeViewModel employeeViewModel, string role)
         {
 
             var branch = _myContext.Branches.FirstOrDefault(b => b.Name == employeeViewModel.BranchName);
@@ -54,18 +50,12 @@ namespace Shipping.Repository
                 _myContext.Add(employee);
                 _myContext.SaveChanges();
 
-                return true;
+                return null;
             }
-            return false;
+            IdentityResult errorMsgs = result;
+            return errorMsgs;
         }
         #endregion
-
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
 
 
         #region GetAlls
@@ -73,12 +63,7 @@ namespace Shipping.Repository
         {
 
             var employees = await _myContext.Employees.Include(e => e.User).Include(e => e.Branch).ToListAsync();
-
-
-
             var employeeViewModels = new List<EmployeeViewModel>();
-
-
 
             foreach (var employee in employees)
             {
@@ -96,7 +81,6 @@ namespace Shipping.Repository
 
                 });
 
-
             }
 
             return employeeViewModels;
@@ -109,7 +93,7 @@ namespace Shipping.Repository
             // Map the Branch objects to BranchViewModel objects
             var branchViewModels = branches.Select(b => new BranchViewModel
             {
-                Id = (int)b.Id,
+                Id = b.Id,
                 Name = b.Name
             });
 
@@ -118,23 +102,25 @@ namespace Shipping.Repository
         #endregion
 
 
-        #region getbyid
-        public EmployeeViewModel GetEmployeeById(string id)
+        #region GetEmployeeById
+        public async Task<EmployeeEditViewModel> GetEmployeeById(string id)
         {
             var employee = _myContext.Employees
                 .Include(e => e.User)
                 .Include(e => e.Branch)
                 .FirstOrDefault(e => e.User.Id == id);
 
+            var hisRole =await _userManager.GetRolesAsync(employee.User);
             if (employee != null)
             {
-                return new EmployeeViewModel
+                return new EmployeeEditViewModel
                 {
                     Id = employee.User.Id,
                     Name = employee.User.Name,
                     Email = employee.User.Email,
                     Phone = employee.User.PhoneNumber,
                     BranchName = employee.Branch.Name,
+                    Role = hisRole[0]
 
                 };
             }
@@ -173,23 +159,29 @@ namespace Shipping.Repository
 
 
         #region update
-        public void Update(EmployeeViewModel employeeViewModel)
+        public async Task Update(EmployeeEditViewModel NewEmployee)
         {
 
-            var employee = _myContext.Employees.Include(e => e.User).Include(e => e.Branch).FirstOrDefault(e => e.User.Id == employeeViewModel.Id);
+            var employee = _myContext.Employees.Include(e => e.User).Include(e => e.Branch).FirstOrDefault(e => e.User.Id == NewEmployee.Id);
 
             if (employee != null)
             {
 
-                employee.User.Name = employeeViewModel.Name;
-                employee.User.Email = employeeViewModel.Email;
-                employee.User.PhoneNumber = employeeViewModel.Phone;
-                //employee.User.Role = employeeViewModel.Role;
-                employee.User.PasswordHash = employeeViewModel.Password;
+                employee.User.Name = NewEmployee.Name;
+                employee.User.Email = NewEmployee.Email;
+                employee.User.PhoneNumber = NewEmployee.Phone;
 
-                if (employee.Branch.Name != employeeViewModel.BranchName)
+                var hisRoles = await _userManager.GetRolesAsync(employee.User);
+                if (hisRoles[0] != NewEmployee.Role)
                 {
-                    var branch = _myContext.Branches.FirstOrDefault(b => b.Name == employeeViewModel.BranchName);
+                    await _userManager.RemoveFromRoleAsync(employee.User, hisRoles[0]);
+                    await _userManager.AddToRoleAsync(employee.User, NewEmployee.Role);
+                }
+               
+
+                if (employee.Branch.Name != NewEmployee.BranchName)
+                {
+                    var branch = _myContext.Branches.FirstOrDefault(b => b.Name == NewEmployee.BranchName);
                     if (branch != null)
                     {
                         employee.Branch = branch;
@@ -213,9 +205,12 @@ namespace Shipping.Repository
         #endregion
 
 
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
 
         public void save() { _myContext.SaveChanges(); }
-
 
 
         public Employee GetById(string id)

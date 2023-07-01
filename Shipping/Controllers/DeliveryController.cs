@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Shipping.Constants;
 using Shipping.Models;
-using Shipping.Repository;
+using Shipping.Repository.DeliveryRepo;
 using Shipping.ViewModels;
 
 namespace Shipping.Controllers
@@ -15,87 +18,101 @@ namespace Shipping.Controllers
 
 
         # region GetALL
+        [HttpGet]
+        [Authorize(Permissions.Deliveries.View)]
         public async Task<IActionResult> Index(String Name)
         {
             var deliveryViewModel = await _deliveryRepository.GetAll(Name);
             return View(deliveryViewModel);
         }
-        //public async Task<IActionResult> Search(string Name)
-        //{
-        //    var deliveryViewModel = await _deliveryRepository.GetAll(Name);
-        //    return View(deliveryViewModel);
-        //}
-
         #endregion
 
         #region Add
+        [HttpGet]
+        [Authorize(Permissions.Deliveries.Create)]
         public IActionResult add()
         {
             var Branchs = _deliveryRepository.GetAllBranches();
+            ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-            ViewBag.Branchs = Branchs;
+            var States = _deliveryRepository.GetAllStates();
+            ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
             return View();
         }
 
         [HttpPost]
+        [Authorize(Permissions.Deliveries.Create)]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> add(DeliveryViewModel deliveryViewModel)
         {
             if (ModelState.IsValid)
             {
-                bool res = await _deliveryRepository.AddDelivery(deliveryViewModel);
-                if (!res)
+                var res = await _deliveryRepository.AddDelivery(deliveryViewModel);
+                if (res != null)
                 {
-                    ModelState.AddModelError("", "Error in your data.");
+                    foreach (var error in res.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    var Branchs = _deliveryRepository.GetAllBranches();
+                    ViewBag.Branchs = Branchs;
+                    return View(deliveryViewModel);
                 }
+                //if everything is good
+                return RedirectToAction("Index");
             }
             else
             {
                 var Branchs = _deliveryRepository.GetAllBranches();
-
                 ViewBag.Branchs = Branchs;
 
                 return View(deliveryViewModel);
             }
-            return RedirectToAction("Index");
+            
         }
         #endregion
 
         #region Edit
-
+        [HttpGet]
+        [Authorize(Permissions.Deliveries.Edit)]
         public async Task<IActionResult> Edit(string Id)
         {
-            var merchant = await _deliveryRepository.GetById(Id);
-            if (merchant == null)
+            var delivery = await _deliveryRepository.GetById(Id);
+            if (delivery == null)
             {
                 return NotFound();
             }
 
             var Branchs = _deliveryRepository.GetAllBranches();
-            ViewBag.Branchs = Branchs;
+            ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+
+            var States = _deliveryRepository.GetAllStates();
+            ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
 
-
-            return View(merchant);
+            return View(delivery);
         }
 
         [HttpPost]
+        [Authorize(Permissions.Deliveries.Edit)]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string Id, DeliveryViewModel deliveryViewModel)
+        public async Task<IActionResult> Edit(string Id, DeliveryEditViewModel deliveryEditViewModel)
         {
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
             if (ModelState.IsValid)
             {
-                _deliveryRepository.EditDelivery(delivery, deliveryViewModel);
+                _deliveryRepository.EditDelivery(delivery, deliveryEditViewModel);
             }
             else
             {
                 var Branchs = _deliveryRepository.GetAllBranches();
+                ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-                ViewBag.Branchs = Branchs;
+                var States = _deliveryRepository.GetAllStates();
+                ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
-                return View("Edit", deliveryViewModel);
+                return View("Edit", deliveryEditViewModel);
             }
             return RedirectToAction("Index");
         }
@@ -103,6 +120,8 @@ namespace Shipping.Controllers
         #endregion
 
         #region Delete
+        [Authorize(Permissions.Deliveries.Delete)]
+        [HttpPost]
         public async Task<IActionResult> DeleteAsync(string Id)
         {
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
@@ -111,6 +130,7 @@ namespace Shipping.Controllers
         }
 
         [HttpPost]
+        [Authorize(Permissions.Deliveries.Delete)]
         public async Task<IActionResult> ChangeState(string Id, bool status)
         {
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);

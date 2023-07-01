@@ -1,15 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Shipping.Models;
-using Shipping.Repository;
+using Shipping.Repository.CityRepo;
+using Shipping.Repository.StateRepo;
 
 namespace Shipping.Controllers
 {
     public class CityController : Controller
     {
         ICityRepository _cityRepository;
-        public CityController(ICityRepository cityRepository)
+        IStateRepository _stateRepository;
+        public CityController(ICityRepository cityRepository, IStateRepository stateRepository)
         {
             _cityRepository = cityRepository;
+            _stateRepository = stateRepository;
         }
 
 
@@ -38,6 +43,48 @@ namespace Shipping.Controllers
         }
 
         #endregion
-        
-    }
+
+
+        #region change state
+        public IActionResult ChangeState(int Id, bool status)
+        {
+            var City = _cityRepository.GetById(Id);
+            City.Status = status;
+            _cityRepository.Update(Id, City);
+            return RedirectToAction("Index");
+        }
+        #endregion
+
+
+        #region Edit
+        public IActionResult Edit(int id)
+        {
+            var city = _cityRepository.GetById(id);
+
+            if (city == null)
+            {
+                return NotFound();
+            }
+            var states = _stateRepository.GetAll().ToList();
+            ViewBag.StateList = new SelectList(states, "Id", "Name");
+            return View(city);
+        }
+        [HttpPost]
+        public IActionResult Edit(int id, City city)
+        {
+            if (id != city.Id)
+            {
+                return BadRequest();
+            }
+          
+                _cityRepository.Update(id, city);
+
+
+
+
+            return RedirectToAction(nameof(Index), new { stateId = city.StateId });
+        }
+            #endregion
+
+        }
 }

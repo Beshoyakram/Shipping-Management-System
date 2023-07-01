@@ -85,8 +85,8 @@ namespace Shipping.Models
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.View",
                     RoleId = ROLE_ID,
-                    ArabicName ="الصلاحيات"
-                  
+                    ArabicName = "صلاحيات المجموعات"
+
                 },
                 new ApplicationRoleCliams
                 {
@@ -94,7 +94,7 @@ namespace Shipping.Models
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Edit",
                     RoleId = ROLE_ID,
-                    ArabicName = "الصلاحيات"
+                    ArabicName = "صلاحيات المجموعات"
                 },
                 new ApplicationRoleCliams
                 {
@@ -102,7 +102,7 @@ namespace Shipping.Models
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Delete",
                     RoleId = ROLE_ID,
-                    ArabicName = "الصلاحيات"
+                    ArabicName = "صلاحيات المجموعات"
                 },
                 new ApplicationRoleCliams
                 {
@@ -110,7 +110,7 @@ namespace Shipping.Models
                     ClaimType = "Permissions",
                     ClaimValue = "Permissions.Controls.Create",
                     RoleId = ROLE_ID,
-                    ArabicName = "الصلاحيات"
+                    ArabicName = "صلاحيات المجموعات"
                 }
                 );
 

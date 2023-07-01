@@ -44,6 +44,15 @@
                     <td>@counter</td>
                     <td>@role.Name</td>
                     <td>@role.Date</td>
+                    @if (role.Name == "Admin" && User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a asp-controller="Administration" asp-action="ManagePermissions" asp-route-roleId="@role.Id">
+                                <i class="fa-solid fa-gear fa-2x text-primary"></i>
+                            </a>
+                        </td>
+                        continue;
+                    }
                     @if (role.Name == "Admin")
                     {
                         <td></td>
@@ -75,8 +84,8 @@
                                 <span id="ConfirmDeleteSpan_@role.Id" style="display:none">
                                     <div style="">
                                         هل تريد الحذف فعلا؟
-                                        <button type="submit" class="btn btn-danger"style="padding: 3px;">Yes</button>
-                                        <a onclick="confirmDelete('@role.Id',false)" class="btn btn-primary" style="padding: 3px;">No</a>
+                                        <button type="submit" class="btn btn-danger"style="padding: 3px;">نعم</button>
+                                        <a onclick="confirmDelete('@role.Id',false)" class="btn btn-primary" style="padding: 3px;">لا</a>
                                     </div>
                                     
                                 </span>

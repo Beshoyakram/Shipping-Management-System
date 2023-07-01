@@ -4,7 +4,7 @@ using Shipping.Models;
 using Shipping.ViewModels;
 using static Shipping.Constants.Permissions;
 
-namespace Shipping.Repository
+namespace Shipping.Repository.MerchantRepo
 {
     public class MerchantRepository : IMerchantRepository
     {
@@ -20,7 +20,7 @@ namespace Shipping.Repository
 
 
         #region addMerchant
-        public async Task<bool> AddMechant(MerchantViewModel merchantViewModel)
+        public async Task<IdentityResult> AddMechant(MerchantViewModel merchantViewModel)
         {
             var merchant = new Merchant
             {
@@ -30,9 +30,6 @@ namespace Shipping.Repository
                 PickUpSpecialCost = merchantViewModel.PickUpPrice,
                 RefusedOrderPercent = merchantViewModel.RefuseCostPercent,
                 BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantViewModel.BranchName).Id,
-
-
-
 
             };
             var user = new ApplicationUser()
@@ -56,9 +53,10 @@ namespace Shipping.Repository
                 _myContext.Add(merchant);
                 _myContext.SaveChanges();
 
-                return true;
+                return null;
             }
-            return false;
+            IdentityResult errorMsgs = result;
+            return errorMsgs;
         }
 
 
@@ -153,10 +151,10 @@ namespace Shipping.Repository
             return merchant;
         }
 
-        public async Task<MerchantViewModel> MapToViewModel(Merchant merchant)
+        public async Task<MerchantEditViewModel> MapToViewModel(Merchant merchant)
         {
             var roles = await _userManager.GetRolesAsync(merchant.User);
-            var merchantViewModel = new MerchantViewModel
+            var merchantEditViewModel = new MerchantEditViewModel
             {
                 MerchantId = merchant.User.Id,
                 Address = merchant.Address,
@@ -166,34 +164,32 @@ namespace Shipping.Repository
                 Government = merchant.Government,
                 Name = merchant.User.Name,
                 Phone = merchant.User.PhoneNumber,
-                Password = merchant.User.PasswordHash,
                 PickUpPrice = merchant.PickUpSpecialCost,
-                RefuseCostPercent = merchant.RefusedOrderPercent,
-                Role = roles.FirstOrDefault()
+                RefuseCostPercent = merchant.RefusedOrderPercent
             };
 
-            return merchantViewModel;
+            return merchantEditViewModel;
         }
 
         #endregion
 
 
         #region EditUser
-        public async void EditMerchant(Merchant merchant, MerchantViewModel merchantViewModel)
+        public async void EditMerchant(Merchant merchant, MerchantEditViewModel merchantEditViewModel)
         {
 
             if (merchant != null)
             {
-                merchant.Address = merchantViewModel.Address;
-                merchant.City = merchantViewModel.City;
-                merchant.Government = merchantViewModel.Government;
-                merchant.PickUpSpecialCost = merchantViewModel.PickUpPrice;
-                merchant.RefusedOrderPercent = merchantViewModel.RefuseCostPercent;
-                merchant.BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantViewModel.BranchName).Id;
+                merchant.Address = merchantEditViewModel.Address;
+                merchant.City = merchantEditViewModel.City;
+                merchant.Government = merchantEditViewModel.Government;
+                merchant.PickUpSpecialCost = merchantEditViewModel.PickUpPrice;
+                merchant.RefusedOrderPercent = merchantEditViewModel.RefuseCostPercent;
+                merchant.BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantEditViewModel.BranchName).Id;
 
-                merchant.User.Email = merchantViewModel.Email;
-                merchant.User.PhoneNumber = merchantViewModel.Phone;
-                merchant.User.Name = merchantViewModel.Name;
+                merchant.User.Email = merchantEditViewModel.Email;
+                merchant.User.PhoneNumber = merchantEditViewModel.Phone;
+                merchant.User.Name = merchantEditViewModel.Name;
 
 
                 _myContext.SaveChanges();
@@ -214,10 +210,25 @@ namespace Shipping.Repository
                 _myContext.SaveChanges();
             }
         }
+
+
         #endregion
 
+        public List<Branch> GetAllBranches()
+        {
+            var Branchs = _myContext.Branches.ToList();
+            return Branchs;
+        }
+        public List<State> GetAllStates()
+        {
+            var States = _myContext.States.ToList();
+            return States;
+        }
 
-
-
+        public List<City> GetAllCities()
+        {
+            var Cities = _myContext.Cities.ToList();
+            return Cities;
+        }
     }
 }

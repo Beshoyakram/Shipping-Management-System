@@ -1,6 +1,6 @@
 ﻿using Shipping.Models;
 
-namespace Shipping.Repository
+namespace Shipping.Repository.StateRepo
 {
     public interface IStateRepository
     {
@@ -8,7 +8,8 @@ namespace Shipping.Repository
         void Add(State state);
 
 
-        Task<State> GetById(int id);
+        State GetById(int id);
+        void Update(int id, State state);
         void UpdateStatus(State state, bool status);
     }
 }

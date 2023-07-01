@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shipping.Models;
 
-namespace Shipping.Repository
+namespace Shipping.Repository.StateRepo
 {
     public class StateRepository : IStateRepository
     {
@@ -19,19 +19,28 @@ namespace Shipping.Repository
 
         public List<State> GetAll()
         {
-            return(_myContext.States.ToList());
+            return _myContext.States.ToList();
         }
 
-        public async Task<State> GetById(int id)
+        public State GetById(int id)
         {
-            return await _myContext.States.FirstOrDefaultAsync(s => s.Id == id);
+            return _myContext.States.Where(p => p.Id == id && p.IsDeleted == false).FirstOrDefault();
+
         }
 
+        public void Update(int id, State state)
+        {
+            State oldstate = GetById(id);
+            oldstate.Name = state.Name;
+            oldstate.Status = state.Status;
+            oldstate.IsDeleted = state.IsDeleted;
 
+            _myContext.SaveChanges();
+        }
 
         public void UpdateStatus(State state, bool status)
         {
-            if (state!= null)
+            if (state != null)
             {
                 state.Status = status;
                 _myContext.SaveChanges();

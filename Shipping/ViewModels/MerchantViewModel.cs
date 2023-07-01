@@ -18,7 +18,7 @@ namespace Shipping.ViewModels
         public string BranchName { get; set; }
         public string? Role { get; set; }
         public bool Status { get; set; }
-        [StringLength(255, ErrorMessage = "ادخل ع الاقل خمس ارقام", MinimumLength = 5)]
+        [StringLength(255, ErrorMessage = "ادخل ع الاقل 6احرف و ارقام", MinimumLength = 6)]
         [Required(ErrorMessage = "يجب ادخال الرقم السري")]
         public string Password { get; set; }
         [Required(ErrorMessage = "يجب ادخال العنوان")]

@@ -4,7 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Shipping.Filters;
 using Shipping.Repository.ArabicNamesColumnIntoRoleClaimsTable;
-using Shipping.Repository;
+using Shipping.Repository.DeliveryRepo;
+using Shipping.Repository.EmployeeRepo;
+using Shipping.Repository.MerchantRepo;
+using Shipping.Repository.StateRepo;
+using Shipping.Repository.CityRepo;
+using Shipping.Repository.BranchRepo;
 
 namespace Shipping
 {
@@ -30,7 +35,7 @@ namespace Shipping
             builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
             builder.Services.AddScoped<IStateRepository, StateRepository>();
             builder.Services.AddScoped<ICityRepository, CityRepository>();
-
+            builder.Services.AddScoped<IbranchRepository, BranchRepository>();
 
             //For igonring reload page when change permissions
             builder.Services.Configure<SecurityStampValidatorOptions>(
@@ -42,6 +47,7 @@ namespace Shipping
             builder.Services.Configure<IdentityOptions>(options =>
             {
                 options.User.AllowedUserNameCharacters = null;
+                options.User.RequireUniqueEmail = true;
             });
 
 

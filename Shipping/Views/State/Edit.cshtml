@@ -1,0 +1,21 @@
+﻿@model Shipping.Models.State
+
+<h2>تعديل بيانات المحافظة</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="d-flex flex-wrap">
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="Name">الإسم</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+
+      
+    </div>
+
+    <button type="submit" class="btn btn-primary">حفظ</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">إلغاء</a>
+}

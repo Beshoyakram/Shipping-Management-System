@@ -11,7 +11,7 @@ namespace Shipping.ViewModels
         [Required(ErrorMessage = "يجب ادخال البريد الاليكتروني")]
         [RegularExpression("^\\S+@\\S+\\.\\S+$", ErrorMessage = "ادخل بريد الكتروني صحيح")]
         public string Email { get; set; }
-        [StringLength(255, ErrorMessage = "ادخل ع الاقل خمس ارقام", MinimumLength = 5)]
+        [StringLength(255, ErrorMessage = "ادخل ع الاقل 6احرف و ارقام", MinimumLength = 6)]
         [Required(ErrorMessage = "يجب ادخال الرقم السري")]
         public string Password { get; set; }
         [Required(ErrorMessage = "يجب ادخال رقم الهاتف")]

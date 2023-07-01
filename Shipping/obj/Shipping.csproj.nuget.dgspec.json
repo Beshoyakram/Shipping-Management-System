@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj": {}
+    "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj": {}
   },
   "projects": {
-    "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj": {
+    "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+        "projectUniqueName": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj",
         "projectName": "Shipping",
-        "projectPath": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\Shipping.csproj",
-        "packagesPath": "C:\\Users\\Azzazi\\.nuget\\packages\\",
-        "outputPath": "D:\\ITI\\GRADUATION PROJECT\\Shipping-Management-System\\Shipping\\obj\\",
+        "projectPath": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+        "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
+        "outputPath": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Azzazi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Beshoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

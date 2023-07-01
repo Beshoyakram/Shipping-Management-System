@@ -143,21 +143,21 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "6/29/2023 9:43:16 AM",
+                            Date = "30/06/2023 06:24:18 م",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "89cea0ae-00b5-4bd1-92a9-9185a07bbeff",
-                            Date = "6/29/2023 9:43:16 AM",
+                            Id = "6f7f5712-8875-4d91-8c0d-673b2eb759bd",
+                            Date = "30/06/2023 06:24:18 م",
                             Name = "المناديب",
                             NormalizedName = "المناديب"
                         },
                         new
                         {
-                            Id = "396e3f3f-6874-4228-ad7d-3bd9c8564580",
-                            Date = "6/29/2023 9:43:16 AM",
+                            Id = "bd2e8491-5539-4fd9-b12b-779fb537fdfb",
+                            Date = "30/06/2023 06:24:18 م",
                             Name = "التجار",
                             NormalizedName = "التجار"
                         });
@@ -194,7 +194,7 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = 1,
-                            ArabicName = "الصلاحيات",
+                            ArabicName = "صلاحيات المجموعات",
                             ClaimType = "Permissions",
                             ClaimValue = "Permissions.Controls.View",
                             RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
@@ -202,7 +202,7 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = 2,
-                            ArabicName = "الصلاحيات",
+                            ArabicName = "صلاحيات المجموعات",
                             ClaimType = "Permissions",
                             ClaimValue = "Permissions.Controls.Edit",
                             RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
@@ -210,7 +210,7 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = 3,
-                            ArabicName = "الصلاحيات",
+                            ArabicName = "صلاحيات المجموعات",
                             ClaimType = "Permissions",
                             ClaimValue = "Permissions.Controls.Delete",
                             RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
@@ -218,7 +218,7 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = 4,
-                            ArabicName = "الصلاحيات",
+                            ArabicName = "صلاحيات المجموعات",
                             ClaimType = "Permissions",
                             ClaimValue = "Permissions.Controls.Create",
                             RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
@@ -303,16 +303,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4a657f5f-ece0-4b7a-ab24-9fcf53de803e",
+                            ConcurrencyStamp = "b1d003f2-ac34-466c-b8b2-2d07c2527141",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEArtwmaO7lAtPUsmQGjO9CR2CYs0SLqhQD94MoBPjlqTsFBgmtyTzDgMjDO1IyJLUA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENc52v/o0AYhzgsYUKb8LWAXOHz2nZGGOtemuPhZxH269WHdMfrvrlhw75fmkY2zdg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a1ba6320-5a0c-4803-afd5-742a496b7f07",
+                            SecurityStamp = "2db41352-c2cd-4c61-a936-f621742b3c61",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"
@@ -337,10 +337,15 @@ namespace Shipping.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StateId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StateId");
 
                     b.ToTable("Branches");
                 });
@@ -586,6 +591,17 @@ namespace Shipping.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Shipping.Models.Branch", b =>
+                {
+                    b.HasOne("Shipping.Models.State", "State")
+                        .WithMany("Branches")
+                        .HasForeignKey("StateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("State");
+                });
+
             modelBuilder.Entity("Shipping.Models.City", b =>
                 {
                     b.HasOne("Shipping.Models.State", "State")
@@ -688,6 +704,8 @@ namespace Shipping.Migrations
 
             modelBuilder.Entity("Shipping.Models.State", b =>
                 {
+                    b.Navigation("Branches");
+
                     b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618

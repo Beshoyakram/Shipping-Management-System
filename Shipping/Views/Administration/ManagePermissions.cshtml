@@ -16,6 +16,7 @@
             <table class="table table-striped text-center">
                 <thead>
                     <tr>
+                        <th style="width:50px"><input type="checkbox" class="form-check-input" onClick="toggle(this)" /></th>
                         <th>الصلاحيه</th>
                         <th>عرض</th>
                         <th>اضافه</th>
@@ -24,9 +25,11 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     @for (int j = 0; j < Model.RoleCalims.Count; j += 4)
                     {
                         <tr>
+                            <td></td>
                             @foreach (var item in EnglishVsArabic.ModulesInEn_AR)
                             {
                                 if (item.Key == Model.RoleCalims[j].DisplayValue.Split('.')[1])
@@ -40,12 +43,25 @@
                             {
                                 if (@Model.RoleCalims[j].DisplayValue.Split('.')[1] != @Model.RoleCalims[i].DisplayValue.Split('.')[1])
                                 { continue; }
-
-                                <td class="">
+                                
+                                
+                                @*disabled Controls permissions in admin permissions*@
+                                if (@Model.RoleCalims[j].DisplayValue.Split('.')[1] == "Controls" && Model.RoleName == "Admin")
+                                {
+                                    <td class="">
+                                        <div class="form-check m-1 d-flex justify-content-center">
+                                            <input type="hidden" asp-for="@Model.RoleCalims[i].DisplayValue" />
+                                            <input disabled type="checkbox" checked class="form-check-input" />
+                                            <input type="hidden" asp-for="@Model.RoleCalims[i].IsSelected" class="form-check-input" />
+                                        </div>
+                                    </td>
+                                    continue; 
+                                }
+                                
+                                <td>
                                     <div class="form-check m-1 d-flex justify-content-center">
                                         <input type="hidden" asp-for="@Model.RoleCalims[i].DisplayValue" />
-                                        <input asp-for="@Model.RoleCalims[i].IsSelected" class="form-check-input" />
-
+                                        <input asp-for="@Model.RoleCalims[i].IsSelected" class="form-check-input foo" />
                                     </div>
                                 </td>
 
@@ -57,11 +73,24 @@
             <div asp-validation-summary="All" class="text-danger"></div>
         </div>
         <div style="position:relative">
-            <div class="card-footer" style="position:absolute; left:0;top:5px">
-            <button type="submit" class="btn btn-primary">حفظ</button>
+            <div class="card-footer d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary ms-2">حفظ</button>
             <a asp-action="ListRoles" class="btn btn-secondary">الغاء</a>
         </div>
         </div>
         
     </div>
 </form>
+
+
+@section Scripts
+{
+    <script>
+        function toggle(source) {
+            checkboxes = document.getElementsByClassName('foo');
+            for (var i = 0, n = checkboxes.length; i < n; i++) {
+                checkboxes[i].checked = source.checked;
+            }
+        }
+    </script>
+}

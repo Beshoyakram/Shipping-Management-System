@@ -19,8 +19,36 @@
                         <a class="nav-link text-dark" asp-area="" asp-action="ListRoles" asp-controller="Administration">الصلاحيات</a>
                     </li>
                 }
-
-
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Employees.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Employee">الموظفين</a>
+                    </li>
+                }
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Deliveries.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Delivery">المناديب</a>
+                    </li>
+                }
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Merchants.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Merchant">التجار</a>
+                    </li>
+                }
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Branches.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Branch">الافرع</a>
+                    </li>
+                }
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="State">المحافظات</a>
+                    </li>
+                }
             </ul>
             <ul class="navbar-nav me-auto">
                 @if (!User.Identity.IsAuthenticated)

@@ -44,13 +44,6 @@ namespace Shipping.Constants
             public const string Edit = "Permissions.Merchants.Edit";
             public const string Delete = "Permissions.Merchants.Delete";
         }
-        public static class Representative
-        {
-            public const string View = "Permissions.Representative.View";
-            public const string Create = "Permissions.Representative.Create";
-            public const string Edit = "Permissions.Representative.Edit";
-            public const string Delete = "Permissions.Representative.Delete";
-        }
         public static class Employees
         {
             public const string View = "Permissions.Employees.View";
@@ -58,6 +51,41 @@ namespace Shipping.Constants
             public const string Edit = "Permissions.Employees.Edit";
             public const string Delete = "Permissions.Employees.Delete";
         }
-
+        public static class Deliveries
+        {
+            public const string View = "Permissions.Deliveries.View";
+            public const string Create = "Permissions.Deliveries.Create";
+            public const string Edit = "Permissions.Deliveries.Edit";
+            public const string Delete = "Permissions.Deliveries.Delete";
+        }
+        public static class Orders
+        {
+            public const string View = "Permissions.Orders.View";
+            public const string Create = "Permissions.Orders.Create";
+            public const string Edit = "Permissions.Orders.Edit";
+            public const string Delete = "Permissions.Orders.Delete";
+        }
+        public static class Branches
+        {
+            public const string View = "Permissions.Branches.View";
+            public const string Create = "Permissions.Branches.Create";
+            public const string Edit = "Permissions.Branches.Edit";
+            public const string Delete = "Permissions.Branches.Delete";
+        }
+        public static class Staties
+        {
+            public const string View = "Permissions.Staties.View";
+            public const string Create = "Permissions.Staties.Create";
+            public const string Edit = "Permissions.Staties.Edit";
+            public const string Delete = "Permissions.Staties.Delete";
+        }
+        public static class Cities
+        {
+            public const string View = "Permissions.Cities.View";
+            public const string Create = "Permissions.Cities.Create";
+            public const string Edit = "Permissions.Cities.Edit";
+            public const string Delete = "Permissions.Cities.Delete";
+        }
+        
     }
 }
