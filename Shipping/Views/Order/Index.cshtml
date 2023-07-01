@@ -38,86 +38,46 @@
         </div>
     </div>
 
-    <table class="table table-hover table-bordered text-center my-4">
-        <tr style="background-color:#ddd;">
-            <th>
-                الرقم التسلسلي
-            </th>
-            <th>
-                التاريخ
-            </th>
-            <th>
-                بيانات العميل
-            </th>
-            <th>
-                المحافظة
-            </th>
-            <th>
-                المدينة
-            </th>
-            <th>
-                تكلفة الطلب
-            </th>
-            <th>
-                تعديل الطلب
-            </th>
-            <th>
-                تغيير الحالة
-            </th>
-            <th>
-                حذف
-            </th>
-            <th>
-                طباعة
-            </th>
-
-
-
-
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.Id
-                </td>
-                <td>
-                    @item.OrderDate
-                </td>
-                <td>
-                    @item.ClientName
-                    <br />
-                    @item.ClientPhoneNumber1
-
-                </td>
-                <td>
-                    @item.StateName
-                </td>
-                <td>
-                    @item.CityName
-                </td>
-                <td>
-                    @item.OrderCost
-                </td>
-                <td>
-                    <a class="btn btn-info">تعديل</a>
-                </td>
-                <td>
-                    <select class="form-control changeStatus" type="checkbox" data-id="@item.Id">
-                        @foreach (OrderStatus status in Enum.GetValues(typeof(OrderStatus)))
-                        {
-                            <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
-                        }
-                    </select>
-                </td>
-                <td>
-                    <a class="btn btn-info">حذف</a>
-                </td>
-                <td>
-                    <a class="btn btn-info">طباعة</a>
-                </td>
+    <table class="table table-hover table-bordered text-center my-4 ">
+        <thead>
+            <tr style="background-color:#ddd;">
+                <th>الرقم التسلسلي</th>
+                <th>التاريخ</th>
+                <th>بيانات العميل</th>
+                <th>المحافظة</th>
+                <th>المدينة</th>
+                <th>تكلفة الطلب</th>
+                <th>تعديل الطلب</th>
+                <th>تغيير الحالة</th>
+                <th>حذف</th>
+                <th>طباعة</th>
             </tr>
-        }
+        </thead>
+        <tbody id="TableBody">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.ClientName<br />@item.ClientPhoneNumber1</td>
+                    <td>@item.StateName</td>
+                    <td>@item.CityName</td>
+                    <td>@item.OrderCost</td>
+                    <td><a class="btn btn-info">تعديل</a></td>
+                    <td>
+                        <select class="form-select changeStatus" data-id="@item.Id">
+                            @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
+                            {
+                                <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
+                            }
+                        </select>
+                    </td>
+                    <td><a class="btn btn-info">حذف</a></td>
+                    <td><a class="btn btn-info">طباعة</a></td>
+                </tr>
+            }
+        </tbody>
+
     </table>
 </div>
 
@@ -135,29 +95,80 @@
                     type: 'POST',
                     data: { Id: Id, status: status },
                     success: function (response) {
-
+                        console.log("changed");
                     },
                     error: function (xhr, status, error) {
                         console.error(error);
                     }
                 });
             });
-        });
+         });
+         
+        //function work after making filter
+        function changeStatus(id)
+        {
+            var Id = id;
+            var ele = document.getElementById("status");
+            var status = ele.value;
+
+            $.ajax({
+                url: '/Order/ChangeStatus',
+                type: 'POST',
+                data: { Id: Id, status: status },
+                success: function (response) {
+                    console.log("changed");
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        }
 
         $(document).ready(function () {
             $('.showStatus').change(function () {
                 var status = $(this).val();
 
                 $.ajax({
-                    url: '/Order/Index',
+                    url: '/Order/GetOrersDependonStatus',
                     type: 'POST',
                     data: { status: status },
-                    success: function (response) {
-
-                    },
                     error: function (xhr, status, error) {
                         console.error(error);
+                    },
+                    success: function (response) {
+
+                        var table = document.getElementById("TableBody");
+                        table.innerHTML = "";
+                        
+                        if (response.length != 0)
+                        {
+                            for (let i = 0; i < response.length; i++) {
+                                table.innerHTML+=`
+                                        <tr>
+                                            <td>${response[i].id}</td>
+                                            <td>${response[i].orderDate }</td>
+                                            <td> ${response[i].clientName} <br/> ${response[i].clientPhoneNumber1}</td>
+                                            <td>${response[i].stateName}</td>
+                                            <td>${response[i].cityName}</td>
+                                            <td>${response[i].orderCost} </td>
+                                            <td> <a class="btn btn-info" > تعديل </a></td>
+                                            <td>
+                                                <select id="status" class="form-select" onchange="changeStatus(${response[i].id})"  data-id="${response[i].id}">
+                                                        <option selected="true" disabled value="${response[i].orderStatus}">${response[i].orderStatus}</option>
+                                                        @foreach(string status in Enum.GetNames(typeof(OrderStatus)))
+                                                        {
+                                                             <option value="@status">@status</option>
+                                                        }
+                                                </select>
+                                            </td>
+                                            <td> <a class="btn btn-info" > حذف </a></td>
+                                            <td><a class="btn btn-info" > طباعة </a></td>
+                                         </tr>`
+                            }
+                        }
+
                     }
+
                 });
             });
         });

@@ -22,7 +22,7 @@ namespace Shipping.Models
         public string ClientEmail { get; set; }
         public int OrderCost { get; set; }
         public int TotalWeight { get; set; }
-        public OrderStatus OrderStatus { get; set; } = OrderStatus.جديد;
+        public string OrderStatus { get; set; } ="جديد";
         public bool IsVillage { get; set; } = false;
         public bool IsDeleted { get; set; } = false;
 

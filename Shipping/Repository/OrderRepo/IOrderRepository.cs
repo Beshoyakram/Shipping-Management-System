@@ -7,8 +7,8 @@ namespace Shipping.Repository.OrderRepo
     {
         List<OrderViewModel> GetAllOrders();
         Task<Order> GetOrderById(int id);
-        List<OrderViewModel> GetOrderByStatus(OrderStatus orderStatus);
-        void UpdateStatus(Order order, OrderStatus status);
+        List<OrderViewModel> GetOrderByStatus(string orderStatus);
+        void UpdateStatus(Order order, string status);
         void Add(OrderViewModel orderViewModel);
     }
 }

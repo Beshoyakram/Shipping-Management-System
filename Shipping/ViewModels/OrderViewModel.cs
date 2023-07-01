@@ -22,7 +22,7 @@ namespace Shipping.ViewModels
         public Models.Type Type { get; set; }
         public ShippingType ShippingType { get; set; }
         public PaymentType PaymentType { get; set; }
-        public OrderStatus? OrderStatus { get; set; }
+        public string? OrderStatus { get; set; }
 
     }
 }

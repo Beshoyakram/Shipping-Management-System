@@ -26,7 +26,15 @@ namespace Shipping.Controllers
 
         #region ViewAll
         [HttpGet]
-        public IActionResult Index(OrderStatus? status = null)
+        public IActionResult Index()
+        {
+           
+            var Orders =  _orderRepository.GetAllOrders();
+            return View(Orders);
+        }
+
+        [HttpPost]
+        public IActionResult GetOrersDependonStatus(string? status = null)
         {
             List<OrderViewModel> Orders;
             if (status == null)
@@ -35,14 +43,14 @@ namespace Shipping.Controllers
             }
             else
             {
-                  Orders =  _orderRepository.GetOrderByStatus(status.Value);
+                Orders = _orderRepository.GetOrderByStatus(status);
             }
 
-            return View(Orders);
+            return Json(Orders);
         }
 
         [HttpPost]
-        public async Task<IActionResult> ChangeStatus(int Id, OrderStatus status)
+        public async Task<IActionResult> ChangeStatus(int Id, string status)
         {
             var order = await _orderRepository.GetOrderById(Id);
             _orderRepository.UpdateStatus(order, status);

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using Shipping.Models;
 using Shipping.ViewModels;
 using static NuGet.Packaging.PackagingConstants;
@@ -79,7 +80,7 @@ namespace Shipping.Repository.OrderRepo
             return order;
         }
 
-        public List<OrderViewModel> GetOrderByStatus(OrderStatus orderStatus)
+        public List<OrderViewModel> GetOrderByStatus(string orderStatus)
         {
             var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).ToList();
 
@@ -113,7 +114,7 @@ namespace Shipping.Repository.OrderRepo
 
         }
 
-        public void UpdateStatus(Order order, OrderStatus status)
+        public void UpdateStatus(Order order, string status)
         {
             if (order != null)
             {
@@ -121,6 +122,8 @@ namespace Shipping.Repository.OrderRepo
                 _myContext.SaveChanges();
             }
         }
+
+
     }
 
 }
