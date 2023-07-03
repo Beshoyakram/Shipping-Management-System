@@ -1,4 +1,4 @@
-﻿using Shipping.Models;
+﻿    using Shipping.Models;
 
 namespace Shipping.ViewModels
 {
@@ -14,10 +14,12 @@ namespace Shipping.ViewModels
         public bool IsVillage { get; set; } = false;
         public string? StateName { get; set; }
         public string CityName { get; set; }
-        //public string BranchName { get; set; }
+        public string BranchName { get; set; }
         public DateTime? OrderDate { get; set; }
         public string StreetName { get; set; }
         public string? Notes { get; set; }
+        public bool IsDeleted { get; set; }
+        public List<OrderProduct> orderProducts { get; set; }
 
         /* hussen */
 

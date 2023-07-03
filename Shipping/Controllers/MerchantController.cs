@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Shipping.Constants;
 using Shipping.Models;
+using Shipping.Repository.BranchRepo;
+using Shipping.Repository.CityRepo;
 using Shipping.Repository.MerchantRepo;
 using Shipping.ViewModels;
 
@@ -13,9 +15,13 @@ namespace Shipping.Controllers
     public class MerchantController : Controller
     {
         IMerchantRepository _merchantRepo;
-        public MerchantController(IMerchantRepository merchantRepo)
+        ICityRepository _cityRepository;
+        IbranchRepository _branchRepository;
+        public MerchantController(IMerchantRepository merchantRepo, ICityRepository CityRepository, IbranchRepository branchRepository)
         {
             _merchantRepo = merchantRepo;
+            _cityRepository = CityRepository;
+            _branchRepository = branchRepository;
         }
         #region ViewAll
         [Authorize(Permissions.Merchants.View)]
@@ -38,9 +44,11 @@ namespace Shipping.Controllers
 
             var States = _merchantRepo.GetAllStates();
             ViewBag.StatesList = new SelectList(States, "Name", "Name");
+            ViewBag.States = _merchantRepo.GetAllStates();
 
             var Cities = _merchantRepo.GetAllCities();
             ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
+
             return View();
         }
         [HttpPost]
@@ -71,9 +79,11 @@ namespace Shipping.Controllers
             {
                 var Branchs = _merchantRepo.GetAllBranches();
                 ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+                ViewBag.Branches = Branchs;
 
                 var States = _merchantRepo.GetAllStates();
                 ViewBag.StatesList = new SelectList(States, "Name", "Name");
+                ViewBag.States = States;
 
                 return View(merchantViewModel);
             }
@@ -141,5 +151,23 @@ namespace Shipping.Controllers
         }
 
         #endregion
+
+        #region  GetCitiesByState
+        public IActionResult GetCitiesByState(string state)
+        {
+            var cities = _cityRepository.GetAllByStateName(state);
+
+            return Json(cities);
+        }
+        #endregion
+
+        #region  GetBranchesByState
+        public IActionResult GetBranchesByState(string state)
+        {
+            var branches = _branchRepository.GetBranchesByStateName(state);
+
+            return Json(branches);
+        }
+        #endregion
     }
 }

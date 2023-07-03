@@ -42,26 +42,31 @@
                     <span asp-validation-for="Address" class="text-danger"></span>
                 </div> 
                 <div class="form-group col-md-4 p-3">
-                    <label asp-for="Government" class="control-label">المحافظة</label>
-                    <select asp-for="Government" class="form-select" asp-items="@ViewBag.StatesList">
-                        <option value="">-- Select Government --</option>
+                    <label asp-for="Government">المحافظة</label>
+                    <select id="state" asp-for="Government" class="form-control">
+                        <option value="">Select a state</option>
+                        @foreach (var state in ViewBag.States)
+                        {
+                            <option value="@state.Name">@state.Name</option>
+                        }
                     </select>
-                    <span asp-validation-for="Government" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-3">
+                    <label asp-for="City">المدينة</label>
+                    <select id="city" asp-for="City" class="form-control">
+                        <option value="">Select a city</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-4 p-3">
                     <label asp-for="BranchName" class="control-label">الفرع</label>
-                    <select asp-for="BranchName" class="form-select" asp-items="@ViewBag.BranchList">
+                    <select id="branch"  asp-for="BranchName" class="form-select" >
                         <option value="">-- Select Branch --</option>
                     </select>
                     <span asp-validation-for="BranchName" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-4 p-3">
-                    <label asp-for="City" class="control-label">المدينة</label>
-                    <select asp-for="City" class="form-select" asp-items="@ViewBag.CitiesList">
-                        <option value="">-- Select City --</option>
-                    </select>
-                    <span asp-validation-for="City" class="text-danger"></span>
-                </div>
+                </div>
+                
+                
                 
 
                 <div class="form-group col-md-4 p-3">
@@ -83,8 +88,60 @@
     </div>
 </div>
 @section scripts{
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            var stateDropdown = $('#state');
+            var cityDropdown = $('#city');
+
+            stateDropdown.on('change', function () {
+                var selectedState = stateDropdown.val();
+
+                cityDropdown.empty();
+
+                $.ajax({
+                    url: '/Merchant/GetCitiesByState',
+                    type: 'GET',
+                    data: { state: selectedState },
+                    success: function (result) {
+                        $.each(result, function (index, city) {
+                            cityDropdown.append($('<option></option>').val(city).text(city));
+                        });
+                    },
+                    error: function () {
+                        console.log('Failed to retrieve cities.');
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var stateDropdown = $('#state');
+            var branchDropdown = $('#branch');
+
+            stateDropdown.on('change', function () {
+                var selectedState = stateDropdown.val();
+
+                branchDropdown.empty();
+
+                $.ajax({
+                    url: '/Merchant/GetBranchesByState',
+                    type: 'GET',
+                    data: { state: selectedState },
+                    success: function (result) {
+                        $.each(result, function (index, branch) {
+                            branchDropdown.append($('<option></option>').val(branch).text(branch));
+                        });
+                    },
+                    error: function () {
+                        console.log('Failed to retrieve Branches.');
+                    }
+                });
+            });
+        });
+
+    </script>
 
 }

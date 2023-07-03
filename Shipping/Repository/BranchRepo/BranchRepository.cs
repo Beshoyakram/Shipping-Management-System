@@ -32,7 +32,7 @@ namespace Shipping.Repository.BranchRepo
             return _myContext.Branches.Where(o => o.IsDeleted == false && o.StateId == id).ToList();
         }
 
-        public Branch GetById(int id)
+        public Branch GetById(int? id)
         {
             return _myContext.Branches.Where(o => o.IsDeleted == false).FirstOrDefault(d => d.Id == id);
         }
@@ -52,6 +52,11 @@ namespace Shipping.Repository.BranchRepo
             oldBranch.Status = branch.Status;
 
             _myContext.SaveChanges();
+        }
+        public List<String> GetBranchesByStateName(string name)
+        {
+            var stateId = _myContext.States.Where(s => s.Name == name).FirstOrDefault().Id;
+            return _myContext.Branches.Where(c => c.StateId == stateId).Select(c => c.Name).ToList();
         }
     }
 }

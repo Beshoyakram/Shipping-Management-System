@@ -106,15 +106,14 @@ namespace Shipping.Controllers
         public IActionResult Add()
         {
             ViewBag.States = _stateRepository.GetAll();
-
-            ViewBag.Branches = _myContext.Branches.ToList(); ;
-
+            ViewBag.Branches = _myContext.Branches.ToList();
 
             return View();
         }
         [HttpPost]
         public IActionResult Add(OrderViewModel orderViewModel)
         {
+
             if (ModelState.IsValid)
             {
                 _orderRepository.Add(orderViewModel);
@@ -145,7 +144,7 @@ namespace Shipping.Controllers
             if (string.IsNullOrWhiteSpace(query)) { Orders = _orderRepository.GetAllOrders().ToList(); }
             else
             {
-                Orders = _orderRepository.GetAllOrders().Where(i => i.ClientName.Contains(query)).ToList();
+                Orders = _orderRepository.GetAllOrders().Where(i => i.ClientName.ToUpper().Contains(query.ToUpper())).ToList();
 
             }
             var x = ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
@@ -165,12 +164,15 @@ namespace Shipping.Controllers
 
             var delivery = await _deliveryRepository.GetAll(null);
 
-            if (string.IsNullOrWhiteSpace(query)) { Orders = _orderRepository.GetAllOrders().ToList(); }
+            if (string.IsNullOrWhiteSpace(query)) { 
+                Orders = _orderRepository.GetAllOrders().ToList();
+                RedirectToAction("Index");
+            }
             else
             {
 
 
-                var deliveryAfterFilteration = delivery.Where(x => x.DeliverName.Contains(query)).ToList();
+                var deliveryAfterFilteration = delivery.Where(x => x.DeliverName.ToUpper().Contains(query.ToUpper())).ToList();
                 foreach (var item in deliveryAfterFilteration)
                 {
                     var ordersAfterFilter = _orderRepository.GetAllOrders().Where(i => i.DeliveryId == item.OrignalIdOnlyInDeliveryTable).ToList();
@@ -191,6 +193,68 @@ namespace Shipping.Controllers
             return View("Index", Orders);
         }
         #endregion
+        #endregion
+
+
+        #region edit
+
+        public async Task<IActionResult> Edit(int Id)
+        {
+            ViewBag.States = _stateRepository.GetAll();
+
+
+
+            ViewBag.Branches = _myContext.Branches.ToList();
+
+            var orderViewModel = await _orderRepository.OrderViewModelById(Id);
+
+            ViewBag.Cities = _cityRepository.GetAllByStateName(orderViewModel.StateName).ToList();
+
+            return View(orderViewModel);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditAsync(int Id, OrderViewModel orderViewModel)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var order = await _orderRepository.GetOrderById(Id);
+                _orderRepository.Edit(order, orderViewModel);
+                return Redirect("/order/index");
+            }
+
+            ViewBag.States = _stateRepository.GetAll();
+            ViewBag.Branches = _myContext.Branches.ToList();
+            return View(orderViewModel);
+        }
+
+        #endregion
+
+        #region Delete
+        [HttpGet, ActionName("Delete")]
+        public async Task<IActionResult> DeleteAsync(int Id)
+        {
+            var order = await _orderRepository.GetOrderById(Id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            return View(order);
+        }
+
+        [HttpPost, ActionName("DeleteConfirmed")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmedAsync(int Id)
+        {
+            var order = await _orderRepository.GetOrderById(Id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+            _orderRepository.Delete(order);
+            return RedirectToAction("Index");
+        }
         #endregion
 
     }

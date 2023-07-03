@@ -13,14 +13,18 @@
     <div class="row ">
         
         <div class="col-2">
-            <form method="get" action="/Merchant/Index">
-                <div>
-                    <label>بحث</label>
-                    <input type="text" name="Name" id="Name" class="form form-control" />
-                    <input type="submit" value="بحث" class="btn btn-primary  m-1" />
-                </div>
+            @using (Html.BeginForm("Search", "City", FormMethod.Get))
+            {
+                @foreach (var item in Model)
+                {
+                    int stateId = item.StateId;
+                    @Html.Hidden("id", stateId)
 
-            </form>
+                }
+
+                <input type="text" name="query" />
+                <input type="submit" class="btn btn-primary" value="بحث" />
+            }
         </div>
     </div>
     <table class="table table-hover table-bordered text-center my-4">

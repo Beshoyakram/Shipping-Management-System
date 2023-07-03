@@ -15,6 +15,7 @@ namespace Shipping.Repository.OrderRepo
             _myContext = myContext;
         }
 
+        #region AddOrder
         public async void Add(OrderViewModel orderViewModel)
         {
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
@@ -35,15 +36,20 @@ namespace Shipping.Repository.OrderRepo
                 TotalWeight = orderViewModel.TotalWeight,
                 Type = orderViewModel.Type,
                 StateId = city.StateId,
-                BranchId = orderViewModel.BranchId,
+                
+                orderProducts = orderViewModel.orderProducts
 
 
             };
+            order.BranchId = int.Parse(orderViewModel.BranchName);
 
             _myContext.Orders.Add(order);
             _myContext.SaveChanges();
         }
 
+        #endregion
+
+        #region GetAllOrders
         public List<OrderViewModel> GetAllOrders()
         {
             var Orders = _myContext.Orders.Include(o => o.City).ThenInclude(c => c.State).ToList();
@@ -78,7 +84,9 @@ namespace Shipping.Repository.OrderRepo
             }
             return orderViewModels;
         }
+        #endregion
 
+        #region GetOrderById
         public async Task<Order> GetOrderById(int id)
         {
             var order = _myContext.Orders.FirstOrDefault(o => o.SerialNumber == id);
@@ -86,6 +94,9 @@ namespace Shipping.Repository.OrderRepo
             return order;
         }
 
+        #endregion
+
+        #region GetOrdersByStatus
         public List<OrderViewModel> GetOrderByStatus(string orderStatus)
         {
             var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).ToList();
@@ -122,6 +133,9 @@ namespace Shipping.Repository.OrderRepo
 
         }
 
+        #endregion
+
+        #region UpdateStatus
         public void UpdateStatus(Order order, string status)
         {
             if (order != null)
@@ -131,6 +145,9 @@ namespace Shipping.Repository.OrderRepo
             }
         }
 
+        #endregion
+
+        #region UpdateDelivery
         public void UpdateDelivery(Order order, int DeliveryId)
         {
             if (order != null)
@@ -142,7 +159,9 @@ namespace Shipping.Repository.OrderRepo
             }
         }
 
+        #endregion
 
+        #region GenerateTable
         public List<string> GenerateTable(OrdersPlusDeliverysViewModel OrdersPlusDeliverys)
         {
             List<string> Rows = new List<string>();
@@ -196,6 +215,87 @@ namespace Shipping.Repository.OrderRepo
             return Rows;
 
         }
+
+        #endregion
+
+        #region GetOrderViewModelById
+        public async Task<OrderViewModel> OrderViewModelById(int id)
+        {
+            var order = await _myContext.Orders.Include(e => e.City).ThenInclude(c => c.State).FirstOrDefaultAsync(o => o.SerialNumber == id);
+            var orderProducts = await _myContext.OrderProducts.Where(o => o.OrderId == id).ToListAsync();
+
+            OrderViewModel orderViewModel = new OrderViewModel()
+            {
+                CityName = order.City.Name,
+                Id = order.SerialNumber,
+                ClientName = order.ClientName,
+                ClientEmail = order.ClientEmail,
+                ClientPhoneNumber1 = order.ClientPhoneNumber1,
+                ClientPhoneNumber2 = order.ClientPhoneNumber2,
+                Notes = order.Notes,
+                OrderCost = order.OrderCost,
+                PaymentType = order.PaymentType,
+                ShippingType = order.ShippingType,
+                StreetName = order.StreetName,
+                TotalWeight = order.TotalWeight,
+                Type = order.Type,
+                IsVillage = order.IsVillage,
+                IsDeleted = order.IsDeleted,
+                StateName = order.City.State.Name,
+                OrderDate = order.Date,
+                OrderStatus = order.OrderStatus,
+                orderProducts = orderProducts
+            };
+            return orderViewModel;
+        }
+        #endregion
+
+        #region Delete
+        public void Delete(Order order)
+        {
+            order.IsDeleted = true;
+            _myContext.SaveChanges();
+        }
+        #endregion
+
+        #region EditOrder
+        public void Edit(Order order, OrderViewModel orderViewModel)
+        {
+            var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
+            if (orderViewModel != null)
+            {
+                foreach (var item in orderViewModel.orderProducts)
+                {
+                    var existingProduct = _myContext.OrderProducts.FirstOrDefault(o => o.ProductName == item.ProductName && o.Id == order.SerialNumber);
+                    if (existingProduct != null)
+                    {
+                        _myContext.OrderProducts.Remove(existingProduct);
+                    }
+                }
+            }
+            if (order != null)
+            {
+                order.CityId = city.Id;
+                order.IsVillage = orderViewModel.IsVillage;
+                order.ClientEmail = orderViewModel.ClientEmail;
+                order.ClientName = orderViewModel.ClientName;
+                order.ClientPhoneNumber1 = orderViewModel.ClientPhoneNumber1;
+                order.ClientPhoneNumber2 = orderViewModel.ClientPhoneNumber2;
+                order.Notes = orderViewModel.Notes;
+                order.IsDeleted = orderViewModel.IsDeleted;
+                order.OrderCost = orderViewModel.OrderCost;
+                order.PaymentType = orderViewModel.PaymentType;
+                order.ShippingType = orderViewModel.ShippingType;
+                order.StreetName = orderViewModel.StreetName;
+                order.TotalWeight = orderViewModel.TotalWeight;
+                order.Type = orderViewModel.Type;
+                order.StateId = city.StateId;
+                order.orderProducts = orderViewModel.orderProducts;
+
+                _myContext.SaveChanges();
+            }
+        } 
+        #endregion
 
     }
 

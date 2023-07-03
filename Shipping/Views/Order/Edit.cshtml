@@ -1,12 +1,11 @@
 ﻿@model OrderViewModel
 @{
-    ViewData["Title"] = "Add";
-    //string type = "";
+    ViewData["Title"] = "تعديل";
 }
 
 
 <div class="bg-light rounded my-4 row">
-    <h2 class="p-4 fw-bold">اضافة طلب جديد</h2>
+    <h2 class="p-4 fw-bold">تعديب الطلب</h2>
 </div>
 
 
@@ -15,7 +14,7 @@
 <div class="row  bg-light rounded my-4">
     <div class="col-md-12">
 
-        <form asp-controller="Order" asp-action="Add" class="" method="post">
+        <form asp-controller="Order" asp-action="Edit" class="" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
 
             <div class="form-group col-md-4 p-3">
@@ -24,6 +23,7 @@
                     @foreach (var item in Enum.GetValues(typeof(Shipping.Models.Type)))
                     {
                         <option value="@item">@item</option>
+
                     }
                 </select>
             </div>
@@ -51,7 +51,7 @@
 
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="StateName">المحافظة</label>
-                    <select id="state" class="form-control" asp-for="StateName">
+                    <select id="state" name="stateId" class="form-control state" asp-for="StateName">
                         <option value="">Select a state</option>
                         @foreach (var state in ViewBag.States)
                         {
@@ -63,10 +63,14 @@
                     <label asp-for="CityName">المدينة</label>
                     <select id="city" asp-for="CityName" class="form-control">
                         <option value="">Select a city</option>
+                        @foreach (var city in ViewBag.Cities)
+                        {
+                            <option value="@city">@city</option>
+                        }
                     </select>
                 </div>
                 <div class="form-group col-md-4 p-3">
-                    <label asp-for="StreetName">الشارع والقرية</label>
+                    <label asp-for="StreetName" required>الشارع والقرية</label>
                     <input type="text" class="form-control" asp-for="StreetName">
                     <span asp-validation-for="StreetName" class="text-danger"></span>
                 </div>
@@ -98,12 +102,13 @@
 
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="BranchName">الفرع</label>
-                    <select class="form-control" asp-for="BranchName">
+                    <select class="form-control" asp-for="BranchName" required>
                         @foreach (Branch item in ViewBag.Branches)
                         {
-                            <option value="@item.Id">@item.Name</option>
+                            <option value="@item.Name">@item.Name</option>
                         }
                     </select>
+
                 </div>
 
                 <div class="form-group  col-md-8 p-3">
@@ -118,6 +123,24 @@
                             </tr>
                         </thead>
                         <tbody id="products-table-body">
+                            @for (int i = 0; i < Model.orderProducts.Count; i++)
+                            {
+                                <tr>
+                                    <td>
+                                        <input name="orderProducts[@i].ProductName" value="@Model.orderProducts[i].ProductName" class="form-control" type="text">
+                                    </td>
+                                    <td>
+                                        <input name="orderProducts[@i].ProductQuantity" value="@Model.orderProducts[i].ProductQuantity" class="form-control" type="number">
+                                    </td>
+                                    <td>
+                                        <input name="orderProducts[@i].Weight" value="@Model.orderProducts[i].Weight" class="form-control" type="text">
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" onclick="removeRow(this)">حذف</button>
+                                    </td>
+                                </tr>
+                            }
+
                         </tbody>
                     </table>
                 </div>
@@ -134,11 +157,15 @@
                     <input type="text" class="form-control" asp-for="TotalWeight">
                     <span asp-validation-for="TotalWeight" class="text-danger"></span>
                 </div>
-
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="Notes">ملاحظات</label>
+                    <input type="text" class="form-control" asp-for="Notes">
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
             </div>
 
             <div class="m-3" style="position: relative;height: 10vh;">
-                <button type="submit" class="btn btn-primary px-3 " style="position: absolute;left: 0;bottom: 15%;">اضافة</button>
+                <button type="submit" class="btn btn-success px-3 " style="position: absolute;left: 0;bottom: 15%;">حفظ</button>
             </div>
         </form>
     </div>
@@ -148,7 +175,6 @@
 
 @section Scripts{
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
@@ -179,26 +205,31 @@
             });
         });
 
+    </script>
+    <script>
+        function removeRow(element) {
+            $(element).closest("tr").remove();
+        }
+    </script>
 
+    <script>
 
         $(document).ready(function () {
-            // Add an event listener to the "Add Product" button
             $("#add-product-btn").click(function () {
                 addProductRow();
             });
         });
 
         function addProductRow() {
-            // Get the table body where the products are listed
             var tableBody = $("#products-table-body");
-            var index = tableBody.children().length; // Get the current number of rows
+            var index = tableBody.children().length;
 
-            // Create a new row with input fields for the product details
+
             var newRow = $("<tr>");
             newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].ProductName").attr("class", "form-control").attr("type", "text")));
             newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].ProductQuantity").attr("class", "form-control").attr("type", "number")));
             newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].Weight").attr("class", "form-control").attr("type", "number").on("input", function () {
-                // Calculate the total weight of the products
+
                 var totalWeight = 0;
                 tableBody.find("input[name$='.Weight']").each(function () {
                     totalWeight += parseInt($(this).val()) || 0;

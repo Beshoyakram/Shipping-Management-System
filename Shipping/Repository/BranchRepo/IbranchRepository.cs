@@ -6,12 +6,12 @@ namespace Shipping.Repository.BranchRepo
     {
         List<Branch> GetAll();
         List<Branch> GetBranchesByStateId(int id);
-        Branch GetById(int id);
+        Branch GetById(int? id);
 
         void Insert(Branch branch);
         void Update(int id, Branch branch);
         void Delete(int id);
 
-
+        List<String> GetBranchesByStateName(string name);
     }
 }

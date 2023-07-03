@@ -1,0 +1,20 @@
+﻿@model Order
+
+<h2>حذف طلب</h2>
+<p>هل انت متأكد من أنك تريد حذف هذا الطلب ؟ </p>
+<div class="d-flex m-auto">
+<dl class="row">
+    <dt class="col-sm-3">الرقم التسلسلي</dt>
+    <dd class="col-sm-9">@Model.SerialNumber</dd>
+    <dt class="col-sm-3">اسم العميل</dt>
+    <dd class="col-sm-9">@Model.ClientName</dd>
+    <dt class="col-sm-3">تاريخ الطلب</dt>
+    <dd class="col-sm-9">@Model.Date</dd>
+</dl>
+</div>
+<form asp-action="DeleteConfirmed" asp-route-Id="@Model.SerialNumber" method="post">
+    <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

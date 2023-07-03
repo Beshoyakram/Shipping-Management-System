@@ -84,7 +84,22 @@ namespace Shipping.Controllers
 
             return RedirectToAction(nameof(Index), new { stateId = city.StateId });
         }
-            #endregion
+        #endregion
 
+        #region search
+        public IActionResult Search(int id, string query)
+        {
+
+            List<City> city;
+            if (string.IsNullOrWhiteSpace(query)) { city = _cityRepository.GetAllByState(id).ToList(); }
+            else
+            {
+                city = _cityRepository.GetAllByState(id).Where(i => i.Name.ToUpper().Contains(query.ToUpper())).ToList();
+
+            }
+            return View("Index", city);
         }
+
+        #endregion
+    }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JRvTwuSmZX2RfoZ1NxKtsOF+qkEYCJ+4FUua3lznYuraAMTjRcdyNU8QX+FADNW3RAkhoSDOrjMl/Fi8CKfKVA==",
+  "dgSpecHash": "2R/35hE2ZVZCwsx+Ig1JfpXKHuYa2lkRxUjNBLV3rtz/R1apBZtZJxDS+34olTD77K3GJ7KLH+BzsV9BO3TuTw==",
   "success": true,
-  "projectFilePath": "F:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\Shipping.csproj",
+  "projectFilePath": "F:\\Shipping-Management-System\\Shipping\\Shipping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Beshoy\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Beshoy\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

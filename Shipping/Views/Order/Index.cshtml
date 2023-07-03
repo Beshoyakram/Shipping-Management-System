@@ -72,7 +72,7 @@
                     <td>@item.CityName</td>
                     <td>@item.OrderCost</td>
 
-                    <td><a class="btn btn-info">تعديل</a></td>
+                    <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
                     <td>
                         <select id="status_@item.Id" class="form-select" onchange='changeStatus(@item.Id)'>
                             @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
@@ -81,7 +81,7 @@
                             }
                         </select>
                     </td>
-                    <td><a class="btn btn-info">حذف</a></td>
+                    <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
                     <td><a class="btn btn-info">طباعة</a></td>
                     <td>
                         <select id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>

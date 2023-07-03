@@ -36,5 +36,5 @@
     </div>
   
     <button type="submit" class="btn btn-primary">حفظ</button>
-    <a href="@Url.Action("Index")" class="btn btn-secondary">إلغاء</a>
+    <a asp-controller="City" asp-action="Index" asp-route-stateId="@Model.StateId" class="btn btn-secondary">إلغاء</a>
 }
