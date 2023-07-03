@@ -15,6 +15,11 @@ namespace Shipping.Models
         public int StateId { get; set; }
         [ForeignKey("City")]
         public int CityId { get; set; }
+        [ForeignKey("Delivery")]
+        public int? DeliveryId { get; set; }
+
+        [ForeignKey("Branch")]
+        public int? BranchId { get; set; }
         public DateTime? Date { get; set; } = DateTime.Now;
         public string ClientName { get; set; }
         public int ClientPhoneNumber1 { get; set; }
@@ -35,6 +40,8 @@ namespace Shipping.Models
         public PaymentType PaymentType { get; set; }
 
 
+        public virtual Delivery? Delivery { get; set; }
+        public virtual Branch? Branch { get; set; }
 
         public virtual Merchant? Merchant { get; set; }
         //public virtual State State { get; set; }

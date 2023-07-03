@@ -7,6 +7,10 @@ using static NuGet.Packaging.PackagingConstants;
 using Shipping.Repository.StateRepo;
 using Shipping.Repository.CityRepo;
 using Shipping.Repository.OrderRepo;
+using Shipping.Repository.DeliveryRepo;
+using Shipping.Repository.BranchRepo;
+using Microsoft.AspNetCore.Identity;
+using Azure;
 
 namespace Shipping.Controllers
 {
@@ -15,26 +19,58 @@ namespace Shipping.Controllers
         IStateRepository _stateRepository;
         ICityRepository _cityRepository;
         IOrderRepository _orderRepository;
+        IDeliveryRepository _deliveryRepository;
+        IbranchRepository _branchRepository;
+
+        UserManager<ApplicationUser> _userManager;
         MyContext _myContext;
-        public OrderController(IStateRepository stateRepository, ICityRepository cityRepository, MyContext myContext, IOrderRepository orderRepository)
+        public OrderController(IStateRepository stateRepository, ICityRepository cityRepository, MyContext myContext, IOrderRepository orderRepository, IDeliveryRepository deliveryRepository, IbranchRepository ibranchRepository, UserManager<ApplicationUser> userManager)
         {
             _stateRepository = stateRepository;
             _cityRepository = cityRepository;
             _myContext = myContext;
             _orderRepository = orderRepository;
+            _deliveryRepository = deliveryRepository;
+            _branchRepository = ibranchRepository;
+            _userManager = userManager;
+
         }
 
         #region ViewAll
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-           
-            var Orders =  _orderRepository.GetAllOrders();
+
+            var Orders = _orderRepository.GetAllOrders();
+            ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
+
+
+            ViewBag.Branches = _myContext.Branches.ToList();
             return View(Orders);
         }
 
+
         [HttpPost]
-        public IActionResult GetOrersDependonStatus(string? status = null)
+        public async Task<IActionResult> ChangeDelivery(int Id, int deliveryId)
+        {
+
+            var order = await _orderRepository.GetOrderById(Id);
+
+            _orderRepository.UpdateDelivery(order, deliveryId);
+
+            var Orders = _orderRepository.GetAllOrders();
+            ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
+
+
+            ViewBag.Branches = _myContext.Branches.ToList();
+            return View("Index", Orders);
+        }
+
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> GetOrersDependonStatus(string? status = null)
         {
             List<OrderViewModel> Orders;
             if (status == null)
@@ -45,8 +81,13 @@ namespace Shipping.Controllers
             {
                 Orders = _orderRepository.GetOrderByStatus(status);
             }
+            var dileveryList = await _deliveryRepository.GetAll(null);
+            var OrdersPlusDeliverys = new OrdersPlusDeliverysViewModel();
+            OrdersPlusDeliverys.orders = Orders;
+            OrdersPlusDeliverys.deliveries = dileveryList;
 
-            return Json(Orders);
+            var Rows = _orderRepository.GenerateTable(OrdersPlusDeliverys);
+            return Json(Rows);
         }
 
         [HttpPost]
@@ -65,7 +106,7 @@ namespace Shipping.Controllers
         public IActionResult Add()
         {
             ViewBag.States = _stateRepository.GetAll();
-            
+
             ViewBag.Branches = _myContext.Branches.ToList(); ;
 
 
@@ -74,7 +115,7 @@ namespace Shipping.Controllers
         [HttpPost]
         public IActionResult Add(OrderViewModel orderViewModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 _orderRepository.Add(orderViewModel);
                 return Redirect("/order/index");
@@ -86,7 +127,7 @@ namespace Shipping.Controllers
             return View(orderViewModel);
         }
         [HttpGet]
-        public  IActionResult GetCitiesByState(string state)
+        public IActionResult GetCitiesByState(string state)
         {
             var cities = _cityRepository.GetAllByStateName(state);
 
@@ -94,5 +135,63 @@ namespace Shipping.Controllers
         }
 
         #endregion
+
+        #region search
+
+        #region SearchByClientName
+        public async Task<IActionResult> SearchByClientName(string query)
+        {
+            List<OrderViewModel> Orders;
+            if (string.IsNullOrWhiteSpace(query)) { Orders = _orderRepository.GetAllOrders().ToList(); }
+            else
+            {
+                Orders = _orderRepository.GetAllOrders().Where(i => i.ClientName.Contains(query)).ToList();
+
+            }
+            var x = ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
+            ViewBag.Deliverys = await _deliveryRepository.GetAll(null);
+
+
+            ViewBag.Branches = _myContext.Branches.ToList();
+            return View("Index", Orders);
+        }
+
+        #endregion
+
+        #region SearchByDeliveryName
+        public async Task<IActionResult> SearchByDeliveryName(string query)
+        {
+            List<OrderViewModel> Orders = new List<OrderViewModel>();
+
+            var delivery = await _deliveryRepository.GetAll(null);
+
+            if (string.IsNullOrWhiteSpace(query)) { Orders = _orderRepository.GetAllOrders().ToList(); }
+            else
+            {
+
+
+                var deliveryAfterFilteration = delivery.Where(x => x.DeliverName.Contains(query)).ToList();
+                foreach (var item in deliveryAfterFilteration)
+                {
+                    var ordersAfterFilter = _orderRepository.GetAllOrders().Where(i => i.DeliveryId == item.OrignalIdOnlyInDeliveryTable).ToList();
+                    foreach (var item1 in ordersAfterFilter)
+                    {
+                        Orders.Add(item1);
+                    }
+                }
+
+
+            }
+
+            ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
+            ViewBag.Deliverys = await _deliveryRepository.GetAll(null);
+
+
+            ViewBag.Branches = _myContext.Branches.ToList();
+            return View("Index", Orders);
+        }
+        #endregion
+        #endregion
+
     }
 }

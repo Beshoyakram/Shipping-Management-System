@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shipping.Models;
 
@@ -11,9 +12,11 @@ using Shipping.Models;
 namespace Shipping.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20230702154630_AssignDeliveryToOrder")]
+    partial class AssignDeliveryToOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,21 +146,21 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "03/07/2023 03:21:33 ص",
+                            Date = "02/07/2023 06:46:29 م",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "7bea046d-b91b-46bf-9f43-7d6f1e6c3e3b",
-                            Date = "03/07/2023 03:21:33 ص",
+                            Id = "9e0477da-b37a-43c5-ad52-f93d8dcbf291",
+                            Date = "02/07/2023 06:46:29 م",
                             Name = "المناديب",
                             NormalizedName = "المناديب"
                         },
                         new
                         {
-                            Id = "2a6ce09a-7811-4081-bae4-ddbfc971aa35",
-                            Date = "03/07/2023 03:21:33 ص",
+                            Id = "517ef5a6-14f0-43a5-8879-27c6f7281a38",
+                            Date = "02/07/2023 06:46:29 م",
                             Name = "التجار",
                             NormalizedName = "التجار"
                         });
@@ -303,16 +306,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e4d3cf17-5a08-4142-8e3c-4a8826f0f0dd",
+                            ConcurrencyStamp = "b7674137-128f-4d0d-972f-b298bcef3441",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKSxXHdKXucVj6xVtOj73YO1yIjfs9hALpcTNOt/HiXFhg+GFfuSVax2Vhwrq1qrVw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMnjHZVnN5Ora1dvT2CYygPr0+Nz8Z5Cs1yrVquU39oGXI8Tb41VxIg2k0y02qBE2A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "99d5a0d4-24d0-43a1-a407-e597d0914dae",
+                            SecurityStamp = "877fe84f-c964-41dd-bdca-9d5a2ac5bd70",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"
@@ -650,33 +653,6 @@ namespace Shipping.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("States");
-                });
-
-            modelBuilder.Entity("Shipping.Models.WeightSetting", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Addition_Cost")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Cost")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("weightSettings");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Addition_Cost = 100,
-                            Cost = 10
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>

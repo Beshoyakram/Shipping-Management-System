@@ -14,10 +14,19 @@ namespace Shipping.ViewModels
         public bool IsVillage { get; set; } = false;
         public string? StateName { get; set; }
         public string CityName { get; set; }
-        public string BranchName { get; set; }
+        //public string BranchName { get; set; }
         public DateTime? OrderDate { get; set; }
         public string StreetName { get; set; }
         public string? Notes { get; set; }
+
+        /* hussen */
+
+        public int? BranchId { get; set; }
+
+        public int? DeliveryId { get; set; }
+
+
+        /* hussen*/
 
         public Models.Type Type { get; set; }
         public ShippingType ShippingType { get; set; }

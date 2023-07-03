@@ -18,6 +18,7 @@ namespace Shipping.Repository.OrderRepo
         public async void Add(OrderViewModel orderViewModel)
         {
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
+
             Order order = new Order()
             {
                 CityId = city.Id,
@@ -33,7 +34,9 @@ namespace Shipping.Repository.OrderRepo
                 StreetName = orderViewModel.StreetName,
                 TotalWeight = orderViewModel.TotalWeight,
                 Type = orderViewModel.Type,
-                StateId = city.StateId
+                StateId = city.StateId,
+                BranchId = orderViewModel.BranchId,
+
 
             };
 
@@ -65,7 +68,10 @@ namespace Shipping.Repository.OrderRepo
                     IsVillage = order.IsVillage,
                     StateName = order.City.State.Name,
                     OrderDate = order.Date,
-                    OrderStatus = order.OrderStatus
+                    OrderStatus = order.OrderStatus,
+                    BranchId = order.BranchId,
+                    DeliveryId = order.DeliveryId
+
 
 
                 });
@@ -105,7 +111,9 @@ namespace Shipping.Repository.OrderRepo
                     IsVillage = order.IsVillage,
                     StateName = order.City.State.Name,
                     OrderDate = order.Date,
-                    OrderStatus = order.OrderStatus
+                    OrderStatus = order.OrderStatus,
+                    DeliveryId = order.DeliveryId,
+                    BranchId = order.BranchId
 
 
                 });
@@ -123,6 +131,71 @@ namespace Shipping.Repository.OrderRepo
             }
         }
 
+        public void UpdateDelivery(Order order, int DeliveryId)
+        {
+            if (order != null)
+            {
+                order.OrderStatus = "قيد_الانتظار";
+                order.DeliveryId = DeliveryId;
+
+                _myContext.SaveChanges();
+            }
+        }
+
+
+        public List<string> GenerateTable(OrdersPlusDeliverysViewModel OrdersPlusDeliverys)
+        {
+            List<string> Rows = new List<string>();
+            if (OrdersPlusDeliverys.orders.Count != 0)
+            {
+                for (int i = 0; i < OrdersPlusDeliverys.orders.Count; i++)
+                {
+                    string x = $"<tr>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].Id}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].OrderDate}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].ClientName} < br/> {OrdersPlusDeliverys.orders[i].ClientPhoneNumber1}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].StateName}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].CityName}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].OrderCost} </td>" +
+                                    $"<td> <a class='btn btn-info' > تعديل</a></td>" +
+                                    "<td>" +
+                                    $"<select id = 'status_{OrdersPlusDeliverys.orders[i].Id}' class='form-select' onchange='changeStatus({OrdersPlusDeliverys.orders[i].Id})'>" +
+                        $"<option selected = 'true' disabled value = '{OrdersPlusDeliverys.orders[i].OrderStatus}'>{OrdersPlusDeliverys.orders[i].OrderStatus}</option>";
+                    foreach (string statusName in Enum.GetNames(typeof(OrderStatus)))
+                    {
+                        x += $"<option value = '{statusName}'>{statusName} </option>";
+                    }
+                    x += $"</select>" +
+                            $"</td>" +
+                            $"<td><a class= 'btn btn-info'> حذف</a></td>" +
+                            "<td><a class= 'btn btn-info'> طباعة</ a></ td >" +
+                            "<td>" +
+                                $"<select id = 'delivery_{OrdersPlusDeliverys.orders[i].Id}' class= 'form-select' onchange = 'AssignDelivery({OrdersPlusDeliverys.orders[i].Id})'>" +
+                                $"<option value = '' > اختر المندوب</option>";
+                    for (int j = 0; j < OrdersPlusDeliverys.deliveries.Count; j++)
+                    {
+                        var item1 = OrdersPlusDeliverys.deliveries[j];
+                        if (OrdersPlusDeliverys.orders[i].DeliveryId == null)
+                            OrdersPlusDeliverys.orders[i].DeliveryId = -1;
+
+                        if (item1.BranchId == OrdersPlusDeliverys.orders[i].BranchId)
+                        {
+                            string type = "";
+                            if (item1.OrignalIdOnlyInDeliveryTable == OrdersPlusDeliverys.orders[i].DeliveryId)
+                                type = "selected";
+                            else
+                                type = "";
+
+                            x += $"<option {type} value = '{item1.OrignalIdOnlyInDeliveryTable}' >{item1.Name}</option>";
+                        }
+                    }
+                    x += "</select></td></tr>";
+                    Rows.Add(x);
+                }
+            }
+            return Rows;
+
+        }
 
     }
 

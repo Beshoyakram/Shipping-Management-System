@@ -11,12 +11,18 @@
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">الصفحة الرئيسية</a>
                 </li>
                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Controls.View).Result.Succeeded)
                 {
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-action="ListRoles" asp-controller="Administration">الصلاحيات</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            الإعدادات
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="@Url.Action("ListRoles", "Administration")">الصلاحيات</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("Edit", "WeightSettings")">تعديل تكلفة الشحن</a></li>
+                        </ul>
                     </li>
                 }
                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Employees.View).Result.Succeeded)
@@ -47,6 +53,12 @@
                 {
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="State">المحافظات</a>
+                    </li>
+                } 
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Order">الطلبات</a>
                     </li>
                 }
             </ul>

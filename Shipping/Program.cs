@@ -38,6 +38,7 @@ namespace Shipping
             builder.Services.AddScoped<ICityRepository, CityRepository>();
             builder.Services.AddScoped<IbranchRepository, BranchRepository>();
             builder.Services.AddScoped<IOrderRepository, OrderRepositorty>();
+            
 
 
             //For igonring reload page when change permissions

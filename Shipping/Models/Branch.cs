@@ -17,6 +17,7 @@ namespace Shipping.Models
 
 
         public virtual State State { get; set; }
+        public virtual List<Order>? Orders { get; set; }
         public virtual List<Employee> Employees { get; set; }
         public virtual List<Merchant> Merchants { get; set; }
 

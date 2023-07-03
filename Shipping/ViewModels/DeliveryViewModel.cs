@@ -28,6 +28,9 @@ namespace Shipping.ViewModels
         public DiscountType DiscountType { get; set; }
         [Required(ErrorMessage = "يجب ادخال نسبة الشركة من الطلب")]
         public int CompanyPercentage { get; set; }
-        }
+        public int BranchId { get; set; }
+        public int? OrignalIdOnlyInDeliveryTable  { get; set; }
+        public string? DeliverName { get; set; }
+    }
         
 }

@@ -1,6 +1,7 @@
 ﻿@model List<OrderViewModel>
 @{
     ViewData["Title"] = "Index";
+    SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
 }
 
 
@@ -25,16 +26,22 @@
                 }
             </select>
         </div>
-        <div class="col-6"></div>
+        <div class="col-4"></div>
         <div class="col-2">
-            <form method="get" action="/Merchant/Index">
-                <div>
-                    <label>بحث</label>
-                    <input type="text" name="Name" id="Name" class="form form-control" />
-                    <input type="submit" value="بحث" class="btn btn-primary add m-1" />
-                </div>
+            @using (Html.BeginForm("SearchByDeliveryName", "Order", FormMethod.Get))
+            {
 
-            </form>
+                <input type="text" name="query" />
+                <input type="submit" class="btn btn-primary" value="بحث بإسم المندوب" />
+            }
+        </div>
+        <div class="col-2">
+            @using (Html.BeginForm("SearchByClientName", "Order", FormMethod.Get))
+            {
+
+                <input type="text" name="query" />
+                <input type="submit" class="btn btn-primary" value="بحث بإسم العميل" />
+            }
         </div>
     </div>
 
@@ -51,6 +58,7 @@
                 <th>تغيير الحالة</th>
                 <th>حذف</th>
                 <th>طباعة</th>
+                <th>المندوب</th>
             </tr>
         </thead>
         <tbody id="TableBody">
@@ -63,9 +71,10 @@
                     <td>@item.StateName</td>
                     <td>@item.CityName</td>
                     <td>@item.OrderCost</td>
+
                     <td><a class="btn btn-info">تعديل</a></td>
                     <td>
-                        <select class="form-select changeStatus" data-id="@item.Id">
+                        <select id="status_@item.Id" class="form-select" onchange='changeStatus(@item.Id)'>
                             @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
                             {
                                 <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
@@ -74,6 +83,18 @@
                     </td>
                     <td><a class="btn btn-info">حذف</a></td>
                     <td><a class="btn btn-info">طباعة</a></td>
+                    <td>
+                        <select id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
+                            <option value="">اختر المندوب</option>
+                            @foreach (var item1 in ViewBag.Delivery)
+                            {
+                                @if (item1.BranchId == item.BranchId)
+                                {
+                                    <option value="@item1.OrignalIdOnlyInDeliveryTable" selected="@(item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)">@item1.Name</option>
+                                }
+                            }
+                        </select>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -85,30 +106,33 @@
 
 @section Scripts {
     <script>
-        $(document).ready(function () {
-            $('.changeStatus').change(function () {
-                var Id = $(this).data('id');
-                var status = $(this).val();
 
-                $.ajax({
-                    url: '/Order/ChangeStatus',
-                    type: 'POST',
-                    data: { Id: Id, status: status },
-                    success: function (response) {
-                        console.log("changed");
-                    },
-                    error: function (xhr, status, error) {
-                        console.error(error);
-                    }
-                });
+        //function work when Assigning delivery 
+        function AssignDelivery(id) {
+            var Id = id;
+            var ele = document.getElementById("delivery_"+`${id}`);
+            var delivery = ele.value;
+
+            $.ajax({
+                url: '/Order/ChangeDelivery',
+                type: 'POST',
+                data: { Id: Id, deliveryId: delivery },
+                success: function (response) {
+                    console.log("Mandob Changed");
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                }
             });
-         });
-         
-        //function work after making filter
+        }
+
+        //-----------------------//
+        
+        //function work when changing status
         function changeStatus(id)
         {
             var Id = id;
-            var ele = document.getElementById("status");
+            var ele = document.getElementById("status_"+`${id}`);
             var status = ele.value;
 
             $.ajax({
@@ -121,9 +145,11 @@
                 error: function (xhr, status, error) {
                     console.error(error);
                 }
-            });
-        }
+            });
+        }
 
+        //-----------------------//
+        //render new table
         $(document).ready(function () {
             $('.showStatus').change(function () {
                 var status = $(this).val();
@@ -136,37 +162,10 @@
                         console.error(error);
                     },
                     success: function (response) {
-
+                        //console.log(response)
                         var table = document.getElementById("TableBody");
                         table.innerHTML = "";
-                        
-                        if (response.length != 0)
-                        {
-                            for (let i = 0; i < response.length; i++) {
-                                table.innerHTML+=`
-                                        <tr>
-                                            <td>${response[i].id}</td>
-                                            <td>${response[i].orderDate }</td>
-                                            <td> ${response[i].clientName} <br/> ${response[i].clientPhoneNumber1}</td>
-                                            <td>${response[i].stateName}</td>
-                                            <td>${response[i].cityName}</td>
-                                            <td>${response[i].orderCost} </td>
-                                            <td> <a class="btn btn-info" > تعديل </a></td>
-                                            <td>
-                                                <select id="status" class="form-select" onchange="changeStatus(${response[i].id})"  data-id="${response[i].id}">
-                                                        <option selected="true" disabled value="${response[i].orderStatus}">${response[i].orderStatus}</option>
-                                                        @foreach(string status in Enum.GetNames(typeof(OrderStatus)))
-                                                        {
-                                                             <option value="@status">@status</option>
-                                                        }
-                                                </select>
-                                            </td>
-                                            <td> <a class="btn btn-info" > حذف </a></td>
-                                            <td><a class="btn btn-info" > طباعة </a></td>
-                                         </tr>`
-                            }
-                        }
-
+                        table.innerHTML = response
                     }
 
                 });

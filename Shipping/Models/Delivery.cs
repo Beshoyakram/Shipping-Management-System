@@ -21,5 +21,6 @@ namespace Shipping.Models
         public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public virtual Branch Branch { get; set; }
+        public virtual List<Order>? Orders { get; set; }
     }
 }

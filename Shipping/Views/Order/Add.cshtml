@@ -97,11 +97,11 @@
                 </div>
 
                 <div class="form-group col-md-4 p-3">
-                    <label asp-for="BranchName">الفرع</label>
-                    <select class="form-control" asp-for="BranchName">
+                    <label asp-for="BranchId">الفرع</label>
+                    <select class="form-control" asp-for="BranchId">
                         @foreach (Branch item in ViewBag.Branches)
                         {
-                            <option value="@item.Name">@item.Name</option>
+                            <option value="@item.Id">@item.Name</option>
                         }
                     </select>
                     

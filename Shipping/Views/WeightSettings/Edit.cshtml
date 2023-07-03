@@ -1,0 +1,29 @@
+﻿@model WeightSetting
+
+<div style="margin-left: 20%;margin-bottom:50px">
+    <h2>إعدادات تكلفة الشحن الإضافية بالنسبة لوزن الشحنة</h2>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="d-flex flex-wrap">
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="Cost">تكلفة الشحن الافتراضي بالجنية  من 0 كجم إلي وزن:</label>
+            <input asp-for="Cost" class="form-control" />
+            <p>كجم</p>
+            <span asp-validation-for="Cost" class="text-danger"></span>
+        </div>
+
+
+
+        <div class="form-group col-md-4 p-3">
+            <label asp-for="Addition_Cost">سعر كل كجم إضافي بالجنية</label>
+            <input asp-for="Addition_Cost" class="form-control" />
+            <span asp-validation-for="Addition_Cost" class="text-danger"></span>
+        </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">حفظ</button>
+    <a href="@Url.Action("Index","Home")" class="btn btn-secondary">إلغاء</a>
+}

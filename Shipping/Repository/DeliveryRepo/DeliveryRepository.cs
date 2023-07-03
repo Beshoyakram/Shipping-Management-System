@@ -45,6 +45,7 @@ namespace Shipping.Repository.DeliveryRepo
             {
                 deliveriesViewModel.Add(new DeliveryViewModel
                 {
+                    
                     DeliveryId = delivery.User.Id,
                     Address = delivery.Address,
                     BranchName = delivery.Branch.Name,
@@ -57,7 +58,12 @@ namespace Shipping.Repository.DeliveryRepo
                     status = delivery.User.Status,
                     //Type = delivery.User.Type.ToString(),
                     DiscountType = delivery.DiscountType,
-                    CompanyPercentage = delivery.CompanyPercent
+                    CompanyPercentage = delivery.CompanyPercent,
+                    BranchId=delivery.BranchId,
+                    OrignalIdOnlyInDeliveryTable=delivery.Id,
+                    DeliverName = delivery.User.Name
+                    
+
 
                 });
             }
