@@ -15,6 +15,7 @@ namespace Shipping.Repository.OrderRepo
         void Edit(Order order, OrderViewModel orderViewModel);
         void UpdateDelivery(Order order, int DeliveryId);
 
+        void CalcShipping(OrderViewModel orderViewModel);
         public List<string> GenerateTable(OrdersPlusDeliverysViewModel OrdersPlusDeliverys);
 
     }

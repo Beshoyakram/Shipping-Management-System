@@ -1,0 +1,42 @@
+﻿@model List<OrderViewModel>
+
+
+    <style>
+
+        .carddd{
+        width: 19rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        }
+        .carddd:hover{
+        box-shadow: none; 
+        }
+
+    #title  {
+        float: left;
+        margin-right: 0.5rem;
+    }
+    </style>
+<div class="row p-2">
+@foreach (OrderStatus item in Enum.GetValues(typeof(OrderStatus)))
+{
+
+        <div class="carddd card mb-3 m-2" >
+           
+        <div class="card-body"  >
+                <h5 class="card-title text-primary">@item <i id="title" class="fa-solid fa-lock" ></i> </h5>
+
+            <h5 class="card-title">@Model.Where(p=>p.OrderStatus==item.ToString()).Count()</h5>
+                <h5 class=" text-primary">
+                    <a class="btn btn-primary" href="/order/IndexAfterFilter?query=@item.ToString()">
+                        استعلام
+            </a></h5>
+               
+            
+        </div>
+    </div>
+    
+}
+</div>
+
+

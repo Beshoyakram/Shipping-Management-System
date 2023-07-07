@@ -1,7 +1,16 @@
 ﻿@model Shipping.Models.City
 
-<h2>تعديل بيانات المدينة</h2>
 
+
+
+<div class="row card shadow m-2">
+    <!-- Page Heading -->
+    <div class="card-header p-3 rounded">
+        <h1 class="m-0 text-center font-weight-bold text-secondary">تعديل بيانات المدينة </h1>
+    </div>
+
+
+    <div class="card-body col-md-12 ">
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -34,7 +43,10 @@
         </div>
 
     </div>
-  
-    <button type="submit" class="btn btn-primary">حفظ</button>
-    <a asp-controller="City" asp-action="Index" asp-route-stateId="@Model.StateId" class="btn btn-secondary">إلغاء</a>
-}
+  <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-outline-success mx-3  col-2">حفظ</button>
+                <a asp-controller="City" asp-action="Index" asp-route-stateId="@Model.StateId" class="btn btn-secondary mx-3  col-1">إلغاء</a>
+            </div>
+        }
+    </div>
+</div>

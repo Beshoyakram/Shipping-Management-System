@@ -3,8 +3,10 @@
 @{
     ViewData["Title"] = "Edit Delivery";
 }
-<h2> تعديل بيانات المندوب</h2>
-<div class="container">
+<div class="bg-light rounded my-4 row">
+<h2 class="text-center text-secondary"> تعديل بيانات المندوب</h2>
+</div>
+<div class="container bg-light rounded">
 
     <form asp-action="Edit" method="post" class="d-flex flex-wrap">
         <div class="row">
@@ -54,9 +56,9 @@
             </div>
         </div>
         <br />
-        <div class="form-group col-md-2 align-items-start">
-            <button type="submit" class="btn btn-primary">حفظ</button>
-            <a asp-controller="Delivery" asp-action="Index" class="btn btn-secondary">إلغاء</a>
+        <div class="m-3" style="position: relative;height: 10vh;">
+            <button type="submit" class="btn btn-outline-primary">حفظ</button>
+            <a asp-controller="Delivery" asp-action="Index" class="btn btn-outline-secondary">إلغاء</a>
         </div>
         
     </form>

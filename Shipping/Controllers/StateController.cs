@@ -99,5 +99,27 @@ namespace Shipping.Controllers
         }
 
         #endregion
+
+        #region Delete
+        public IActionResult Delete(int id)
+        {
+
+
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            State state = _stateRepository.GetById(id);
+            state.IsDeleted = true;
+            _stateRepository.Update(id, state);
+
+
+
+
+            return RedirectToAction(nameof(Index));
+        }
+
+#endregion
     }
 }

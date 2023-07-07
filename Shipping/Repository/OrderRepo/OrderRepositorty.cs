@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Shipping.Models;
+using Shipping.Repository.CityRepo;
 using Shipping.ViewModels;
 using static NuGet.Packaging.PackagingConstants;
 
@@ -9,10 +10,11 @@ namespace Shipping.Repository.OrderRepo
     public class OrderRepositorty : IOrderRepository
     {
         MyContext _myContext;
-
-        public OrderRepositorty(MyContext myContext)
+        ICityRepository _cityRepository;
+        public OrderRepositorty(MyContext myContext, ICityRepository cityRepository)
         {
             _myContext = myContext;
+            _cityRepository = cityRepository;
         }
 
         #region AddOrder
@@ -36,7 +38,7 @@ namespace Shipping.Repository.OrderRepo
                 TotalWeight = orderViewModel.TotalWeight,
                 Type = orderViewModel.Type,
                 StateId = city.StateId,
-                
+                ShippingCost = orderViewModel.ShippingCost,
                 orderProducts = orderViewModel.orderProducts
 
 
@@ -52,7 +54,7 @@ namespace Shipping.Repository.OrderRepo
         #region GetAllOrders
         public List<OrderViewModel> GetAllOrders()
         {
-            var Orders = _myContext.Orders.Include(o => o.City).ThenInclude(c => c.State).ToList();
+            var Orders = _myContext.Orders.Include(o => o.City).ThenInclude(c => c.State).Where(o => o.IsDeleted != true).ToList();
             List<OrderViewModel> orderViewModels = new List<OrderViewModel>();
             foreach (var order in Orders)
             {
@@ -76,7 +78,10 @@ namespace Shipping.Repository.OrderRepo
                     OrderDate = order.Date,
                     OrderStatus = order.OrderStatus,
                     BranchId = order.BranchId,
-                    DeliveryId = order.DeliveryId
+                    DeliveryId = order.DeliveryId,
+                    ShippingCost = order.ShippingCost,
+                    TotalCost = order.TotalCost,
+                    MerchantId=order.MerchantId
 
 
 
@@ -89,7 +94,7 @@ namespace Shipping.Repository.OrderRepo
         #region GetOrderById
         public async Task<Order> GetOrderById(int id)
         {
-            var order = _myContext.Orders.FirstOrDefault(o => o.SerialNumber == id);
+            var order = _myContext.Orders.Include(o => o.orderProducts).FirstOrDefault(o => o.SerialNumber == id);
 
             return order;
         }
@@ -99,7 +104,7 @@ namespace Shipping.Repository.OrderRepo
         #region GetOrdersByStatus
         public List<OrderViewModel> GetOrderByStatus(string orderStatus)
         {
-            var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).ToList();
+            var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).Where(o=>o.IsDeleted != true).ToList();
 
             List<OrderViewModel> orderViewModels = new List<OrderViewModel>();
             foreach (var order in Orders)
@@ -172,10 +177,12 @@ namespace Shipping.Repository.OrderRepo
                     string x = $"<tr>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].Id}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].OrderDate}</td>" +
-                                    $"<td>{OrdersPlusDeliverys.orders[i].ClientName} < br/> {OrdersPlusDeliverys.orders[i].ClientPhoneNumber1}</td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].ClientName} <br /> {OrdersPlusDeliverys.orders[i].ClientPhoneNumber1}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].StateName}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].CityName}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].OrderCost} </td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].ShippingCost} </td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].ShippingType} </td>" +
                                     $"<td> <a class='btn btn-info' > تعديل</a></td>" +
                                     "<td>" +
                                     $"<select id = 'status_{OrdersPlusDeliverys.orders[i].Id}' class='form-select' onchange='changeStatus({OrdersPlusDeliverys.orders[i].Id})'>" +
@@ -264,17 +271,21 @@ namespace Shipping.Repository.OrderRepo
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
             if (orderViewModel != null)
             {
-                foreach (var item in orderViewModel.orderProducts)
+                var items = _myContext.OrderProducts.Where(o => o.OrderId == orderViewModel.Id).ToList();
+                foreach (var item in items)
                 {
-                    var existingProduct = _myContext.OrderProducts.FirstOrDefault(o => o.ProductName == item.ProductName && o.Id == order.SerialNumber);
-                    if (existingProduct != null)
-                    {
-                        _myContext.OrderProducts.Remove(existingProduct);
-                    }
+
+                    _myContext.OrderProducts.Remove(item);
+                    //var existingProduct = _myContext.OrderProducts.FirstOrDefault(o => o.ProductName == item.ProductName && o.Id == order.SerialNumber);
+                    //if (existingProduct != null)
+                    //{
+                    //    _myContext.OrderProducts.Remove(existingProduct);
+                    //}
                 }
             }
             if (order != null)
             {
+                CalcShipping(orderViewModel);
                 order.CityId = city.Id;
                 order.IsVillage = orderViewModel.IsVillage;
                 order.ClientEmail = orderViewModel.ClientEmail;
@@ -291,11 +302,38 @@ namespace Shipping.Repository.OrderRepo
                 order.Type = orderViewModel.Type;
                 order.StateId = city.StateId;
                 order.orderProducts = orderViewModel.orderProducts;
-
+                order.ShippingCost = orderViewModel.ShippingCost;
                 _myContext.SaveChanges();
             }
-        } 
+        }
         #endregion
+
+        public void CalcShipping(OrderViewModel orderViewModel)
+        {
+            if (orderViewModel.IsVillage == true)
+                orderViewModel.ShippingCost += 20;
+            if (orderViewModel.ShippingType == ShippingType.توصيل_في_نفس_اليوم)
+            {
+                orderViewModel.ShippingCost += 50;
+            }
+            else if (orderViewModel.ShippingType == ShippingType.توصيل_سريع)
+            {
+                orderViewModel.ShippingCost += 20;
+            }
+
+            if (orderViewModel.PaymentType == PaymentType.واجبة_التحصيل)
+            {
+                orderViewModel.ShippingCost += 10;
+            }
+
+            if (orderViewModel.Type == Models.Type.تسليم_فالفرع)
+                orderViewModel.ShippingCost += _cityRepository.GetByName(orderViewModel.CityName).PickUpPrice;
+
+            else if (orderViewModel.Type == Models.Type.توصيل_الي_المنزل)
+                orderViewModel.ShippingCost += _cityRepository.GetByName(orderViewModel.CityName).ShippingPrice;
+
+        }
+
 
     }
 

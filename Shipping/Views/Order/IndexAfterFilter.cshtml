@@ -1,0 +1,80 @@
+﻿@model List<OrderViewModel>
+@{
+    ViewData["Title"] = "Index";
+    SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
+}
+
+
+
+<div class="my-4 bg-light py-2 rounded">
+    <div class="row container d-flex">
+        <div class="col-10">عرض الطلبات</div>
+      
+    </div>
+
+</div>
+<div class="my-4 bg-light p-2 px-4 rounded">
+  
+
+    <table class="table table-hover table-bordered text-center my-4 ">
+        <thead>
+            <tr style="background-color:#ddd;">
+                <th>الرقم التسلسلي</th>
+                <th>التاريخ</th>
+                <th>بيانات العميل</th>
+                <th>المحافظة</th>
+                <th>المدينة</th>
+                <th>تكلفة الطلب</th>
+                <th>تكلفة الشحن</th>
+                <th>نوع الشحن</th>
+                <th>تعديل الطلب</th>
+              
+                <th>حذف</th>
+                <th>طباعة</th>
+                <th>المندوب</th>
+            </tr>
+        </thead>
+        <tbody id="TableBody">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.OrderDate</td>
+                    <td>@item.ClientName<br />@item.ClientPhoneNumber1</td>
+                    <td>@item.StateName</td>
+                    <td>@item.CityName</td>
+                    <td>@item.OrderCost</td>
+                    <td>@item.ShippingCost</td>
+                    <td>@item.ShippingType</td>
+
+                    <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                 
+                    <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                    <td><a class="btn btn-info">طباعة</a></td>
+                    <td >
+                        <select  id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
+                           
+                            @foreach (var item1 in ViewBag.Delivery)
+                            {
+                                @if (item1.BranchId == item.BranchId)
+                                {
+                                    @if (item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)
+                                    {
+                                        <option value="@item1.OrignalIdOnlyInDeliveryTable" selected="@(item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)">@item1.Name</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+
+@section Scripts {
+    
+}

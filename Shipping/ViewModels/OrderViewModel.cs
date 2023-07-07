@@ -19,6 +19,8 @@ namespace Shipping.ViewModels
         public string StreetName { get; set; }
         public string? Notes { get; set; }
         public bool IsDeleted { get; set; }
+        public int ShippingCost { get; set; }
+        public int? TotalCost { get; set; } 
         public List<OrderProduct> orderProducts { get; set; }
 
         /* hussen */
@@ -26,6 +28,8 @@ namespace Shipping.ViewModels
         public int? BranchId { get; set; }
 
         public int? DeliveryId { get; set; }
+
+        public int? MerchantId { get; set; }
 
 
         /* hussen*/

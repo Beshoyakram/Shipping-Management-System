@@ -143,21 +143,21 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "7/3/2023 5:03:23 AM",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "fc7ac835-145d-40a7-80be-b39b4d8add6e",
-                            Date = "7/3/2023 5:03:23 AM",
+                            Id = "44c0c619-af54-4a83-b99b-2dfe92223d32",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "المناديب",
                             NormalizedName = "المناديب"
                         },
                         new
                         {
-                            Id = "970dcdbc-c88b-410a-b50b-2bc9d3367818",
-                            Date = "7/3/2023 5:03:23 AM",
+                            Id = "98c1be01-39b5-4b5c-ab9c-adc5494ebb2c",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "التجار",
                             NormalizedName = "التجار"
                         });
@@ -303,16 +303,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c79889b4-bbb9-4674-a904-15a496764b57",
+                            ConcurrencyStamp = "633806e6-cac5-4203-90e5-e5edc991c21d",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGuLBzeUAk39lRjQQdSP2rtxhg8G2tdKUkbu4H5lxNJCIKf2DUUGgodeiIH6Rh4t4g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAED21VEVSDPxTXUvx5qzJBgIcFz3FlsXN+zYwFlcDhzQEdRQGfWTNQsQMi9bUYRDHNg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "aa5686cb-6352-4170-b2e0-b9a34073cf42",
+                            SecurityStamp = "6bb61d7d-5439-4931-8874-0536ba2f1b0e",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"
@@ -542,6 +542,9 @@ namespace Shipping.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PaymentType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ShippingCost")
                         .HasColumnType("int");
 
                     b.Property<int>("ShippingType")

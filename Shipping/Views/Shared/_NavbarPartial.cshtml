@@ -54,11 +54,17 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="State">المحافظات</a>
                     </li>
-                } 
+                }
                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.View).Result.Succeeded)
                 {
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-action="Index" asp-controller="Order">الطلبات</a>
+                    </li>
+                }
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.View).Result.Succeeded)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-action="OrderCount" asp-controller="Order">حلات الطلبات</a>
                     </li>
                 }
             </ul>

@@ -1,68 +1,88 @@
-﻿@model List<State>
+﻿@inject IAuthorizationService AuthorizationService
+@model List<State>
 @{
     ViewData["Title"] = "Index";
+    var count = 1;
 }
 
-<h3 class="display-4">المحافظات</h3>
+<!-- Page Heading -->
 
 
-<div class=" py-2 rounded">
-    <div class="row container d-flex">
-        
-        <div class="col-2 ">
-            <a asp-action="Add" class="btn btn-primary">اضافة محافظة جديدة</a>
-        </div>
+<div class="card shadow mb-4">
+    <div class="card-header py-3 rounded">
+        <h1 class="m-0 text-center font-weight-bold text-secondary">المحافظات</h1>
+
     </div>
-
-</div>
-<div class=" p-2 px-4 rounded">
-    <div class="row ">
-        
-        <div class="col-2">
+    <div class="card-body">
+        <div class="d-flex justify-content-around align-items-center mb-3">
             <form method="get" action="/State/Search">
-                <div>
-                    <label>بحث</label>
-                    <input type="text" name="query" id="Name" class="form form-control" />
-                    <input type="submit" value="بحث" class="btn btn-primary m-1" />
-                </div>
-
+                <input type="submit" value="بحث" class="btn btn-outline-secondary m-0" />
+                <input type="text" name="query" id="Name" />
             </form>
+            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Create).Result.Succeeded)
+            {
+                <a asp-action="Add" class="d-none d-sm-inline-block btn btn-sm btn-outline-secondary shadow-sm">
+                    <i class="fas fa-plus-circle fa-sm text-gray-800"></i> اضافة محافظة جديد
+                </a>
+            }
         </div>
-    </div>
-    <table class="table table-hover table-bordered text-center my-4">
-        <tr style="background-color:#ddd;">
-            <th>
-                الاسم
-            </th>
-            <th>
-                الحاله
-            </th>
-            <th>
-                الاعدادات
-            </th>
-
-
-        </tr>
-        @foreach (var item in Model)
+        <div class="table-responsive">
+            <table class="table table-bordered text-center ">
+                <thead>
+                <tr style="background-color:#ddd;">
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        الاسم
+                    </th>
+                    <th>
+                        الحاله
+                    </th>
+                    <th>
+                        الاعدادات
+                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+        @foreach (var item in Model )
         {
             <tr>
+                <td>@count</td>
                 <td>
                     @item.Name
                 </td>
-                <td class="form-switch">
-                    <input class="form-check-input" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+                <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Delete).Result.Succeeded){
+                        <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+                    }
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">تعديل</a>
-                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-success">اضافة مدينة</a>
-                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-success">المدن</a>
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Edit).Result.Succeeded){
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">
+                                <i class="fa-solid fa-pen-to-square "></i> تعديل المحافظة
+                        </a><span> | </span>
+                    } 
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Create).Result.Succeeded)
+                    {
 
+                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-outline-secondary ">
+                            <i class="fa-solid fa-plus-circle"></i>  إضافة مدينة
+                    </a><span> | </span>
+                    }
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.View).Result.Succeeded)
+                    {
+                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-outline-primary"> <i class="fa-solid fa-city"></i> المدن</a>
+                    }
                 </td>
-            </tr>
-        }
+                        </tr>
+                        count += 1;
+                    }
+                </tbody>
     </table>
 </div>
-
+    </div>
+</div>
 
 
 

@@ -30,6 +30,8 @@ namespace Shipping.Models
         public string OrderStatus { get; set; } ="جديد";
         public bool IsVillage { get; set; } = false;
         public bool IsDeleted { get; set; } = false;
+        public int ShippingCost { get; set; }
+        public int TotalCost => OrderCost + ShippingCost;
 
 
         public string StreetName { get; set; }

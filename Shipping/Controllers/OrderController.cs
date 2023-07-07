@@ -11,6 +11,7 @@ using Shipping.Repository.DeliveryRepo;
 using Shipping.Repository.BranchRepo;
 using Microsoft.AspNetCore.Identity;
 using Azure;
+using System.Security.Claims;
 
 namespace Shipping.Controllers
 {
@@ -70,7 +71,7 @@ namespace Shipping.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> GetOrersDependonStatus(string? status = null)
+        public async Task<IActionResult> GetOrdersDependonStatus(string? status = null)
         {
             List<OrderViewModel> Orders;
             if (status == null)
@@ -101,7 +102,6 @@ namespace Shipping.Controllers
 
         #endregion
 
-
         #region Add
         public IActionResult Add()
         {
@@ -116,6 +116,9 @@ namespace Shipping.Controllers
 
             if (ModelState.IsValid)
             {
+
+                _orderRepository.CalcShipping(orderViewModel);
+
                 _orderRepository.Add(orderViewModel);
                 return Redirect("/order/index");
             }
@@ -195,7 +198,6 @@ namespace Shipping.Controllers
         #endregion
         #endregion
 
-
         #region edit
 
         public async Task<IActionResult> Edit(int Id)
@@ -219,6 +221,7 @@ namespace Shipping.Controllers
 
             if (ModelState.IsValid)
             {
+                
                 var order = await _orderRepository.GetOrderById(Id);
                 _orderRepository.Edit(order, orderViewModel);
                 return Redirect("/order/index");
@@ -246,7 +249,7 @@ namespace Shipping.Controllers
         [HttpPost, ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmedAsync(int Id)
-        {
+            {
             var order = await _orderRepository.GetOrderById(Id);
             if (order == null)
             {
@@ -257,5 +260,62 @@ namespace Shipping.Controllers
         }
         #endregion
 
+        #region OrderCount
+
+        public IActionResult OrderCount()
+        {
+
+
+            string roleName = User.FindFirstValue(ClaimTypes.Role);
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = _orderRepository.GetAllOrders();
+            if (roleName == "Admin" || roleName == "موظف")
+            { return View(result); }
+            else if (roleName == "التجار")
+            {
+
+                var intMerchantId = _myContext.Merchants.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
+                return View(result.Where(p => p.MerchantId == intMerchantId).ToList());
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+        #endregion
+
+        #region related to the count screen
+        public async Task<IActionResult> IndexAfterFilter(string query)
+        {
+            string roleName = User.FindFirstValue(ClaimTypes.Role);
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            
+            var Orders = _orderRepository.GetAllOrders().ToList();
+
+            ViewData["Delivery"] = await _deliveryRepository.GetAll(null);
+            var newOrders = Orders.Where(p => p.OrderStatus == query).ToList();
+
+            ViewBag.Branches = _myContext.Branches.ToList();
+            
+
+            if (roleName == "Admin" || roleName == "موظف")
+            { return View("index", model: newOrders); }
+            else if (roleName == "التجار")
+            {
+
+                var intMerchantId = _myContext.Merchants.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
+                var result= Orders.Where(p => p.OrderStatus == query &&p.MerchantId==intMerchantId).ToList();
+                return View(result);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+
+        }
+       
+        #endregion
     }
 }

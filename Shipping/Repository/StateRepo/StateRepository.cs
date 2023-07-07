@@ -19,12 +19,13 @@ namespace Shipping.Repository.StateRepo
 
         public List<State> GetAll()
         {
-            return _myContext.States.ToList();
+            return _myContext.States.Where(s => s.IsDeleted != true).ToList();
         }
 
         public State GetById(int id)
         {
             return _myContext.States.Where(p => p.Id == id && p.IsDeleted == false).FirstOrDefault();
+
 
         }
 

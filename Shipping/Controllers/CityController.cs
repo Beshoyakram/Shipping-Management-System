@@ -100,6 +100,28 @@ namespace Shipping.Controllers
             return View("Index", city);
         }
 
-        #endregion
+        #endregion
+
+        #region Delete
+        public IActionResult Delete(int id)
+        {
+
+
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            City city = _cityRepository.GetById(id);
+            city.IsDeleted = true;
+            _cityRepository.Update(id, city);
+
+
+
+
+            return RedirectToAction(nameof(Index), new { stateId = city.StateId });
+        }
+
+#endregion
     }
 }

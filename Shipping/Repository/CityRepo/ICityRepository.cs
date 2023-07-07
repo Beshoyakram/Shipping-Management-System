@@ -8,6 +8,7 @@ namespace Shipping.Repository.CityRepo
         List<string> GetAllByStateName(string stateName);
         void AddToState(int stateId, City city);
         City GetById(int id);
+        City GetByName(string name);
         void Update(int id, City city);
     }
 }

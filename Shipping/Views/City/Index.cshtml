@@ -1,18 +1,19 @@
-﻿@model List<City>
+﻿@inject IAuthorizationService AuthorizationService
+@model List<City>
 @{
     ViewData["Title"] = "Index";
+    var count = 1;
 }
+<!-- Page Heading -->
 
 
-<div class=" py-2 rounded">
-    <div class="row container d-flex">
-        <h3 class="display-4">المدن</h3>
+
+<div class="card shadow mb-4">
+    <div class="card-header p-3 rounded">
+        <h1 class="m-0 text-center font-weight-bold text-secondary">المدن</h1>
     </div>
-</div>
-<div class=" p-2 px-4 rounded">
-    <div class="row ">
-        
-        <div class="col-2">
+    <div class="card-body">
+        <div class="d-flex justify-content-around align-items-center m-3">
             @using (Html.BeginForm("Search", "City", FormMethod.Get))
             {
                 @foreach (var item in Model)
@@ -22,41 +23,66 @@
 
                 }
 
+                <input type="submit" class="btn btn-outline-secondary m-0" value="بحث" />
                 <input type="text" name="query" />
-                <input type="submit" class="btn btn-primary" value="بحث" />
             }
+            <div>
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Create).Result.Succeeded)
+                {
+                    <a asp-action="Add" class="d-none d-sm-inline-block btn btn-sm btn-outline-success shadow-sm mx-1">
+                        <i class="fas fa-plus-circle fa-sm"></i> اضافة مدينة جديدة
+                    </a>
+                }
+                <a asp-controller="State" asp-action="Index" class="d-sm-inline-block btn  btn-sm btn-secondary shadow-sm">الرجوع إلي المحافظات</a>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered text-center " cellspacing="0">
+                <thead>
+                    <tr style="background-color:#ddd;">
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            الاسم
+                        </th>
+                        <th>
+                            الحاله
+                        </th>
+                        <th>
+                            الاعدادات
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@count</td>
+                        <td>
+                            @item.Name
+                        </td>
+                            <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Delete).Result.Succeeded)
+                            {
+                                    <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+                                }
+                        </td>
+                        <td>
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Edit).Result.Succeeded)
+                            {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">تعديل <i class="fa-solid fa-pen-to-square "></i></a>
+                            }
+                        </td>
+                        </tr>
+                        count += 1;
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-    <table class="table table-hover table-bordered text-center my-4">
-        <tr style="background-color:#ddd;">
-            <th>
-                الاسم
-            </th>
-            <th>
-                الحاله
-            </th>
-            <th>
-                الاعدادات
-            </th>
-
-
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @item.Name
-                </td>
-                <td class="form-switch">
-                    <input class="form-check-input" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">تعديل</a>
-                </td>
-            </tr>
-        }
-    </table>
 </div>
+
 @section Scripts {
     <script>
         function changeState(checkbox) {

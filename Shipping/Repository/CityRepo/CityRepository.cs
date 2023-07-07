@@ -19,21 +19,27 @@ namespace Shipping.Repository.CityRepo
 
         public List<City> GetAllByState(int stateId)
         {
-            return _myContext.Cities.Where(c => c.StateId == stateId).ToList();
+            return _myContext.Cities.Where(c => c.StateId == stateId && c.IsDeleted == false).ToList();
         }
+
 
         public List<string> GetAllByStateName(string stateName)
         {
-            var stateId = _myContext.States.Where(s => s.Name == stateName).FirstOrDefault().Id;
-            return _myContext.Cities.Where(c => c.StateId == stateId).Select(c => c.Name).ToList();
+            var stateId = _myContext.States.Where(s => s.Name == stateName && s.IsDeleted == false).FirstOrDefault().Id;
+            return _myContext.Cities.Where(c => c.StateId == stateId && c.IsDeleted == false).Select(c => c.Name).ToList();
         }
 
+
+        public City GetByName(string name)
+        {
+            return _myContext.Cities.FirstOrDefault(c => c.Name == name);
+        }
         #region GetById
         public City GetById(int id)
         {
             return _myContext.Cities.Where(p => p.Id == id && p.IsDeleted == false).FirstOrDefault();
         }
-        #endregion
+        #endregion
         #region Update
 
         public void Update(int id, City city)

@@ -27,10 +27,12 @@ namespace Shipping.Repository.BranchRepo
             return _myContext.Branches.Where(o => o.IsDeleted == false).Include(e => e.State).ToList();
         }
 
+
         public List<Branch> GetBranchesByStateId(int id)
         {
             return _myContext.Branches.Where(o => o.IsDeleted == false && o.StateId == id).ToList();
         }
+
 
         public Branch GetById(int? id)
         {

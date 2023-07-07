@@ -4,7 +4,7 @@
 }
 
 <div class="bg-light rounded my-4 row">
-    <h2 class="p-4 fw-bold">اضافة تاجر جديد</h2>
+    <h2 class="p-4 fw-bold text-center text-secondary">اضافة تاجر جديد</h2>
 </div>
 
 <div class="row  bg-light rounded my-4">
@@ -44,7 +44,7 @@
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="Government">المحافظة</label>
                     <select id="state" asp-for="Government" class="form-control">
-                        <option value="">Select a state</option>
+                        <option value="">اختر محافظة</option>
                         @foreach (var state in ViewBag.States)
                         {
                             <option value="@state.Name">@state.Name</option>
@@ -54,14 +54,14 @@
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="City">المدينة</label>
                     <select id="city" asp-for="City" class="form-control">
-                        <option value="">Select a city</option>
+                        <option value="">اختر مدينة</option>
                     </select>
                 </div>
 
                 <div class="form-group col-md-4 p-3">
                     <label asp-for="BranchName" class="control-label">الفرع</label>
                     <select id="branch"  asp-for="BranchName" class="form-select" >
-                        <option value="">-- Select Branch --</option>
+                        <option value=""> اختر فرع</option>
                     </select>
                     <span asp-validation-for="BranchName" class="text-danger"></span>
                 </div>
@@ -82,7 +82,9 @@
             </div>
 
             <div class="m-3" style="position: relative;height: 10vh;">
-                <button type="submit" class="btn btn-primary px-3 " style="position: absolute;left: 0;bottom: 15%;">اضافة</button>
+                <button type="submit" class="btn btn-outline-primary">إضافة</button>
+                <a asp-controller="Merchant" asp-action="Index" class="btn btn-outline-secondary">إلغاء</a>
+
             </div>
         </form>
     </div>
