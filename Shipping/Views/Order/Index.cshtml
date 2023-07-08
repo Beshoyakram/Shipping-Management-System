@@ -56,6 +56,7 @@
                         <th>المحافظة</th>
                         <th>المدينة</th>
                         <th>تكلفة الطلب</th>
+                        <th>تكلفة الشحن</th>
                         <th>تعديل الطلب</th>
                         <th>تغيير الحالة</th>
                         <th>حذف</th>
@@ -75,6 +76,7 @@
                             <td>@item.StateName</td>
                             <td>@item.CityName</td>
                             <td>@item.OrderCost</td>
+                            <td>@item.ShippingCost</td>
 
                             <td><a class="btn btn-outline-success" asp-action="Edit" asp-route-Id="@item.Id"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
                             <td>

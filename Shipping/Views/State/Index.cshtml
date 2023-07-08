@@ -29,58 +29,69 @@
         <div class="table-responsive">
             <table class="table table-bordered text-center ">
                 <thead>
-                <tr style="background-color:#ddd;">
-                    <th>
-                        #
-                    </th>
-                    <th>
-                        الاسم
-                    </th>
-                    <th>
-                        الحاله
-                    </th>
-                    <th>
-                        الاعدادات
-                    </th>
+                    <tr style="background-color:#ddd;">
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            الاسم
+                        </th>
+                        <th>
+                            الحاله
+                        </th>
+                        <th>
+                            الاعدادات
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-        @foreach (var item in Model )
-        {
-            <tr>
-                <td>@count</td>
-                <td>
-                    @item.Name
-                </td>
-                <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Delete).Result.Succeeded){
-                        <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
-                    }
-                </td>
-                <td>
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Edit).Result.Succeeded){
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">
-                                <i class="fa-solid fa-pen-to-square "></i> تعديل المحافظة
-                        </a><span> | </span>
-                    } 
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Create).Result.Succeeded)
+                    @foreach (var item in Model)
                     {
+                        <tr>
+                            <td>@count</td>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Delete).Result.Succeeded)
+                                {
+                                    <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+                                }
+                            </td>
+                            <td>
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Delete).Result.Succeeded)
+                                {
+                                    @Html.ActionLink("مسح", "Delete", new { id = item.Id },
+                                    new { @class = "btn btn-danger", onclick = $"return confirm('هل انت متأكد من المسح؟')"})
+                                }
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Staties.Edit).Result.Succeeded)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">
+                                        <i class="fa-solid fa-pen-to-square "></i> تعديل المحافظة
+                                    </a>
 
-                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-outline-secondary ">
-                            <i class="fa-solid fa-plus-circle"></i>  إضافة مدينة
-                    </a><span> | </span>
-                    }
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.View).Result.Succeeded)
-                    {
-                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-outline-primary"> <i class="fa-solid fa-city"></i> المدن</a>
-                    }
-                </td>
+                                    <span> | </span>
+                                }
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Create).Result.Succeeded)
+                                {
+
+                                    <a asp-controller="City" asp-action="Add" asp-route-stateId="@item.Id" class="btn btn-outline-secondary ">
+                                        <i class="fa-solid fa-plus-circle"></i>  إضافة مدينة
+                                    </a>
+
+                                    <span> | </span>
+                                }
+                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.View).Result.Succeeded)
+                                {
+                                    <a asp-controller="City" asp-action="Index" asp-route-stateId="@item.Id" class="btn btn-outline-primary"> <i class="fa-solid fa-city"></i> المدن</a>
+                                }
+                            </td>
                         </tr>
                         count += 1;
                     }
                 </tbody>
-    </table>
-</div>
+            </table>
+        </div>
     </div>
 </div>
 

@@ -80,6 +80,15 @@ namespace Shipping.Models
                     Date = DateTime.Now.ToString()
                 });
 
+            modelBuilder.Entity<ApplicationRole>().HasData(
+                new ApplicationRole
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "الموظفين",
+                    NormalizedName = "الموظفين",
+                    Date = DateTime.Now.ToString()
+                });
+
             //Add Permissions
             modelBuilder.Entity<ApplicationRoleCliams>().HasData(
                 new ApplicationRoleCliams
