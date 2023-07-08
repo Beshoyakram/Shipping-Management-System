@@ -143,30 +143,23 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "08/07/2023 06:42:11 م",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "16da2458-b241-456b-924b-e971e04407cb",
-                            Date = "08/07/2023 06:42:11 م",
+                            Id = "44c0c619-af54-4a83-b99b-2dfe92223d32",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "المناديب",
                             NormalizedName = "المناديب"
                         },
                         new
                         {
-                            Id = "13551064-d2ea-40ce-aad3-247a8622e38a",
-                            Date = "08/07/2023 06:42:11 م",
+                            Id = "98c1be01-39b5-4b5c-ab9c-adc5494ebb2c",
+                            Date = "7/5/2023 9:20:23 PM",
                             Name = "التجار",
                             NormalizedName = "التجار"
-                        },
-                        new
-                        {
-                            Id = "177b6a7c-4de3-4254-96fd-dab1dbc4f868",
-                            Date = "08/07/2023 06:42:11 م",
-                            Name = "الموظفين",
-                            NormalizedName = "الموظفين"
                         });
                 });
 
@@ -310,16 +303,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b3be9dbf-3dae-4e06-a12d-b0b9096752cf",
+                            ConcurrencyStamp = "633806e6-cac5-4203-90e5-e5edc991c21d",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENhoxyCsRNE/GCFMf0iLd6pXejkogtZchq3Y7f/QVthw0e2FAOGsWYq5jf8typHgqA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAED21VEVSDPxTXUvx5qzJBgIcFz3FlsXN+zYwFlcDhzQEdRQGfWTNQsQMi9bUYRDHNg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f2693b15-699a-40f9-95e6-4012d550c52e",
+                            SecurityStamp = "6bb61d7d-5439-4931-8874-0536ba2f1b0e",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"

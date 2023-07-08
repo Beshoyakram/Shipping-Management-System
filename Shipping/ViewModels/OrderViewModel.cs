@@ -21,7 +21,7 @@ namespace Shipping.ViewModels
         public bool IsDeleted { get; set; }
         public int ShippingCost { get; set; }
         public int? TotalCost { get; set; } 
-        public List<OrderProduct> orderProducts { get; set; } = new List<OrderProduct>();
+        public List<OrderProduct> orderProducts { get; set; }
 
         /* hussen */
 

@@ -25,7 +25,7 @@ namespace Shipping.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("ordercount", "Order");
+                return RedirectToAction("Index", "home");
             }
             return View();
         }
@@ -46,7 +46,7 @@ namespace Shipping.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, LoginVM.Password, LoginVM.RememberMe, false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("ordercount", "Order");
+                        return RedirectToAction("Index", "Home");
                     }
                     else
                     { ModelState.AddModelError("", "UserName or Password is wrong"); }

@@ -55,31 +55,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@count</td>
-                            <td>
-                                @item.Name
-                            </td>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@count</td>
+                        <td>
+                            @item.Name
+                        </td>
                             <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
                                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Delete).Result.Succeeded)
-                                {
+                            {
                                     <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
                                 }
-                            </td>
-                            <td>
-                                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Delete).Result.Succeeded)
-                                {
-                                    @Html.ActionLink("مسح", "Delete", new { id = item.Id } ,
-                                    new { @class = "btn btn-danger",onclick = $"return confirm('هل انت متأكد من المسح؟')"
-                                    })
-                                }
+                        </td>
+                        <td>
                                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Edit).Result.Succeeded)
-                                {
+                            {
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">تعديل <i class="fa-solid fa-pen-to-square "></i></a>
-                                }
-                            </td>
+                            }
+                        </td>
                         </tr>
                         count += 1;
                     }

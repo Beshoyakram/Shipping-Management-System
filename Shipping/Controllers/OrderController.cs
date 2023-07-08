@@ -261,6 +261,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region OrderCount
+
         public IActionResult OrderCount()
         {
 
@@ -268,10 +269,11 @@ namespace Shipping.Controllers
             string roleName = User.FindFirstValue(ClaimTypes.Role);
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = _orderRepository.GetAllOrders();
-            if (roleName == "Admin" || roleName == "الموظفين")
+            if (roleName == "Admin" || roleName == "موظف")
             { return View(result); }
             else if (roleName == "التجار")
             {
+
                 var intMerchantId = _myContext.Merchants.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
                 return View(result.Where(p => p.MerchantId == intMerchantId).ToList());
             }
@@ -297,7 +299,7 @@ namespace Shipping.Controllers
             ViewBag.Branches = _myContext.Branches.ToList();
             
 
-            if (roleName == "Admin" || roleName == "الموظفين")
+            if (roleName == "Admin" || roleName == "موظف")
             { return View("index", model: newOrders); }
             else if (roleName == "التجار")
             {
