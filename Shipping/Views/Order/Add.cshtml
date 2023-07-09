@@ -70,16 +70,14 @@
                     </select>
                 </div>
             </div>
-                <hr class="sidebar-divider">
+             
             <div class="d-flex flex-wrap">
-                <div class="form-group col-md-4 p-1">
-                    <label asp-for="BranchName">الفرع : </label>
-                    <select class="form-control" asp-for="BranchName">
-                        @foreach (Branch item in ViewBag.Branches)
-                        {
-                            <option value="@item.Id">@item.Name</option>
-                        }
+                <div class="form-group col-md-4 p-3">
+                    <label asp-for="BranchName" class="control-label">الفرع</label>
+                    <select id="branch" asp-for="BranchName" class="form-select">
+                        <option value=""> اختر فرع</option>
                     </select>
+                    <span asp-validation-for="BranchName" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="StreetName">الشارع والقرية : </label>
@@ -159,7 +157,33 @@
 
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var stateDropdown = $('#state');
+            var branchDropdown = $('#branch');
 
+            stateDropdown.on('change', function () {
+                var selectedState = stateDropdown.val();
+
+                branchDropdown.empty();
+
+                $.ajax({
+                    url: '/Order/GetBranchesByState',
+                    type: 'GET',
+                    data: { state: selectedState },
+                    success: function (result) {
+                        $.each(result, function (index, branch) {
+                            branchDropdown.append($('<option></option>').val(branch).text(branch));
+                        });
+                    },
+                    error: function () {
+                        console.log('Failed to retrieve Branches.');
+                    }
+                });
+            });
+        });
+
+    </script>
 
     <script>
         $(document).ready(function () {

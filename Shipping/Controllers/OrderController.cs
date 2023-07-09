@@ -106,7 +106,7 @@ namespace Shipping.Controllers
         public IActionResult Add()
         {
             ViewBag.States = _stateRepository.GetAll();
-            ViewBag.Branches = _myContext.Branches.ToList();
+            ViewBag.Branches = _myContext.Branches.ToList();           
 
             return View();
         }
@@ -137,6 +137,15 @@ namespace Shipping.Controllers
         }
 
         #endregion
+
+        #region  GetBranchesByState
+        public IActionResult GetBranchesByState(string state)
+        {
+            var branches = _branchRepository.GetBranchesByStateName(state);
+
+            return Json(branches);
+        }
+        #endregion
 
         #region search
 
