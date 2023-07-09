@@ -12,6 +12,8 @@ using Shipping.Repository.BranchRepo;
 using Microsoft.AspNetCore.Identity;
 using Azure;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Shipping.Constants;
 
 namespace Shipping.Controllers
 {
@@ -39,6 +41,7 @@ namespace Shipping.Controllers
 
         #region ViewAll
         [HttpGet]
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> Index()
         {
 
@@ -52,6 +55,8 @@ namespace Shipping.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.Edit)]
         public async Task<IActionResult> ChangeDelivery(int Id, int deliveryId)
         {
 
@@ -71,6 +76,7 @@ namespace Shipping.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> GetOrdersDependonStatus(string? status = null)
         {
             List<OrderViewModel> Orders;
@@ -92,6 +98,9 @@ namespace Shipping.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.Delete)]
+
         public async Task<IActionResult> ChangeStatus(int Id, string status)
         {
             var order = await _orderRepository.GetOrderById(Id);
@@ -103,6 +112,8 @@ namespace Shipping.Controllers
         #endregion
 
         #region Add
+        [Authorize(Permissions.Orders.Create)]
+
         public IActionResult Add()
         {
             ViewBag.States = _stateRepository.GetAll();
@@ -111,6 +122,8 @@ namespace Shipping.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.Create)]
         public IActionResult Add(OrderViewModel orderViewModel)
         {
 
@@ -129,6 +142,7 @@ namespace Shipping.Controllers
             return View(orderViewModel);
         }
         [HttpGet]
+        [Authorize(Permissions.Orders.Create)]
         public IActionResult GetCitiesByState(string state)
         {
             var cities = _cityRepository.GetAllByStateName(state);
@@ -139,17 +153,19 @@ namespace Shipping.Controllers
         #endregion
 
         #region  GetBranchesByState
+        [Authorize(Permissions.Orders.Create)]
         public IActionResult GetBranchesByState(string state)
         {
             var branches = _branchRepository.GetBranchesByStateName(state);
 
             return Json(branches);
         }
-        #endregion
+        #endregion
 
         #region search
 
         #region SearchByClientName
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> SearchByClientName(string query)
         {
             List<OrderViewModel> Orders;
@@ -170,6 +186,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region SearchByDeliveryName
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> SearchByDeliveryName(string query)
         {
             List<OrderViewModel> Orders = new List<OrderViewModel>();
@@ -208,7 +225,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region edit
-
+        [Authorize(Permissions.Orders.Edit)]
         public async Task<IActionResult> Edit(int Id)
         {
             ViewBag.States = _stateRepository.GetAll();
@@ -225,6 +242,7 @@ namespace Shipping.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.Edit)]
         public async Task<IActionResult> EditAsync(int Id, OrderViewModel orderViewModel)
         {
 
@@ -245,6 +263,7 @@ namespace Shipping.Controllers
 
         #region Delete
         [HttpGet, ActionName("Delete")]
+        [Authorize(Permissions.Orders.Delete)]
         public async Task<IActionResult> DeleteAsync(int Id)
         {
             var order = await _orderRepository.GetOrderById(Id);
@@ -257,6 +276,7 @@ namespace Shipping.Controllers
 
         [HttpPost, ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.Delete)]
         public async Task<IActionResult> DeleteConfirmedAsync(int Id)
             {
             var order = await _orderRepository.GetOrderById(Id);
@@ -269,7 +289,9 @@ namespace Shipping.Controllers
         }
         #endregion
 
+
         #region OrderCount
+        [Authorize(Permissions.OrderCount.View)]
         public IActionResult OrderCount()
         {
             
@@ -301,6 +323,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region related to the count screen
+        [Authorize(Permissions.OrderCount.View)]
         public async Task<IActionResult> IndexAfterFilter(string query)
         {
             string roleName = User.FindFirstValue(ClaimTypes.Role);

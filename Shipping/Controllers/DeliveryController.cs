@@ -33,6 +33,7 @@ namespace Shipping.Controllers
         #region Add
         [HttpGet]
         [Authorize(Permissions.Deliveries.Create)]
+
         public IActionResult add()
         {
             var Branchs = _deliveryRepository.GetAllBranches();
@@ -78,6 +79,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region  GetBranchesByState
+        [Authorize(Permissions.Deliveries.Create)]
         public IActionResult GetBranchesByState(string state)
         {
             var branches = _branchRepository.GetBranchesByStateName(state);

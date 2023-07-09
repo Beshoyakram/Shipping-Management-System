@@ -1,4 +1,5 @@
-﻿@model List<OrderViewModel>
+﻿@inject IAuthorizationService AuthorizationService
+@model List<OrderViewModel>
 @{
     ViewData["Title"] = "Index";
     SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
@@ -31,8 +32,15 @@
 
                 @if (ViewBag.RoleName != "المناديب")
                 {
-                    <th>تعديل الطلب</th>
-                    <th>حذف</th>
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Edit).Result.Succeeded)
+                    {
+                        <th>تعديل الطلب</th>
+                    }
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Delete).Result.Succeeded)
+                    {
+                        <th>حذف</th>
+                    }
+                                   
                 }
                     
 
@@ -54,10 +62,19 @@
                     <td>@item.ShippingType</td>
                     @if (ViewBag.RoleName != "المناديب")
                     {
-<td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                        {
+                            <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                        }
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                        {
+                                <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                        }
                  
-                    <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                
+
                     }
+
                     
                     <td><a class="btn btn-info">طباعة</a></td>
                     <td >

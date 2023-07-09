@@ -1,4 +1,5 @@
-﻿@model List<OrderViewModel>
+﻿@inject IAuthorizationService AuthorizationService
+@model List<OrderViewModel>
 @{
     ViewData["Title"] = "Index";
     SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
@@ -9,9 +10,13 @@
 <div class="card shadow mb-4 rounded">
     <div class="d-sm-flex align-items-center justify-content-between m-4">
         <h1 class="mb-0 text-gray-800">الطلبات</h1>
-        <a asp-action="Add" class="d-none d-sm-inline-block btn btn-sm btn-outline-secondary shadow-sm">
+        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Create).Result.Succeeded)
+        {
+            <a asp-action="Add" class="d-none d-sm-inline-block btn btn-sm btn-outline-secondary shadow-sm">
             <i class="fas fa-plus-circle fa-sm text-gray-800"></i> اضافة طلب جديد
         </a>
+        }
+       
     </div>
 </div>
 
@@ -57,11 +62,26 @@
                         <th>المدينة</th>
                         <th>تكلفة الطلب</th>
                         <th>تكلفة الشحن</th>
-                        <th>تعديل الطلب</th>
-                        <th>تغيير الحالة</th>
-                        <th>حذف</th>
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                        {
+                             <th>تعديل الطلب</th>
+                        }
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                        {
+                            <th>تغيير الحالة</th>
+                        }
+                       
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                        {
+                           <th>حذف</th> 
+                        }
+                        
                         <th>طباعة</th>
-                        <th>المندوب</th>
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                        {
+                            <th>المندوب</th>
+                        }
+                       
                     </tr>
                 </thead>
                 <tbody id="TableBody">
@@ -77,9 +97,13 @@
                             <td>@item.CityName</td>
                             <td>@item.OrderCost</td>
                             <td>@item.ShippingCost</td>
-
-                            <td><a class="btn btn-outline-success" asp-action="Edit" asp-route-Id="@item.Id"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
-                            <td>
+                            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                            {
+                              <td><a class="btn btn-outline-success" asp-action="Edit" asp-route-Id="@item.Id"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+                            }
+                            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                            {
+                                <td>
                                 <select id="status_@item.Id" class="form-select" onchange='changeStatus(@item.Id)'>
                                     @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
                                     {
@@ -87,10 +111,19 @@
                                     }
                                 </select>
                             </td>
-                            <td><a class="btn btn-outline-danger" asp-action="Delete" asp-route-Id="@item.Id"><i class="fa-solid fa-trash-can fa-2x"></i></a>
+                            }
+                           
+                            
+                            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                            {
+                                 <td><a class="btn btn-outline-danger" asp-action="Delete" asp-route-Id="@item.Id"><i class="fa-solid fa-trash-can fa-2x"></i></a>
                             </td>
+                            }
+                           
                             <td><a class="btn btn-outline-secondary"><i class="fa-solid fa-print fa-2x"></i></a></td>
-                            <td>
+                            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                            {
+                                <td>
                                 <select id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
                                     <option value="">اختر المندوب</option>
                                     @foreach (var item1 in ViewBag.Delivery)
@@ -102,6 +135,8 @@
                                     }
                                 </select>
                             </td>
+                            }
+                           
                         </tr>
                     }
                 </tbody>

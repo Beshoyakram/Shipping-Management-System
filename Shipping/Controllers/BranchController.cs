@@ -51,6 +51,7 @@ namespace Shipping.Controllers
         }
         [Authorize(Permissions.Branches.Create)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Add(Branch branch)
         {
             branch.Date = DateTime.Now;
@@ -74,6 +75,7 @@ namespace Shipping.Controllers
         }
         [Authorize(Permissions.Branches.Edit)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Branch branch)
         {
             branch.Date = DateTime.Now;

@@ -52,6 +52,7 @@ namespace Shipping.Controllers
 
         [Authorize(Permissions.Employees.Create)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(EmployeeViewModel employeeViewModel)
         {
             if (ModelState.IsValid)
@@ -109,6 +110,7 @@ namespace Shipping.Controllers
         }
         [Authorize(Permissions.Employees.Edit)]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public  async Task<IActionResult> Edit(EmployeeEditViewModel Newemployee)
         {
             if (ModelState.IsValid)

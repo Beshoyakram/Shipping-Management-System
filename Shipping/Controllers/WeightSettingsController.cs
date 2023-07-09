@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Shipping.Constants;
 using Shipping.Models;
 
 namespace Shipping.Controllers
@@ -13,6 +15,11 @@ namespace Shipping.Controllers
         }
 
         // GET: WeightSettings/Edit
+
+        #region edit
+        [Authorize(Permissions.WeightSettings.Edit)]
+        [Authorize(Permissions.WeightSettings.View)]
+
         public async Task<IActionResult> Edit()
         {
             var shippingCost = await _context.weightSettings.FirstOrDefaultAsync();
@@ -57,6 +64,7 @@ namespace Shipping.Controllers
 
             return View(shippingCost);
         }
+        #endregion
         private bool ShippingCostExists(int id)
         {
             return _context.weightSettings.Any(e => e.Id == 1);

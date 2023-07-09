@@ -17,6 +17,7 @@ namespace Shipping.Controllers
 
 
         #region View
+        [Authorize(Permissions.Staties.View)]
 
         public IActionResult Index()
         {
@@ -26,11 +27,14 @@ namespace Shipping.Controllers
         #endregion
 
         #region Add
+        [Authorize(Permissions.Staties.Create)]
         public IActionResult Add()
         {
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Staties.Create)]
         public async Task<IActionResult> Add(State state)
         {
             if (ModelState.IsValid)
@@ -45,7 +49,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region Edit
-
+        [Authorize(Permissions.Staties.Edit)]
         public IActionResult Edit(int id)
         {
             var state = _stateRepository.GetById(id);
@@ -57,6 +61,8 @@ namespace Shipping.Controllers
             return View(state);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Staties.Edit)]
         public IActionResult Edit(int id, State state)
         {
             if (id != state.Id)
@@ -75,6 +81,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region changeStatus
+        [Authorize(Permissions.Staties.Delete)]
         public async Task<IActionResult> ChangeState(int Id, bool status)
         {
             var state = _stateRepository.GetById(Id);
@@ -101,6 +108,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region Delete
+        [Authorize(Permissions.Staties.Delete)]
         public IActionResult Delete(int id)
         {
 
