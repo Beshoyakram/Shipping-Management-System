@@ -263,22 +263,30 @@ namespace Shipping.Controllers
         #region OrderCount
         public IActionResult OrderCount()
         {
+            
 
-
-            string roleName = User.FindFirstValue(ClaimTypes.Role);
+                string roleName = User.FindFirstValue(ClaimTypes.Role);
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = _orderRepository.GetAllOrders();
-            if (roleName == "Admin" || roleName == "الموظفين")
+
+            ViewBag.RoleName=roleName;
+            if (roleName == "Admin" || roleName == "الموظفين")           
             { return View(result); }
             else if (roleName == "التجار")
             {
                 var intMerchantId = _myContext.Merchants.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
                 return View(result.Where(p => p.MerchantId == intMerchantId).ToList());
             }
+            else if (roleName == "المناديب")
+            {
+                var intDeliveryId = _myContext.Deliveries.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
+                return View(result.Where(p => p.DeliveryId == intDeliveryId).ToList());
+            }
             else
             {
                 return BadRequest();
             }
+            
         }
 
         #endregion
@@ -295,7 +303,9 @@ namespace Shipping.Controllers
             var newOrders = Orders.Where(p => p.OrderStatus == query).ToList();
 
             ViewBag.Branches = _myContext.Branches.ToList();
-            
+            ViewBag.RoleName = roleName;
+
+
 
             if (roleName == "Admin" || roleName == "الموظفين")
             { return View("index", model: newOrders); }
@@ -304,6 +314,13 @@ namespace Shipping.Controllers
 
                 var intMerchantId = _myContext.Merchants.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
                 var result= Orders.Where(p => p.OrderStatus == query &&p.MerchantId==intMerchantId).ToList();
+                return View(result);
+            }
+            else if (roleName == "المناديب")
+            {
+
+                var intDeliveryId = _myContext.Deliveries.Where(p => p.UserId == userId).Select(p => p.Id).FirstOrDefault();
+                var result = Orders.Where(p => p.OrderStatus == query && p.DeliveryId == intDeliveryId).ToList();
                 return View(result);
             }
             else

@@ -27,9 +27,15 @@
                 <th>تكلفة الطلب</th>
                 <th>تكلفة الشحن</th>
                 <th>نوع الشحن</th>
-                <th>تعديل الطلب</th>
-              
-                <th>حذف</th>
+               
+
+                @if (ViewBag.RoleName != "المناديب")
+                {
+                    <th>تعديل الطلب</th>
+                    <th>حذف</th>
+                }
+                    
+
                 <th>طباعة</th>
                 <th>المندوب</th>
             </tr>
@@ -46,12 +52,16 @@
                     <td>@item.OrderCost</td>
                     <td>@item.ShippingCost</td>
                     <td>@item.ShippingType</td>
-
-                    <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                    @if (ViewBag.RoleName != "المناديب")
+                    {
+<td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
                  
                     <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                    }
+                    
                     <td><a class="btn btn-info">طباعة</a></td>
                     <td >
+                        
                         <select  id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
                            
                             @foreach (var item1 in ViewBag.Delivery)
