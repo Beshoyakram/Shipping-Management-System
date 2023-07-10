@@ -194,12 +194,12 @@ namespace Shipping.Repository.DeliveryRepo
 
         public List<Branch> GetAllBranches()
         {
-            var Branchs = _myContext.Branches.ToList();
+            var Branchs = _myContext.Branches.Where(b=>b.IsDeleted==false).ToList();
             return Branchs;
         }
         public List<State> GetAllStates()
         {
-            var States = _myContext.States.ToList();
+            var States = _myContext.States.Where(s=>s.IsDeleted==false).ToList();
             return States;
         }
     }

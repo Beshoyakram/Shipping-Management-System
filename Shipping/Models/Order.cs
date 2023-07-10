@@ -9,7 +9,7 @@ namespace Shipping.Models
         [Key]
         public int SerialNumber { get; set; }
         [ForeignKey("Merchant")]
-        public int MerchantId { get; set; } = 1;
+        public int MerchantId { get; set; }
 
         //[ForeignKey("State")]
         public int StateId { get; set; }

@@ -94,7 +94,8 @@ namespace Shipping.Repository.EmployeeRepo
             var branchViewModels = branches.Select(b => new BranchViewModel
             {
                 Id = b.Id,
-                Name = b.Name
+                Name = b.Name,
+                Status = b.Status
             });
 
             return branchViewModels;

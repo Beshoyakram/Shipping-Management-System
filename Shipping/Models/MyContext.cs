@@ -17,6 +17,7 @@ namespace Shipping.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
         public DbSet<WeightSetting> weightSettings { get; set; }
+        public DbSet<SpecialCitiesPrice> SpecialCitiesPrice { get; set; }
 
         public MyContext():base()
         {}
