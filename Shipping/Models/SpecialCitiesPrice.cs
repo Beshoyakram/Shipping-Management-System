@@ -12,6 +12,6 @@ namespace Shipping.Models
         public string City { get; set; }
         public int Price { get; set; }
 
-        public virtual Merchant Merchant { get; set; }
+        public virtual Merchant? Merchant { get; set; }
     }
 }

@@ -45,7 +45,7 @@ namespace Shipping.Controllers
         public IActionResult Add()
         {
 
-            ViewData["State"] = _stateRepo.GetAll();
+            ViewData["State"] = _stateRepo.GetAll().Where(s=>s.Status==true);
 
             return View();
         }
@@ -69,7 +69,7 @@ namespace Shipping.Controllers
         {
             Branch branch = _brachRepo.GetById(id);
 
-            ViewData["State"] = _stateRepo.GetAll();
+            ViewData["State"] = _stateRepo.GetAll().Where(s=>s.Status==true);
 
             return View("Edit", branch);
         }

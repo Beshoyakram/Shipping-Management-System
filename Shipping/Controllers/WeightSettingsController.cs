@@ -34,19 +34,27 @@ namespace Shipping.Controllers
         //
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Cost,Addition_Cost")] WeightSetting shippingCost)
+        //public async Task<IActionResult> Edit( [Bind("Id,Cost,Addition_Cost")] WeightSetting shippingCost)
+        public async Task<IActionResult> Edit(WeightSetting shippingCost)
         {
-            if (id != shippingCost.Id)
-            {
-                return NotFound();
-            }
+            //if (id != shippingCost.Id)
+            //{
+            //    return NotFound();
+            //}
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(shippingCost);
-                    await _context.SaveChangesAsync();
+
+                    var weight = _context.weightSettings.Where(w => w.Id == 1).FirstOrDefault();
+                    if (weight != null)
+                    {
+                        weight.Addition_Cost = shippingCost.Addition_Cost;
+                        weight.Cost = shippingCost.Cost;
+                        await _context.SaveChangesAsync();
+                    }
+                    //_context.Update(shippingCost);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

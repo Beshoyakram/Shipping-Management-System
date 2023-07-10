@@ -36,10 +36,10 @@ namespace Shipping.Controllers
 
         public IActionResult add()
         {
-            var Branchs = _deliveryRepository.GetAllBranches();
+            var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
             ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-            var States = _deliveryRepository.GetAllStates();
+            var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
             ViewBag.StatesList = new SelectList(States, "Name", "Name");
             ViewBag.States = _deliveryRepository.GetAllStates();
 
@@ -60,8 +60,11 @@ namespace Shipping.Controllers
                     {
                         ModelState.AddModelError("", error.Description);
                     }
-                    var Branchs = _deliveryRepository.GetAllBranches();
-                    ViewBag.Branchs = Branchs;
+                    var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
+                    ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+
+                    var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
+                    ViewBag.StatesList = new SelectList(States, "Name", "Name");
                     return View(deliveryViewModel);
                 }
                 //if everything is good
@@ -69,8 +72,11 @@ namespace Shipping.Controllers
             }
             else
             {
-                var Branchs = _deliveryRepository.GetAllBranches();
-                ViewBag.Branchs = Branchs;
+                var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
+                ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+
+                var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
+                ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
                 return View(deliveryViewModel);
             }
@@ -99,10 +105,10 @@ namespace Shipping.Controllers
                 return NotFound();
             }
 
-            var Branchs = _deliveryRepository.GetAllBranches();
+            var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
             ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-            var States = _deliveryRepository.GetAllStates();
+            var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
             ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
 
@@ -121,12 +127,11 @@ namespace Shipping.Controllers
             }
             else
             {
-                var Branchs = _deliveryRepository.GetAllBranches();
+                var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
                 ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-                var States = _deliveryRepository.GetAllStates();
+                var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
                 ViewBag.StatesList = new SelectList(States, "Name", "Name");
-
                 return View("Edit", deliveryEditViewModel);
             }
             return RedirectToAction("Index");

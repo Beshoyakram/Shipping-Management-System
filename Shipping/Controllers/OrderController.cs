@@ -14,6 +14,7 @@ using Azure;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Shipping.Constants;
+using System.Threading.Tasks;
 
 namespace Shipping.Controllers
 {
@@ -116,29 +117,29 @@ namespace Shipping.Controllers
 
         public IActionResult Add()
         {
-            ViewBag.States = _stateRepository.GetAll();
-            ViewBag.Branches = _myContext.Branches.ToList();           
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
 
             return View();
         }
-        [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Permissions.Orders.Create)]
-        public IActionResult Add(OrderViewModel orderViewModel)
+        public async Task<IActionResult> Add(OrderViewModel orderViewModel)
         {
 
             if (ModelState.IsValid)
             {
+                var user = await _userManager.GetUserAsync(User);
 
-                _orderRepository.CalcShipping(orderViewModel);
 
-                _orderRepository.Add(orderViewModel);
+                _orderRepository.CalcShipping(orderViewModel,user);
+
+                _orderRepository.Add(orderViewModel,user);
                 return Redirect("/order/index");
             }
 
-            ViewBag.States = _stateRepository.GetAll();
-
-            ViewBag.Branches = _myContext.Branches.ToList();
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
             return View(orderViewModel);
         }
         [HttpGet]
@@ -228,11 +229,8 @@ namespace Shipping.Controllers
         [Authorize(Permissions.Orders.Edit)]
         public async Task<IActionResult> Edit(int Id)
         {
-            ViewBag.States = _stateRepository.GetAll();
-
-
-
-            ViewBag.Branches = _myContext.Branches.ToList();
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
 
             var orderViewModel = await _orderRepository.OrderViewModelById(Id);
 
@@ -248,14 +246,16 @@ namespace Shipping.Controllers
 
             if (ModelState.IsValid)
             {
+                var user = await _userManager.GetUserAsync(User);
+
                 
                 var order = await _orderRepository.GetOrderById(Id);
-                _orderRepository.Edit(order, orderViewModel);
+                _orderRepository.Edit(order, orderViewModel,user);
                 return Redirect("/order/index");
             }
 
-            ViewBag.States = _stateRepository.GetAll();
-            ViewBag.Branches = _myContext.Branches.ToList();
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
             return View(orderViewModel);
         }
 

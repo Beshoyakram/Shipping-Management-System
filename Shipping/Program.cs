@@ -11,6 +11,7 @@ using Shipping.Repository.StateRepo;
 using Shipping.Repository.CityRepo;
 using Shipping.Repository.BranchRepo;
 using Shipping.Repository.OrderRepo;
+using Shipping.Repository.WeightRepo;
 
 namespace Shipping
 {
@@ -38,6 +39,7 @@ namespace Shipping
             builder.Services.AddScoped<ICityRepository, CityRepository>();
             builder.Services.AddScoped<IbranchRepository, BranchRepository>();
             builder.Services.AddScoped<IOrderRepository, OrderRepositorty>();
+            builder.Services.AddScoped<IWeightSettingRepository, WeightSettingRepository>();
             
 
 

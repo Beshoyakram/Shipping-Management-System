@@ -8,6 +8,7 @@ using Shipping.Models;
 using Shipping.Repository.BranchRepo;
 using Shipping.Repository.CityRepo;
 using Shipping.Repository.MerchantRepo;
+using Shipping.Repository.StateRepo;
 using Shipping.ViewModels;
 
 namespace Shipping.Controllers
@@ -17,11 +18,13 @@ namespace Shipping.Controllers
         IMerchantRepository _merchantRepo;
         ICityRepository _cityRepository;
         IbranchRepository _branchRepository;
-        public MerchantController(IMerchantRepository merchantRepo, ICityRepository CityRepository, IbranchRepository branchRepository)
+        IStateRepository _stateRepository;
+        public MerchantController(IMerchantRepository merchantRepo, ICityRepository CityRepository, IbranchRepository branchRepository,IStateRepository stateRepository)
         {
             _merchantRepo = merchantRepo;
             _cityRepository = CityRepository;
             _branchRepository = branchRepository;
+            _stateRepository = stateRepository;
         }
         #region ViewAll
         [Authorize(Permissions.Merchants.View)]
@@ -35,18 +38,29 @@ namespace Shipping.Controllers
         #endregion
 
         #region Adding
+
+        [HttpGet]
+        public IActionResult GetStates()
+        {
+            var states = _stateRepository.GetAll().Where(b => b.Status == true);
+            return Json(states);
+        }
+
         [HttpGet]
         [Authorize(Permissions.Merchants.Create)]
         public IActionResult Add()
         {
-            var Branchs = _merchantRepo.GetAllBranches();
+            var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
             ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-            var States = _merchantRepo.GetAllStates();
-            ViewBag.StatesList = new SelectList(States, "Name", "Name");
-            ViewBag.States = _merchantRepo.GetAllStates();
+            //var States = _merchantRepo.GetAllStates().Where(b => b.Status == true);
+            //ViewBag.StatesList = new SelectList(States, "Name", "Name");
+            //ViewBag.StatesName = _stateRepository.GetAllNames();
 
-            var Cities = _merchantRepo.GetAllCities();
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            
+
+            var Cities = _merchantRepo.GetAllCities().Where(b => b.Status == true);
             ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
 
             return View();
@@ -66,11 +80,15 @@ namespace Shipping.Controllers
                     {
                         ModelState.AddModelError("", error.Description);
                     }
-                    var Branchs = _merchantRepo.GetAllBranches();
+                    var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
                     ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-                    var States = _merchantRepo.GetAllStates();
+                    var States = _merchantRepo.GetAllStates().Where(b => b.Status == true);
                     ViewBag.StatesList = new SelectList(States, "Name", "Name");
+                    ViewBag.States = _stateRepository.GetAll();
+
+                    var Cities = _merchantRepo.GetAllCities().Where(b => b.Status == true);
+                    ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
                     return View(merchantViewModel);
                 }
                 //if everything is good
@@ -78,11 +96,11 @@ namespace Shipping.Controllers
             }
             else
             {
-                var Branchs = _merchantRepo.GetAllBranches();
+                var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
                 ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
                 ViewBag.Branches = Branchs;
 
-                var States = _merchantRepo.GetAllStates();
+                var States = _stateRepository.GetAll().Where(b => b.Status == true);
                 ViewBag.StatesList = new SelectList(States, "Name", "Name");
                 ViewBag.States = States;
 
@@ -103,13 +121,13 @@ namespace Shipping.Controllers
             {
                 return NotFound();
             }
-            var Branchs = _merchantRepo.GetAllBranches();
+            var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
             ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-            var States = _merchantRepo.GetAllStates();
+            var States = _merchantRepo.GetAllStates().Where(b => b.Status == true);
             ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
-            var Cities = _merchantRepo.GetAllCities();
+            var Cities = _merchantRepo.GetAllCities().Where(b => b.Status == true);
             ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
 
 
@@ -127,13 +145,13 @@ namespace Shipping.Controllers
             }
             else
             {
-                var Branchs = _merchantRepo.GetAllBranches();
+                var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
                 ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
 
-                var States = _merchantRepo.GetAllStates();
+                var States = _merchantRepo.GetAllStates().Where(b => b.Status == true);
                 ViewBag.StatesList = new SelectList(States, "Name", "Name");
 
-                var Cities = _merchantRepo.GetAllCities();
+                var Cities = _merchantRepo.GetAllCities().Where(b => b.Status == true);
                 ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
                 return View("Edit", merchantEditViewModel);
             }
