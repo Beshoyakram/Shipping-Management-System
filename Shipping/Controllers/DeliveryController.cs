@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Shipping.Constants;
 using Shipping.Models;
+using Shipping.Repository.BranchRepo;
 using Shipping.Repository.DeliveryRepo;
 using Shipping.ViewModels;
 
@@ -11,9 +12,11 @@ namespace Shipping.Controllers
     public class DeliveryController : Controller
     {
         IDeliveryRepository _deliveryRepository;
-        public DeliveryController(IDeliveryRepository deliveryRepository)
+        IbranchRepository _branchRepository;
+        public DeliveryController(IDeliveryRepository deliveryRepository,IbranchRepository ibranchRepository)
         {
             this._deliveryRepository = deliveryRepository;
+            this._branchRepository = ibranchRepository;
         }
 
 
@@ -30,6 +33,7 @@ namespace Shipping.Controllers
         #region Add
         [HttpGet]
         [Authorize(Permissions.Deliveries.Create)]
+
         public IActionResult add()
         {
             var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
@@ -37,6 +41,7 @@ namespace Shipping.Controllers
 
             var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
             ViewBag.StatesList = new SelectList(States, "Name", "Name");
+            ViewBag.States = _deliveryRepository.GetAllStates();
 
             return View();
         }
@@ -78,6 +83,16 @@ namespace Shipping.Controllers
             
         }
         #endregion
+
+        #region  GetBranchesByState
+        [Authorize(Permissions.Deliveries.Create)]
+        public IActionResult GetBranchesByState(string state)
+        {
+            var branches = _branchRepository.GetBranchesByStateName(state);
+
+            return Json(branches);
+        }
+        #endregion
 
         #region Edit
         [HttpGet]

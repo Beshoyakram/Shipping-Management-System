@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Shipping.Constants;
 using Shipping.Models;
 using Shipping.Repository.CityRepo;
 using Shipping.Repository.StateRepo;
@@ -18,6 +20,7 @@ namespace Shipping.Controllers
         }
 
 
+        [Authorize(Permissions.Cities.View)]
         public IActionResult Index(int stateId)
         {
 
@@ -25,12 +28,15 @@ namespace Shipping.Controllers
         }
 
         #region Add
+        [Authorize(Permissions.Cities.Create)]
         public IActionResult Add(int stateId)
         {
             ViewBag.stateId = stateId;
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Cities.Create)]
         public async Task<IActionResult> Add(int stateId, City city)
         {
             if (ModelState.IsValid)
@@ -46,6 +52,7 @@ namespace Shipping.Controllers
 
 
         #region change state
+        [Authorize(Permissions.Cities.Edit)]
         public IActionResult ChangeState(int Id, bool status)
         {
             var City = _cityRepository.GetById(Id);
@@ -57,6 +64,7 @@ namespace Shipping.Controllers
 
 
         #region Edit
+        [Authorize(Permissions.Cities.Edit)]
         public IActionResult Edit(int id)
         {
             var city = _cityRepository.GetById(id);
@@ -70,6 +78,8 @@ namespace Shipping.Controllers
             return View(city);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Cities.Edit)]
         public IActionResult Edit(int id, City city)
         {
             if (id != city.Id)
@@ -87,6 +97,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region search
+        [Authorize(Permissions.Cities.View)]
         public IActionResult Search(int id, string query)
         {
 
@@ -103,6 +114,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region Delete
+        [Authorize(Permissions.Cities.Delete)]
         public IActionResult Delete(int id)
         {
 

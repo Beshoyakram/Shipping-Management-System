@@ -30,18 +30,21 @@
                 <input asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
-         
+
             <div class="form-group col-md-4 p-3">
-                <label asp-for="Government" class="control-label">المحافظة</label>
-                <select asp-for="Government" class="form-select" asp-items="@ViewBag.StatesList">
-                    <option value="">-- اختر محافظة --</option>
+                <label asp-for="Government">المحافظة</label>
+                <select id="state" asp-for="Government" class="form-control">
+                    <option value="">اختر محافظة</option>
+                    @foreach (var state in ViewBag.States)
+                    {
+                        <option value="@state.Name">@state.Name</option>
+                    }
                 </select>
-                <span asp-validation-for="Government" class="text-danger"></span>
             </div>
             <div class="form-group col-md-4 p-3">
                 <label asp-for="BranchName" class="control-label">الفرع</label>
-                <select asp-for="BranchName" class="form-select" asp-items="@ViewBag.BranchList">
-                    <option value="">-- اختر فرع --</option>
+                <select id="branch" asp-for="BranchName" class="form-select">
+                    <option value=""> اختر فرع</option>
                 </select>
                 <span asp-validation-for="BranchName" class="text-danger"></span>
             </div>
@@ -74,4 +77,31 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            var stateDropdown = $('#state');
+            var branchDropdown = $('#branch');
+
+            stateDropdown.on('change', function () {
+                var selectedState = stateDropdown.val();
+
+                branchDropdown.empty();
+
+                $.ajax({
+                    url: '/Delivery/GetBranchesByState',
+                    type: 'GET',
+                    data: { state: selectedState },
+                    success: function (result) {
+                        $.each(result, function (index, branch) {
+                            branchDropdown.append($('<option></option>').val(branch).text(branch));
+                        });
+                    },
+                    error: function () {
+                        console.log('Failed to retrieve Branches.');
+                    }
+                });
+            });
+        });
+
+    </script>
 }

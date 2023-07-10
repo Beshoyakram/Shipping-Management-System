@@ -67,6 +67,7 @@ namespace Shipping.Controllers
         }
         [HttpPost]
         [Authorize(Permissions.Merchants.Create)]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Add(MerchantViewModel merchantViewModel)
         {
 
@@ -134,6 +135,7 @@ namespace Shipping.Controllers
         }
         [HttpPost]
         [Authorize(Permissions.Merchants.Edit)]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string Id, MerchantEditViewModel merchantEditViewModel)
         {
             var merchant = await _merchantRepo.GetById(Id);
@@ -170,7 +172,9 @@ namespace Shipping.Controllers
 
         #endregion
 
+
         #region  GetCitiesByState
+        [Authorize(Permissions.Merchants.Create)]
         public IActionResult GetCitiesByState(string state)
         {
             var cities = _cityRepository.GetAllByStateName(state);
@@ -180,6 +184,7 @@ namespace Shipping.Controllers
         #endregion
 
         #region  GetBranchesByState
+        [Authorize(Permissions.Merchants.Create)]
         public IActionResult GetBranchesByState(string state)
         {
             var branches = _branchRepository.GetBranchesByStateName(state);

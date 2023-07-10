@@ -9,7 +9,9 @@
         Orders,
         Branches,
         Staties,
-        Cities
+        Cities,
+        OrderCount,
+        WeightSettings
 
     }
     public static class EnglishVsArabic
@@ -23,7 +25,9 @@
             { "Orders", "صلاحيات الطلبات" },
             { "Branches", "صلاحيات الافرع" },
             { "Staties", "صلاحيات المحافظات" },
-            { "Cities", "صلاحيات المدن" }
+            { "Cities", "صلاحيات المدن" },
+            { "OrderCount", "صلاحيات عدد الطلبات" },
+            { "WeightSettings", "صلاحيات اعدادات الوزن " }
 
 
         };

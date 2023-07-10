@@ -1,4 +1,5 @@
-﻿@model List<OrderViewModel>
+﻿@inject IAuthorizationService AuthorizationService
+@model List<OrderViewModel>
 @{
     ViewData["Title"] = "Index";
     SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
@@ -27,9 +28,22 @@
                 <th>تكلفة الطلب</th>
                 <th>تكلفة الشحن</th>
                 <th>نوع الشحن</th>
-                <th>تعديل الطلب</th>
-              
-                <th>حذف</th>
+               
+
+                @if (ViewBag.RoleName != "المناديب")
+                {
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Edit).Result.Succeeded)
+                    {
+                        <th>تعديل الطلب</th>
+                    }
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Delete).Result.Succeeded)
+                    {
+                        <th>حذف</th>
+                    }
+                                   
+                }
+                    
+
                 <th>طباعة</th>
                 <th>المندوب</th>
             </tr>
@@ -46,12 +60,25 @@
                     <td>@item.OrderCost</td>
                     <td>@item.ShippingCost</td>
                     <td>@item.ShippingType</td>
-
-                    <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                    @if (ViewBag.RoleName != "المناديب")
+                    {
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                        {
+                            <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
+                        }
+                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                        {
+                                <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                        }
                  
-                    <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
+                
+
+                    }
+
+                    
                     <td><a class="btn btn-info">طباعة</a></td>
                     <td >
+                        
                         <select  id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
                            
                             @foreach (var item1 in ViewBag.Delivery)

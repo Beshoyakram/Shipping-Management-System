@@ -20,7 +20,10 @@
 <div class="row p-2">
 @foreach (OrderStatus item in Enum.GetValues(typeof(OrderStatus)))
 {
-
+        if (ViewBag.RoleName == "المناديب"&& item.ToString()=="جديد")
+        {
+            continue;
+        }
         <div class="carddd card mb-3 m-2" >
            
         <div class="card-body"  >
