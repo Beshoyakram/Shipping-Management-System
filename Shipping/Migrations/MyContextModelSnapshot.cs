@@ -143,28 +143,28 @@ namespace Shipping.Migrations
                         new
                         {
                             Id = "5ab58670-8727-4b67-85d5-4199912a70bf",
-                            Date = "08/07/2023 06:42:11 م",
+                            Date = "10/07/2023 08:12:04 م",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "16da2458-b241-456b-924b-e971e04407cb",
-                            Date = "08/07/2023 06:42:11 م",
+                            Id = "9013509a-719b-41ba-8c77-6ccfd8688d17",
+                            Date = "10/07/2023 08:12:04 م",
                             Name = "المناديب",
                             NormalizedName = "المناديب"
                         },
                         new
                         {
-                            Id = "13551064-d2ea-40ce-aad3-247a8622e38a",
-                            Date = "08/07/2023 06:42:11 م",
+                            Id = "6b76e677-ddf6-4233-8fa7-c7079172bd23",
+                            Date = "10/07/2023 08:12:04 م",
                             Name = "التجار",
                             NormalizedName = "التجار"
                         },
                         new
                         {
-                            Id = "177b6a7c-4de3-4254-96fd-dab1dbc4f868",
-                            Date = "08/07/2023 06:42:11 م",
+                            Id = "8b89350b-cb59-4ae1-be39-be970cedaf34",
+                            Date = "10/07/2023 08:12:04 م",
                             Name = "الموظفين",
                             NormalizedName = "الموظفين"
                         });
@@ -228,6 +228,14 @@ namespace Shipping.Migrations
                             ArabicName = "صلاحيات المجموعات",
                             ClaimType = "Permissions",
                             ClaimValue = "Permissions.Controls.Create",
+                            RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ArabicName = "صلاحيات عدد الطلبات",
+                            ClaimType = "Permissions",
+                            ClaimValue = "Permissions.OrderCount.View",
                             RoleId = "5ab58670-8727-4b67-85d5-4199912a70bf"
                         });
                 });
@@ -310,16 +318,16 @@ namespace Shipping.Migrations
                         {
                             Id = "76f86073-b51c-47c4-b7fa-731628055ebb",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b3be9dbf-3dae-4e06-a12d-b0b9096752cf",
+                            ConcurrencyStamp = "7bc4cab0-5aaa-48ff-8137-e8d8e10c8de4",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENhoxyCsRNE/GCFMf0iLd6pXejkogtZchq3Y7f/QVthw0e2FAOGsWYq5jf8typHgqA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAwT5/ZNmmrKPy9btlT1n+O2H4LWDJc/YZDiiZ6/qioDFs4XWWqn2yWSFljCR//PJA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f2693b15-699a-40f9-95e6-4012d550c52e",
+                            SecurityStamp = "f92fb942-a31c-4580-9dc1-cb4ced5ddc60",
                             Status = true,
                             TwoFactorEnabled = false,
                             UserName = "admin"

@@ -114,7 +114,7 @@ namespace Shipping.Controllers
 
         #region Add
         [Authorize(Permissions.Orders.Create)]
-
+        [HttpGet]
         public IActionResult Add()
         {
             ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
@@ -124,6 +124,7 @@ namespace Shipping.Controllers
         }
         [ValidateAntiForgeryToken]
         [Authorize(Permissions.Orders.Create)]
+        [HttpPost]
         public async Task<IActionResult> Add(OrderViewModel orderViewModel)
         {
 
@@ -291,7 +292,7 @@ namespace Shipping.Controllers
 
 
         #region OrderCount
-        [Authorize(Permissions.OrderCount.View)]
+        [Authorize]
         public IActionResult OrderCount()
         {
             

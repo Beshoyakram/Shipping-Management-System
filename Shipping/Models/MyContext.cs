@@ -125,6 +125,14 @@ namespace Shipping.Models
                     RoleId = ROLE_ID,
                     ArabicName = "صلاحيات المجموعات"
                 }
+                , new ApplicationRoleCliams
+                {
+                    Id = 5,
+                    ClaimType = "Permissions",
+                    ClaimValue = "Permissions.OrderCount.View",
+                    RoleId = ROLE_ID,
+                    ArabicName = "صلاحيات عدد الطلبات"
+                }
                 );
 
             //Add WeightSetting
