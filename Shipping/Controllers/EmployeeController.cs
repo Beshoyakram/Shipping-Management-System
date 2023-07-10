@@ -38,7 +38,7 @@ namespace Shipping.Controllers
 
             var employeeViewModel = new EmployeeViewModel();
 
-            var branches = _employeeRepository.GetAllBranches();
+            var branches = _employeeRepository.GetAllBranches().Where(b=>b.Status==true);
             var branchList = new SelectList(branches, "Name", "Name");
 
             ViewBag.BranchList = branchList;
@@ -64,7 +64,7 @@ namespace Shipping.Controllers
                         ModelState.AddModelError("", error.Description);
                     }
 
-                    var branches = _employeeRepository.GetAllBranches();
+                    var branches = _employeeRepository.GetAllBranches().Where(b => b.Status == true);
                     var branchList = new SelectList(branches, "Name", "Name");
                     ViewBag.BranchList = branchList;
                     var empRoles = await _roleManager.Roles.Where(r => r.Name != "admin" && r.Name != "التجار" && r.Name != "المناديب").ToListAsync();
@@ -93,7 +93,7 @@ namespace Shipping.Controllers
 
             if (employee != null)
             {
-                var branches = _employeeRepository.GetAllBranches().ToList();
+                var branches = _employeeRepository.GetAllBranches().ToList().Where(b => b.Status == true);
                 ViewBag.BranchList = new SelectList(branches, "Name", "Name");
 
                 var empRoles = await _roleManager.Roles.Where(r => r.Name != "admin" && r.Name != "التجار" && r.Name != "المناديب").ToListAsync();
@@ -118,7 +118,7 @@ namespace Shipping.Controllers
             }
             else
             {
-                var branches = _employeeRepository.GetAllBranches().ToList();
+                var branches = _employeeRepository.GetAllBranches().ToList().Where(b => b.Status == true);
                 ViewBag.BranchList = new SelectList(branches, "Name", "Name");
 
                 var empRoles = await _roleManager.Roles.Where(r => r.Name != "admin" && r.Name != "التجار" && r.Name != "المناديب").ToListAsync();

@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Shipping.Models;
 using Shipping.Repository.CityRepo;
+using Shipping.Repository.WeightRepo;
 using Shipping.ViewModels;
 using static NuGet.Packaging.PackagingConstants;
 
@@ -11,19 +14,27 @@ namespace Shipping.Repository.OrderRepo
     {
         MyContext _myContext;
         ICityRepository _cityRepository;
-        public OrderRepositorty(MyContext myContext, ICityRepository cityRepository)
+        private readonly UserManager<ApplicationUser> _userManager;
+        IWeightSettingRepository _weightSettingRepository;
+        public OrderRepositorty(MyContext myContext, ICityRepository cityRepository,UserManager<ApplicationUser> userManager,IWeightSettingRepository weightSettingRepository)
         {
             _myContext = myContext;
             _cityRepository = cityRepository;
+            _userManager = userManager;
+            _weightSettingRepository = weightSettingRepository;
+
         }
 
         #region AddOrder
-        public async void Add(OrderViewModel orderViewModel)
+        public async void Add(OrderViewModel orderViewModel, ApplicationUser user)
         {
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
 
+            var userId = user.Id;
+            var merchantId = _myContext.Merchants.Where(m => m.UserId == userId).FirstOrDefault().Id;
             Order order = new Order()
             {
+                MerchantId = merchantId,
                 CityId = city.Id,
                 IsVillage = orderViewModel.IsVillage,
                 ClientEmail = orderViewModel.ClientEmail,
@@ -266,7 +277,7 @@ namespace Shipping.Repository.OrderRepo
         #endregion
 
         #region EditOrder
-        public void Edit(Order order, OrderViewModel orderViewModel)
+        public void Edit(Order order, OrderViewModel orderViewModel, ApplicationUser user)
         {
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
             if (orderViewModel != null)
@@ -285,7 +296,7 @@ namespace Shipping.Repository.OrderRepo
             }
             if (order != null)
             {
-                CalcShipping(orderViewModel);
+                CalcShipping(orderViewModel, user);   
                 order.CityId = city.Id;
                 order.IsVillage = orderViewModel.IsVillage;
                 order.ClientEmail = orderViewModel.ClientEmail;
@@ -308,8 +319,24 @@ namespace Shipping.Repository.OrderRepo
         }
         #endregion
 
-        public void CalcShipping(OrderViewModel orderViewModel)
+        public async void CalcShipping(OrderViewModel orderViewModel, ApplicationUser user)
         {
+
+            var userId = user.Id;
+            var merchantId = _myContext.Merchants.Where(m => m.UserId == userId).FirstOrDefault().Id;
+
+            var specialPrices = _myContext.SpecialCitiesPrice.Where(s=>s.MerchantId== merchantId && orderViewModel.CityName == s.City).FirstOrDefault();
+
+            var OrderWeight = Math.Ceiling((double) orderViewModel.TotalWeight / 1000);
+
+            var MaxWeight = _weightSettingRepository.GetWeight();
+            var additionCost = _weightSettingRepository.GetCost();
+
+            if(OrderWeight > MaxWeight)
+            {
+                orderViewModel.ShippingCost += (int) (OrderWeight - MaxWeight) * additionCost;
+            }
+
             if (orderViewModel.IsVillage == true)
                 orderViewModel.ShippingCost += 20;
             if (orderViewModel.ShippingType == ShippingType.توصيل_في_نفس_اليوم)
@@ -326,7 +353,9 @@ namespace Shipping.Repository.OrderRepo
                 orderViewModel.ShippingCost += 10;
             }
 
-            if (orderViewModel.Type == Models.Type.تسليم_فالفرع)
+            if (specialPrices != null)
+                orderViewModel.ShippingCost += specialPrices.Price;
+            else if (orderViewModel.Type == Models.Type.تسليم_فالفرع)
                 orderViewModel.ShippingCost += _cityRepository.GetByName(orderViewModel.CityName).PickUpPrice;
 
             else if (orderViewModel.Type == Models.Type.توصيل_الي_المنزل)

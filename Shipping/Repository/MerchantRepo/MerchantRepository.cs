@@ -30,6 +30,7 @@ namespace Shipping.Repository.MerchantRepo
                 PickUpSpecialCost = merchantViewModel.PickUpPrice,
                 RefusedOrderPercent = merchantViewModel.RefuseCostPercent,
                 BranchId = _myContext.Branches.FirstOrDefault(b => b.Name == merchantViewModel.BranchName).Id,
+                SpecialCitiesPrices = merchantViewModel.SpecialCities
 
             };
             var user = new ApplicationUser()

@@ -5,6 +5,7 @@ namespace Shipping.Repository.StateRepo
     public interface IStateRepository
     {
         List<State> GetAll();
+        List<string> GetAllNames();
         void Add(State state);
 
 

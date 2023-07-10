@@ -26,7 +26,7 @@ namespace Shipping.Repository.CityRepo
         public List<string> GetAllByStateName(string stateName)
         {
             var stateId = _myContext.States.Where(s => s.Name == stateName && s.IsDeleted == false).FirstOrDefault().Id;
-            return _myContext.Cities.Where(c => c.StateId == stateId && c.IsDeleted == false).Select(c => c.Name).ToList();
+            return _myContext.Cities.Where(c => c.StateId == stateId && c.IsDeleted == false && c.Status==true).Select(c => c.Name).ToList();
         }
 
 

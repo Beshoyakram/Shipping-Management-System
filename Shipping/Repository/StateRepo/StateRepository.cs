@@ -22,6 +22,11 @@ namespace Shipping.Repository.StateRepo
             return _myContext.States.Where(s => s.IsDeleted != true).ToList();
         }
 
+        public List<string> GetAllNames()
+        {
+            return _myContext.States.Where(s => s.IsDeleted != true && s.Status==true).Select(s => s.Name).ToList();
+        }
+
         public State GetById(int id)
         {
             return _myContext.States.Where(p => p.Id == id && p.IsDeleted == false).FirstOrDefault();

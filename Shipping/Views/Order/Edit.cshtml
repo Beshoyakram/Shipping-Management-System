@@ -21,14 +21,14 @@
             <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
             <div id="dataTable_filter" class="card-header">
                 <div class="form-group p-3 d-flex justify-content-center align-items-center">
-                <label asp-for="ShippingType">النوع</label>
+                    <label asp-for="ShippingType">النوع</label>
                     <select class="form-control col-4 m-1" asp-for="Type">
-                    @foreach (var item in Enum.GetValues(typeof(Shipping.Models.Type)))
-                    {
-                        <option value="@item">@item</option>
+                        @foreach (var item in Enum.GetValues(typeof(Shipping.Models.Type)))
+                        {
+                            <option value="@item">@item</option>
 
-                    }
-                </select>
+                        }
+                    </select>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
                     </select>
                 </div>
             </div>
-                <hr class="sidebar-divider">
+            <hr class="sidebar-divider">
             <div class="d-flex flex-wrap">
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="BranchName">الفرع : </label>
@@ -116,7 +116,7 @@
                     </select>
                 </div>
             </div>
-                <hr class="sidebar-divider">
+            <hr class="sidebar-divider">
 
             <div class="form-group p-1">
                 <div class="d-flex justify-content-evenly align-items-center">
@@ -138,10 +138,10 @@
                                         <input name="orderProducts[@i].ProductName" value="@Model.orderProducts[i].ProductName" class="form-control" type="text">
                                     </td>
                                     <td>
-                                        <input name="orderProducts[@i].ProductQuantity" value="@Model.orderProducts[i].ProductQuantity" class="form-control" type="number">
+                                        <input name="orderProducts[@i].ProductQuantity" value="@Model.orderProducts[i].ProductQuantity" class="form-control productQuantityInput" type="number">
                                     </td>
                                     <td>
-                                        <input name="orderProducts[@i].Weight" value="@Model.orderProducts[i].Weight" class="form-control" type="text">
+                                        <input name="orderProducts[@i].Weight" value="@Model.orderProducts[i].Weight" class="form-control productWeightInput" type="text">
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-danger" onclick="removeRow(this)">حذف</button>
@@ -158,7 +158,7 @@
             <div class="d-flex justify-content-around align-items-center">
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="TotalWeight">اجمالي الوزن (كجم)</label>
-                    <input type="text" class="form-control" asp-for="TotalWeight">
+                    <input type="text" class="form-control" asp-for="TotalWeight" readonly>
                     <span asp-validation-for="TotalWeight" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
@@ -210,13 +210,13 @@
         });
 
     </script>
+
     <script>
         function removeRow(element) {
             $(element).closest("tr").remove();
+            var totalWeight = calculateTotalWeight();
+            $("#TotalWeight").val(totalWeight);
         }
-    </script>
-
-    <script>
 
         $(document).ready(function () {
             $("#add-product-btn").click(function () {
@@ -228,38 +228,49 @@
             var tableBody = $("#products-table-body");
             var index = tableBody.children().length;
 
-
             var newRow = $("<tr>");
             newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].ProductName").attr("class", "form-control").attr("type", "text")));
-            newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].ProductQuantity").attr("class", "form-control").attr("type", "number")));
+            newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].ProductQuantity").attr("class", "form-control").attr("type", "number").on("input", function () {
+                var totalWeight = calculateTotalWeight();
+                $("#TotalWeight").val(totalWeight);
+            })));
             newRow.append($("<td>").append($("<input>").attr("name", "orderProducts[" + index + "].Weight").attr("class", "form-control").attr("type", "number").on("input", function () {
-
-                var totalWeight = 0;
-                tableBody.find("input[name$='.Weight']").each(function () {
-                    totalWeight += parseInt($(this).val()) || 0;
-                });
-
-                // Set the total weight in the input field
+                var totalWeight = calculateTotalWeight();
                 $("#TotalWeight").val(totalWeight);
             })));
             newRow.append($("<td>").append($("<button>").attr("type", "button").attr("class", "btn btn-danger").text("حذف").click(function () {
                 $(this).closest("tr").remove();
-
-                // Recalculate the total weight of the products
-                var totalWeight = 0;
-                tableBody.find("input[name$='.Weight']").each(function () {
-                    totalWeight += parseInt($(this).val()) || 0;
-                });
-
-                // Set the total weight in the input field
+                var totalWeight = calculateTotalWeight();
                 $("#TotalWeight").val(totalWeight);
             })));
 
-            // Add the new row to the table body
             tableBody.append(newRow);
         }
+        $(document).ready(function () {
+
+            $('.productQuantityInput, .productWeightInput').on('input', function () {
+                var totalWeight = calculateTotalWeight();
+                $("#TotalWeight").val(totalWeight);
+            });
+        });
+
+
+
+        function calculateTotalWeight() {
+            var totalWeight = 0;
+            var tableBody = $("#products-table-body");
+            tableBody.find("tr").each(function () {
+                var quantity = parseInt($(this).find("input[name$='.ProductQuantity']").val()) || 0;
+                var weight = parseInt($(this).find("input[name$='.Weight']").val()) || 0;
+                var productWeight = quantity * weight;
+                totalWeight += productWeight;
+            });
+            return totalWeight;
+        }
+
 
     </script>
+
 
 }
 
