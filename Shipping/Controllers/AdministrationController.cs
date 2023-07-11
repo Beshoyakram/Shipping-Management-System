@@ -86,7 +86,7 @@ namespace Shipping.Controllers
                 ViewBag.ErrorMessage = $"Role with id : {ID} can't be found.";
                 return View("Notfound");
             }
-            else if (role.Name == "Admin")
+            else if (role.Name == "Admin" || role.Name == "التجار" || role.Name == "الموظفين" || role.Name == "المناديب")
             { return View("NotAllowed"); }
             else
             {
@@ -111,7 +111,7 @@ namespace Shipping.Controllers
                 ViewBag.ErrorMessage = $"Role with id : {model.RoleId} can't be found.";
                 return View("Notfound");
             }
-            else if (role.Name == "Admin")
+            else if (role.Name == "Admin" || role.Name == "التجار" || role.Name == "الموظفين" || role.Name == "المناديب")
             { return View("NotAllowed"); }
             else
             {

@@ -29,3 +29,7 @@
     -moz-appearance: none;
     appearance: none;
 }
+
+.form-check-input {
+    position: inherit;
+}

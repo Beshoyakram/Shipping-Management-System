@@ -51,7 +51,7 @@
                         <td>@b.State.Name</td>
                         @if (AuthorizationService.AuthorizeAsync(User, Permissions.Branches.Delete).Result.Succeeded)
                         {
-                                <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
+                                <td class="form-switch" style="margin:auto;">
                                 <input style="margin:auto"  class="form-check-input btn-outline-success mt-3"  type="checkbox" asp-for="@b.Status"
                                    data-id="@b.Id" onchange="changeState(this)" checked="@b.Status">
                             </td>

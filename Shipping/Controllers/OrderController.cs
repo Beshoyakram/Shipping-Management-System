@@ -77,7 +77,7 @@ namespace Shipping.Controllers
 
         #region GetOrdersDependonStatus
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> GetOrdersDependonStatus(string? status = null)
         {
             List<OrderViewModel> Orders;

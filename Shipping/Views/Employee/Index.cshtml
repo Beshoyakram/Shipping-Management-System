@@ -65,10 +65,10 @@
                             <td>@item.Email</td>
                             <td>@item.Phone</td>
                             <td>@item.BranchName</td>
-                            <td class="form-switch">
+                            <td class="form-switch" >
                                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Employees.Delete).Result.Succeeded)
                                 {
-                                    <input class="form-check-input" type="checkbox"
+                                    <input class="form-check-input" type="checkbox" style="margin:auto;"
                                    asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
                                 }
                             </td>

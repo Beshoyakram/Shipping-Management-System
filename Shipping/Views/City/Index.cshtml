@@ -64,10 +64,10 @@
                             <td>
                                 @item.Name
                             </td>
-                            <td class="form-switch d-flex justify-content-center " style="vertical-align:middle !important;">
+                            <td class="form-switch">
                                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Delete).Result.Succeeded)
                                 {
-                                    <input style="margin:auto" class="form-check-input btn-outline-success mt-3" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
+                                    <input style="margin:auto" class="form-check-input btn-outline-success" type="checkbox" asp-for="@item.Status" data-id="@item.Id" onchange="changeState(this)" checked="@item.Status">
                                 }
                             </td>
                             <td>

@@ -197,7 +197,7 @@
                 var status = $(this).val();
 
                 $.ajax({
-                    url: '/Order/GetOrersDependonStatus',
+                    url: '/Order/GetOrdersDependonStatus',
                     type: 'POST',
                     data: { status: status },
                     error: function (xhr, status, error) {
