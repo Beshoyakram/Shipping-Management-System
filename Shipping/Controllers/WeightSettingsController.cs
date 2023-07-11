@@ -25,7 +25,7 @@ namespace Shipping.Controllers
             var shippingCost = await _context.weightSettings.FirstOrDefaultAsync();
             if (shippingCost == null)
             {
-                return NotFound();
+                return View("NotFound");
             }
 
             return View(shippingCost);
@@ -34,13 +34,8 @@ namespace Shipping.Controllers
         //
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit( [Bind("Id,Cost,Addition_Cost")] WeightSetting shippingCost)
         public async Task<IActionResult> Edit(WeightSetting shippingCost)
         {
-            //if (id != shippingCost.Id)
-            //{
-            //    return NotFound();
-            //}
 
             if (ModelState.IsValid)
             {
@@ -60,7 +55,7 @@ namespace Shipping.Controllers
                 {
                     if (!ShippingCostExists(shippingCost.Id))
                     {
-                        return NotFound();
+                        return View("NotFound");
                     }
                     else
                     {

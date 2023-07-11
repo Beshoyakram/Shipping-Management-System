@@ -23,7 +23,7 @@ namespace Shipping.Controllers
         [Authorize(Permissions.Cities.View)]
         public IActionResult Index(int stateId)
         {
-
+            ViewBag.StateId = stateId;
             return View(_cityRepository.GetAllByState(stateId));
         }
 
@@ -41,7 +41,7 @@ namespace Shipping.Controllers
         {
             if (ModelState.IsValid)
             {
-                _cityRepository.AddToState(stateId,city);
+                _cityRepository.AddToState(stateId, city);
                 return Redirect("/State/Index");
             }
 
@@ -65,13 +65,14 @@ namespace Shipping.Controllers
 
         #region Edit
         [Authorize(Permissions.Cities.Edit)]
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             var city = _cityRepository.GetById(id);
 
             if (city == null)
             {
-                return NotFound();
+                return View("NotFound");
             }
             var states = _stateRepository.GetAll().ToList();
             ViewBag.StateList = new SelectList(states, "Id", "Name");
@@ -84,13 +85,9 @@ namespace Shipping.Controllers
         {
             if (id != city.Id)
             {
-                return BadRequest();
+                return View("NotFound");
             }
-          
-                _cityRepository.Update(id, city);
-
-
-
+            _cityRepository.Update(id, city);
 
             return RedirectToAction(nameof(Index), new { stateId = city.StateId });
         }
@@ -118,22 +115,18 @@ namespace Shipping.Controllers
         public IActionResult Delete(int id)
         {
 
-
-            if (id == null)
-            {
-                return BadRequest();
-            }
-
             City city = _cityRepository.GetById(id);
+
+            if (city == null)
+                return View("NotFound");
+            
+
             city.IsDeleted = true;
             _cityRepository.Update(id, city);
-
-
-
 
             return RedirectToAction(nameof(Index), new { stateId = city.StateId });
         }
 
-#endregion
+        #endregion
     }
 }

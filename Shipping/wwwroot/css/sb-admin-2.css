@@ -9902,9 +9902,9 @@ a:focus {
 }
 
 .bg-gradient-secondary {
-  background-color: #858796;
-  background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
-  background-size: cover;
+    background-color: #858796;
+    background-image: linear-gradient(358deg, #0c0f68e3 74%, #04061c 100%);
+    background-size: cover;
 }
 
 .bg-gradient-success {
@@ -10384,16 +10384,16 @@ a:focus {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
   display: block;
-  color: #3a3b45;
+  color: #e1e1e1;
   text-decoration: none;
   border-radius: 0.35rem;
   white-space: nowrap;
 }
 
-.sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
-.sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #eaecf4;
-}
+    .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
+    .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
+        background-color: #39419f;
+    }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:active {
@@ -10595,11 +10595,11 @@ a:focus {
   .sidebar.toggled .nav-item:last-child {
     margin-bottom: 1rem;
   }
-  .sidebar.toggled .nav-item .nav-link {
-    text-align: center;
-    padding: 0.75rem 1rem;
-    width: 6.5rem;
-  }
+    .sidebar.toggled .nav-item .nav-link {
+        text-align: center;
+        padding: 0.75rem 0rem 0.75rem 1rem;
+        width: 6.5rem;
+    }
   .sidebar.toggled .nav-item .nav-link span {
     font-size: 0.65rem;
     display: block;

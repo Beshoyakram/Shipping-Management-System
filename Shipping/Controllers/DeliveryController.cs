@@ -102,7 +102,7 @@ namespace Shipping.Controllers
             var delivery = await _deliveryRepository.GetById(Id);
             if (delivery == null)
             {
-                return NotFound();
+                return View("NotFound");
             }
 
             var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
@@ -140,20 +140,16 @@ namespace Shipping.Controllers
         #endregion
 
         #region Delete
-        [Authorize(Permissions.Deliveries.Delete)]
-        [HttpPost]
-        public async Task<IActionResult> DeleteAsync(string Id)
-        {
-            Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
-            _deliveryRepository.Delete(delivery);
-            return RedirectToAction("Index");
-        }
 
         [HttpPost]
         [Authorize(Permissions.Deliveries.Delete)]
         public async Task<IActionResult> ChangeState(string Id, bool status)
         {
             Delivery delivery = await _deliveryRepository.GetDeliveryById(Id);
+            if(delivery == null)
+            {
+                return View("NotFound");
+            }
             _deliveryRepository.UpdateStatus(delivery, status);
             return RedirectToAction("Index");
         }

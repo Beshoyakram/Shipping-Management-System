@@ -10,7 +10,6 @@ namespace Shipping.Repository.DeliveryRepo
         Task<DeliveryEditViewModel> GetById(string id);
         Task<IdentityResult> AddDelivery(DeliveryViewModel deliveryViewModel);
         void EditDelivery(Delivery delivery, DeliveryEditViewModel deliveryEditViewModel);
-        void Delete(Delivery delivery);
         void UpdateStatus(Delivery delivery, bool status);
         Task<Delivery> GetDeliveryById(string id);
         List<Branch> GetAllBranches();

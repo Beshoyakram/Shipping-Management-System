@@ -174,14 +174,6 @@ namespace Shipping.Repository.DeliveryRepo
         }
 
         #endregion
-        public void Delete(Delivery delivery)
-        {
-            if (delivery != null)
-            {
-                delivery.User.IsDeleted = true;
-            }
-            _myContext.SaveChanges();
-        }
 
         public void UpdateStatus(Delivery delivery, bool status)
         {

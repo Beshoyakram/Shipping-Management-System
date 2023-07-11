@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Index";
     SelectList Delivers = new SelectList(ViewBag.Delivery, "DeliveryId", "Name", "BranchId");
-
 }
 
 <!-- Page Heading -->
@@ -104,7 +103,7 @@
                             @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
                             {
                                 <td>
-                                <select id="status_@item.Id" class="form-select" onchange='changeStatus(@item.Id)'>
+                                    <select id="status_@item.Id" class="form-select-cust" onchange='changeStatus(@item.Id)'>
                                     @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
                                     {
                                         <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
@@ -124,7 +123,7 @@
                             @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
                             {
                                 <td>
-                                <select id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
+                                    <select id="delivery_@item.Id" class="form-select-cust" onchange='AssignDelivery(@item.Id)'>
                                     <option value="">اختر المندوب</option>
                                     @foreach (var item1 in ViewBag.Delivery)
                                     {
@@ -147,6 +146,7 @@
 
 
 @section Scripts {
+    
     <script>
 
         //function work when Assigning delivery 
@@ -220,21 +220,5 @@
 
 
     </script>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
 
 }

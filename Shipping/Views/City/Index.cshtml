@@ -29,7 +29,7 @@
             <div>
                 @if (AuthorizationService.AuthorizeAsync(User, Permissions.Cities.Create).Result.Succeeded)
                 {
-                    <a asp-action="Add" class="d-none d-sm-inline-block btn btn-sm btn-outline-success shadow-sm mx-1">
+                    <a asp-action="Add" asp-route-stateId="@ViewBag.StateId" class="d-none d-sm-inline-block btn btn-sm btn-outline-success shadow-sm mx-1">
                         <i class="fas fa-plus-circle fa-sm"></i> اضافة مدينة جديدة
                     </a>
                 }

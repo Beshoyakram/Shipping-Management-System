@@ -53,10 +53,10 @@ namespace Shipping.Controllers
             ViewBag.Branches = _myContext.Branches.ToList();
             return View(Orders);
         }
+        #endregion
 
-
+        #region ChangeDelivery
         [HttpPost]
-        [ValidateAntiForgeryToken]
         [Authorize(Permissions.Orders.Edit)]
         public async Task<IActionResult> ChangeDelivery(int Id, int deliveryId)
         {
@@ -72,10 +72,10 @@ namespace Shipping.Controllers
             ViewBag.Branches = _myContext.Branches.ToList();
             return View("Index", Orders);
         }
+        #endregion
 
 
-
-
+        #region GetOrdersDependonStatus
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> GetOrdersDependonStatus(string? status = null)
@@ -97,20 +97,20 @@ namespace Shipping.Controllers
             var Rows = _orderRepository.GenerateTable(OrdersPlusDeliverys);
             return Json(Rows);
         }
+        #endregion
 
+
+        #region ChangeStatus
         [HttpPost]
-        [ValidateAntiForgeryToken]
         [Authorize(Permissions.Orders.Delete)]
-
         public async Task<IActionResult> ChangeStatus(int Id, string status)
         {
             var order = await _orderRepository.GetOrderById(Id);
             _orderRepository.UpdateStatus(order, status);
             return RedirectToAction("Index");
         }
-
-
         #endregion
+
 
         #region Add
         [Authorize(Permissions.Orders.Create)]
@@ -283,7 +283,7 @@ namespace Shipping.Controllers
             var order = await _orderRepository.GetOrderById(Id);
             if (order == null)
             {
-                return NotFound();
+                return View("NotFound");
             }
             _orderRepository.Delete(order);
             return RedirectToAction("Index");
@@ -295,9 +295,7 @@ namespace Shipping.Controllers
         [Authorize]
         public IActionResult OrderCount()
         {
-            
-
-                string roleName = User.FindFirstValue(ClaimTypes.Role);
+            string roleName = User.FindFirstValue(ClaimTypes.Role);
             string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = _orderRepository.GetAllOrders();
 
@@ -316,7 +314,7 @@ namespace Shipping.Controllers
             }
             else
             {
-                return BadRequest();
+                return View("NotAllowed");
             }
             
         }
@@ -358,7 +356,7 @@ namespace Shipping.Controllers
             }
             else
             {
-                return BadRequest();
+                return View("NotFound");
             }
 
 

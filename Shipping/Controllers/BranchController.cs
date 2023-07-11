@@ -89,6 +89,7 @@ namespace Shipping.Controllers
 
         #region Delete
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [Authorize(Permissions.Branches.Delete)]
         public IActionResult Delete(int id)
         {

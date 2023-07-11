@@ -89,37 +89,24 @@
         </div>
     </div>
 </div>
-        @section Scripts {
-            <script>
-                function changeState(checkbox) {
-                    var id = $(checkbox).data('id');
-                    var status = checkbox.checked;
-                    $.ajax({
-                        url: '@Url.Action("ChangeState", "Employee")',
-                        type: 'POST',
-                        data: { id: id, status: status },
-                        success: function () {
-                            console.log('State changed successfully!');
-                        },
-                        error: function () {
-                            console.log('Failed to change state!');
-                        }
-                    });
+
+@section Scripts {
+    <script>
+        function changeState(checkbox) {
+            var id = $(checkbox).data('id');
+            var status = checkbox.checked;
+            $.ajax({
+                url: '@Url.Action("ChangeState", "Employee")',
+                type: 'POST',
+                data: { id: id, status: status },
+                success: function () {
+                    console.log('State changed successfully!');
+                },
+                error: function () {
+                    console.log('Failed to change state!');
                 }
-            </script>
-
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-            <script src="wwwroot\vendor/jquery-easing/jquery.easing.min.js"></script>
-
-            <script src="wwwroot\js/sb-admin-2.min.js"></script>
-
-
-            <script src="wwwroot\vendor/datatables/jquery.dataTables.min.js"></script>
-            <script src="wwwroot\vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-
-            <script src="wwwroot\js/demo/datatables-demo.js"></script>
+            });
         }
+    </script>
+ 
+}

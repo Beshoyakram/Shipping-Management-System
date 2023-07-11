@@ -67,7 +67,7 @@ namespace Shipping.Controllers
         {
             if (id != state.Id)
             {
-                return BadRequest();
+                return View("NotFound");
             }
 
             _stateRepository.Update(id, state);
@@ -112,19 +112,14 @@ namespace Shipping.Controllers
         public IActionResult Delete(int id)
         {
 
-
-            if (id == null)
-            {
-                return BadRequest();
-            }
-
             State state = _stateRepository.GetById(id);
+
+            if (state == null)
+                return View("NotFound");
+            
+
             state.IsDeleted = true;
             _stateRepository.Update(id, state);
-
-
-
-
             return RedirectToAction(nameof(Index));
         }
 

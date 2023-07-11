@@ -105,7 +105,7 @@ namespace Shipping.Controllers
             }
             else
             {
-                return NotFound();
+                return View("NotFound");
             }
         }
         [Authorize(Permissions.Employees.Edit)]
@@ -142,7 +142,7 @@ namespace Shipping.Controllers
         #region Change State
         [HttpPost]
         [Authorize(Permissions.Employees.Delete)]
-        public async Task<IActionResult> ChangeState(string Id, bool status)
+        public IActionResult ChangeState(string Id, bool status)
         {
             var employee = _employeeRepository.GetById(Id);
             _employeeRepository.UpdateStatus(employee, status);

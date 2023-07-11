@@ -73,6 +73,7 @@ namespace Shipping.Controllers
             return View();
         }
         [Authorize]
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
         {

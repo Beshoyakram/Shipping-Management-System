@@ -193,7 +193,7 @@ namespace Shipping.Controllers
         {
             var role = await _roleManager.FindByIdAsync(roleId);
             if (role == null)
-                return NotFound();
+                return View("NotFound");
 
 
             var roleClaims = _roleManager.GetClaimsAsync(role).Result.Select(c => c.Value).ToList();
@@ -226,7 +226,7 @@ namespace Shipping.Controllers
             var role = await _roleManager.FindByIdAsync(model.RoleId);
 
             if (role == null)
-                return NotFound();
+                return View("NotFound");
 
             var roleClaims = await _roleManager.GetClaimsAsync(role);
 
