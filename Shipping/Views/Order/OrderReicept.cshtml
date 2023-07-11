@@ -1,0 +1,41 @@
+﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "OrderReicept";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="order-receipt text-center">
+                <div>
+                    <h1>تقرير الطلب رقم @Model.Id</h1>
+                    <a class="btn btn-outline-primary m-4 px-5" onclick="printOrder()">طباعة</a>
+                </div>
+                <p>التاريخ :  @Model.OrderDate</p>
+                <p>اسم العميل : @Model.ClientName</p>
+                <p>رقم العميل : @Model.ClientPhoneNumber1</p>
+                <p>رقم بديل العميل : @Model.ClientPhoneNumber2</p>
+
+                <p>نوع الدفع : @Model.PaymentType</p>
+                <p>نوع التوصيل : @Model.ShippingType</p>
+                <p>الفرع : @Model.BranchName</p>
+
+                <p>المدينة : @Model.CityName</p>
+                <p>الشارع والقرية : @Model.StreetName</p>
+                <p>وزن الطلب : @Model.TotalWeight جم</p>
+
+                <p>سعر الطلب : @Model.OrderCost</p>
+                <p>سعر التوصيل : @Model.ShippingCost</p>
+                <p>السعر النهائي : @Model.TotalCost</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function printOrder(){
+        
+    }
+</script>

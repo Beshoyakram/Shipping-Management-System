@@ -16,7 +16,7 @@ namespace Shipping.Repository.OrderRepo
         ICityRepository _cityRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         IWeightSettingRepository _weightSettingRepository;
-        public OrderRepositorty(MyContext myContext, ICityRepository cityRepository,UserManager<ApplicationUser> userManager,IWeightSettingRepository weightSettingRepository)
+        public OrderRepositorty(MyContext myContext, ICityRepository cityRepository, UserManager<ApplicationUser> userManager, IWeightSettingRepository weightSettingRepository)
         {
             _myContext = myContext;
             _cityRepository = cityRepository;
@@ -54,7 +54,12 @@ namespace Shipping.Repository.OrderRepo
 
 
             };
-            order.BranchId = int.Parse(orderViewModel.BranchName);
+            var BRANCH = _myContext.Branches.Where(b => b.Name == orderViewModel.BranchName).FirstOrDefault();
+            if (BRANCH == null)
+                return;
+
+            order.BranchId = BRANCH.Id;
+            
 
             _myContext.Orders.Add(order);
             _myContext.SaveChanges();
@@ -92,7 +97,7 @@ namespace Shipping.Repository.OrderRepo
                     DeliveryId = order.DeliveryId,
                     ShippingCost = order.ShippingCost,
                     TotalCost = order.TotalCost,
-                    MerchantId=order.MerchantId
+                    MerchantId = order.MerchantId
 
 
 
@@ -115,7 +120,7 @@ namespace Shipping.Repository.OrderRepo
         #region GetOrdersByStatus
         public List<OrderViewModel> GetOrderByStatus(string orderStatus)
         {
-            var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).Where(o=>o.IsDeleted != true).ToList();
+            var Orders = _myContext.Orders.Where(o => o.OrderStatus == orderStatus).Include(o => o.City).ThenInclude(c => c.State).Where(o => o.IsDeleted != true).ToList();
 
             List<OrderViewModel> orderViewModels = new List<OrderViewModel>();
             foreach (var order in Orders)
@@ -140,7 +145,8 @@ namespace Shipping.Repository.OrderRepo
                     OrderDate = order.Date,
                     OrderStatus = order.OrderStatus,
                     DeliveryId = order.DeliveryId,
-                    BranchId = order.BranchId
+                    BranchId = order.BranchId,
+                    ShippingCost = order.ShippingCost,
 
 
                 });
@@ -189,14 +195,17 @@ namespace Shipping.Repository.OrderRepo
                                     $"<td>{OrdersPlusDeliverys.orders[i].Id}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].OrderDate}</td>" +
                                     $"<td>{OrdersPlusDeliverys.orders[i].ClientName} <br /> {OrdersPlusDeliverys.orders[i].ClientPhoneNumber1}</td>" +
-                                    $"<td>{OrdersPlusDeliverys.orders[i].StateName}</td>" +
+                                    /*$"<td>{OrdersPlusDeliverys.orders[i].StateName}</td>" +*/
                                     $"<td>{OrdersPlusDeliverys.orders[i].CityName}</td>" +
-                                    $"<td>{OrdersPlusDeliverys.orders[i].OrderCost} </td>" +
-                                    $"<td>{OrdersPlusDeliverys.orders[i].ShippingCost} </td>" +
-                                    $"<td>{OrdersPlusDeliverys.orders[i].ShippingType} </td>" +
-                                    $"<td> <a class='btn btn-info' > تعديل</a></td>" +
+                                    $"<td>{OrdersPlusDeliverys.orders[i].OrderCost + OrdersPlusDeliverys.orders[i].ShippingCost}</td>" +
+                                    /*$"<td>{OrdersPlusDeliverys.orders[i].ShippingCost} </td>" +*/
+
+                                    $"<td> <a class='btn btn-outline-success' href='/Order/Edit/{OrdersPlusDeliverys.orders[i].Id}'>" +
+                                        $"<i class='fa-solid fa-pen-to-square fa-1x'></i>" +
+                                    $"</a></td>" +
+
                                     "<td>" +
-                                    $"<select id = 'status_{OrdersPlusDeliverys.orders[i].Id}' class='form-select' onchange='changeStatus({OrdersPlusDeliverys.orders[i].Id})'>" +
+                                    $"<select id = 'status_{OrdersPlusDeliverys.orders[i].Id}' class='form-select-cust' onchange='changeStatus({OrdersPlusDeliverys.orders[i].Id})'>" +
                         $"<option selected = 'true' disabled value = '{OrdersPlusDeliverys.orders[i].OrderStatus}'>{OrdersPlusDeliverys.orders[i].OrderStatus}</option>";
                     foreach (string statusName in Enum.GetNames(typeof(OrderStatus)))
                     {
@@ -204,10 +213,15 @@ namespace Shipping.Repository.OrderRepo
                     }
                     x += $"</select>" +
                             $"</td>" +
-                            $"<td><a class= 'btn btn-info'> حذف</a></td>" +
-                            "<td><a class= 'btn btn-info'> طباعة</ a></ td >" +
+                            $"<td>" +
+                            $"<a class='btn btn-outline-danger' href='/Order/Delete/{OrdersPlusDeliverys.orders[i].Id}'>" +
+                            $"<i class='fa-solid fa-trash-can fa-1x'></i></a>"+
+                            $"</td>" +
                             "<td>" +
-                                $"<select id = 'delivery_{OrdersPlusDeliverys.orders[i].Id}' class= 'form-select' onchange = 'AssignDelivery({OrdersPlusDeliverys.orders[i].Id})'>" +
+                            $"<a class='btn btn-outline-secondary' href='/Order/OrderReicept/{OrdersPlusDeliverys.orders[i].Id}'><i class='fa-solid fa-print fa-1x'></i></a>" +
+                            "</td>" +
+                            "<td>" +
+                                $"<select id = 'delivery_{OrdersPlusDeliverys.orders[i].Id}' class= 'form-select-cust' onchange = 'AssignDelivery({OrdersPlusDeliverys.orders[i].Id})'>" +
                                 $"<option value = '' > اختر المندوب</option>";
                     for (int j = 0; j < OrdersPlusDeliverys.deliveries.Count; j++)
                     {
@@ -239,7 +253,7 @@ namespace Shipping.Repository.OrderRepo
         #region GetOrderViewModelById
         public async Task<OrderViewModel> OrderViewModelById(int id)
         {
-            var order = await _myContext.Orders.Include(e => e.City).ThenInclude(c => c.State).FirstOrDefaultAsync(o => o.SerialNumber == id);
+            var order = await _myContext.Orders.Include(e => e.City).ThenInclude(c => c.State).Include(o=>o.Branch).FirstOrDefaultAsync(o => o.SerialNumber == id);
             var orderProducts = await _myContext.OrderProducts.Where(o => o.OrderId == id).ToListAsync();
 
             OrderViewModel orderViewModel = new OrderViewModel()
@@ -262,9 +276,12 @@ namespace Shipping.Repository.OrderRepo
                 StateName = order.City.State.Name,
                 OrderDate = order.Date,
                 OrderStatus = order.OrderStatus,
-                orderProducts = orderProducts
+                orderProducts = orderProducts,
+                ShippingCost= order.ShippingCost,
+                TotalCost = order.TotalCost,
+                BranchName = order.Branch.Name
             };
-            return orderViewModel;
+            return orderViewModel;
         }
         #endregion
 
@@ -296,7 +313,7 @@ namespace Shipping.Repository.OrderRepo
             }
             if (order != null)
             {
-                CalcShipping(orderViewModel, user);   
+                CalcShipping(orderViewModel, user);
                 order.CityId = city.Id;
                 order.IsVillage = orderViewModel.IsVillage;
                 order.ClientEmail = orderViewModel.ClientEmail;
@@ -325,16 +342,16 @@ namespace Shipping.Repository.OrderRepo
             var userId = user.Id;
             var merchantId = _myContext.Merchants.Where(m => m.UserId == userId).FirstOrDefault().Id;
 
-            var specialPrices = _myContext.SpecialCitiesPrice.Where(s=>s.MerchantId== merchantId && orderViewModel.CityName == s.City).FirstOrDefault();
+            var specialPrices = _myContext.SpecialCitiesPrice.Where(s => s.MerchantId == merchantId && orderViewModel.CityName == s.City).FirstOrDefault();
 
-            var OrderWeight = Math.Ceiling((double) orderViewModel.TotalWeight / 1000);
+            var OrderWeight = Math.Ceiling((double)orderViewModel.TotalWeight / 1000);
 
             var MaxWeight = _weightSettingRepository.GetWeight();
             var additionCost = _weightSettingRepository.GetCost();
 
-            if(OrderWeight > MaxWeight)
+            if (OrderWeight > MaxWeight)
             {
-                orderViewModel.ShippingCost += (int) (OrderWeight - MaxWeight) * additionCost;
+                orderViewModel.ShippingCost += (int)(OrderWeight - MaxWeight) * additionCost;
             }
 
             if (orderViewModel.IsVillage == true)

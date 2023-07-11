@@ -2,9 +2,11 @@
 <div class="bg-light rounded my-4 row">
     <h2 class="text-secondary text-center">تعديل بيانات الموظف</h2>
 </div>
-<form method="post" asp-action="Edit">
-    <div class="row">
-        <input type="hidden" asp-for="Id" />
+
+<div class="container bg-light rounded">
+    <form method="post" asp-action="Edit" class="d-flex flex-wrap">
+        <div class="row">
+            <input type="hidden" asp-for="Id" />
 
             <div class="form-group col-md-4 p-3">
                 <label asp-for="Name" class="control-label">الإسم</label>
@@ -38,10 +40,10 @@
 
 
         </div>
-    
 
-    <div class="m-3" style="position: relative;height: 10vh;">
-        <button type="submit" class="btn btn-outline-primary">حفظ</button>
-        <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-secondary">إلغاء</a>
-    </div>
-</form>
+        <div class="m-3" style="position: relative;height: 10vh;">
+            <button type="submit" class="btn btn-outline-primary">حفظ</button>
+            <a asp-controller="Employee" asp-action="Index" class="btn btn-outline-secondary">إلغاء</a>
+        </div>
+    </form>
+</div>

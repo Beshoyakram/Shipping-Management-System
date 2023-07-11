@@ -39,12 +39,12 @@
                     <span asp-validation-for="ClientName" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1 ">
-                    <label asp-for="ClientPhoneNumber1" class="col-md-4"> رقم العميل : </label>
+                    <label asp-for="ClientPhoneNumber1"> رقم العميل : </label>
                     <input type="text" class="form-control" asp-for="ClientPhoneNumber1">
                     <span asp-validation-for="ClientPhoneNumber1" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
-                    <label asp-for="ClientPhoneNumber2" class="col-md-4">رقم بديل  : </label>
+                    <label asp-for="ClientPhoneNumber2">رقم بديل  : </label>
                     <input type="text" class="form-control" asp-for="ClientPhoneNumber2">
                     <span asp-validation-for="ClientPhoneNumber2" class="text-danger"></span>
                 </div>
@@ -158,12 +158,12 @@
             <div class="d-flex justify-content-around align-items-center">
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="TotalWeight">اجمالي الوزن (كجم)</label>
-                    <input type="text" class="form-control" asp-for="TotalWeight" readonly>
+                    <input type="number" class="form-control" asp-for="TotalWeight" readonly>
                     <span asp-validation-for="TotalWeight" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="OrderCost">تكلفة الطلب</label>
-                    <input type="text" class="form-control" asp-for="OrderCost">
+                    <input type="number" class="form-control" asp-for="OrderCost">
                     <span asp-validation-for="OrderCost" class="text-danger"></span>
                 </div>
             </div>

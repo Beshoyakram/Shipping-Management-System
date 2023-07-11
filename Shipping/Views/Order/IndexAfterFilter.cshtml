@@ -17,35 +17,36 @@
 <div class="my-4 bg-light p-2 px-4 rounded">
   
 
-    <table class="table table-hover table-bordered text-center my-4 ">
+    <table class="table table-bordered text-center table-cust" id="dataTable" cellspacing="0">
         <thead>
             <tr style="background-color:#ddd;">
-                <th>الرقم التسلسلي</th>
+                <th>#</th>
                 <th>التاريخ</th>
                 <th>بيانات العميل</th>
-                <th>المحافظة</th>
+                @*                        <th>المحافظة</th>*@
                 <th>المدينة</th>
-                <th>تكلفة الطلب</th>
-                <th>تكلفة الشحن</th>
-                <th>نوع الشحن</th>
-               
-
-                @if (ViewBag.RoleName != "المناديب")
+                <th>التكلفة الكلية</th>
+                @*<th>تكلفة الشحن</th>*@
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
                 {
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Edit).Result.Succeeded)
-                    {
-                        <th>تعديل الطلب</th>
-                    }
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.OrderCount.Delete).Result.Succeeded)
-                    {
-                        <th>حذف</th>
-                    }
-                                   
+                    <th>تعديل الطلب</th>
                 }
-                    
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                {
+                    <th>تغيير الحالة</th>
+                }
+
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                {
+                    <th>حذف</th>
+                }
 
                 <th>طباعة</th>
-                <th>المندوب</th>
+                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                {
+                    <th>المندوب</th>
+                }
+
             </tr>
         </thead>
         <tbody id="TableBody">
@@ -54,54 +55,139 @@
                 <tr>
                     <td>@item.Id</td>
                     <td>@item.OrderDate</td>
-                    <td>@item.ClientName<br />@item.ClientPhoneNumber1</td>
-                    <td>@item.StateName</td>
+                    <td>
+                        @item.ClientName
+                        <br>
+                        @item.ClientPhoneNumber1
+                    </td>
+                    @*<td>@item.StateName</td>*@
                     <td>@item.CityName</td>
-                    <td>@item.OrderCost</td>
-                    <td>@item.ShippingCost</td>
-                    <td>@item.ShippingType</td>
-                    @if (ViewBag.RoleName != "المناديب")
+                    <td>@(item.OrderCost + item.ShippingCost)</td>
+                    @*<td>@item.ShippingCost</td>*@
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
                     {
-                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
-                        {
-                            <td><a class="btn btn-info" asp-action="Edit" asp-route-Id="@item.Id">تعديل</a></td>
-                        }
-                        @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
-                        {
-                                <td><a class="btn btn-info" asp-action="Delete" asp-route-Id="@item.Id">حذف</a></td>
-                        }
-                 
-                
-
+                        <td>
+                            <a class="btn btn-outline-success" asp-action="Edit" asp-route-Id="@item.Id">
+                                <i class="fa-solid fa-pen-to-square fa-1x"></i>
+                            </a>
+                        </td>
+                    }
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                    {
+                        <td>
+                            <select id="status_@item.Id" class="form-select-cust" onchange='changeStatus(@item.Id)'>
+                                @foreach (var status in Enum.GetNames(typeof(OrderStatus)))
+                                {
+                                    <option value="@status" selected="@(status == item.OrderStatus)">@status</option>
+                                }
+                            </select>
+                        </td>
                     }
 
-                    
-                    <td><a class="btn btn-info">طباعة</a></td>
-                    <td >
-                        
-                        <select  id="delivery_@item.Id" class="form-control" onchange='AssignDelivery(@item.Id)'>
-                           
-                            @foreach (var item1 in ViewBag.Delivery)
-                            {
-                                @if (item1.BranchId == item.BranchId)
+
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                    {
+                        <td>
+                            <a class="btn btn-outline-danger" asp-action="Delete" asp-route-Id="@item.Id">
+                                <i class="fa-solid fa-trash-can fa-1x"></i>
+                            </a>
+                        </td>
+                    }
+
+                    <td><a asp-action="OrderReicept" asp-route-Id="@item.Id" class="btn btn-outline-secondary"><i class="fa-solid fa-print fa-1x"></i></a></td>
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                    {
+                        <td>
+                            <select id="delivery_@item.Id" class="form-select-cust" onchange='AssignDelivery(@item.Id)'>
+                                <option value="">اختر المندوب</option>
+                                @foreach (var item1 in ViewBag.Delivery)
                                 {
-                                    @if (item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)
+                                    @if (item1.BranchId == item.BranchId)
                                     {
                                         <option value="@item1.OrignalIdOnlyInDeliveryTable" selected="@(item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)">@item1.Name</option>
                                     }
                                 }
-                            }
-                        </select>
-                    </td>
+                            </select>
+                        </td>
+                    }
+
                 </tr>
             }
         </tbody>
-
     </table>
 </div>
 
 
 
 @section Scripts {
-    
+    <script>
+
+    //function work when Assigning delivery
+    function AssignDelivery(id) {
+        var Id = id;
+        var ele = document.getElementById("delivery_" + `${id}`);
+        var delivery = ele.value;
+
+        $.ajax({
+            url: '/Order/ChangeDelivery',
+            type: 'POST',
+            data: { Id: Id, deliveryId: delivery },
+            success: function (response) {
+                console.log("Mandob Changed");
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+    //-----------------------//
+
+    //function work when changing status
+    function changeStatus(id) {
+        var Id = id;
+        var ele = document.getElementById("status_" + `${id}`);
+        var status = ele.value;
+
+        $.ajax({
+            url: '/Order/ChangeStatus',
+            type: 'POST',
+            data: { Id: Id, status: status },
+            success: function (response) {
+                console.log("changed");
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+
+    //-----------------------//
+    //render new table
+    $(document).ready(function () {
+        $('.showStatus').change(function () {
+            var status = $(this).val();
+
+            $.ajax({
+                url: '/Order/GetOrdersDependonStatus',
+                type: 'POST',
+                data: { status: status },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                },
+                success: function (response) {
+                    //console.log(response)
+                    var table = document.getElementById("TableBody");
+                    table.innerHTML = "";
+                    for (let i = 0; i < response.length; i++) {
+                        table.innerHTML += response[i]
+                    }
+
+                }
+
+            });
+        });
+    });
+
+    </script>
 }

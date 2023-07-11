@@ -38,12 +38,12 @@
                     <span asp-validation-for="ClientName" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1 ">
-                    <label asp-for="ClientPhoneNumber1" class="col-md-4"> رقم العميل : </label>
+                    <label asp-for="ClientPhoneNumber1"> رقم العميل : </label>
                     <input type="text" class="form-control" asp-for="ClientPhoneNumber1">
                     <span asp-validation-for="ClientPhoneNumber1" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
-                    <label asp-for="ClientPhoneNumber2" class="col-md-4">رقم بديل  : </label>
+                    <label asp-for="ClientPhoneNumber2">رقم بديل  : </label>
                     <input type="text" class="form-control" asp-for="ClientPhoneNumber2">
                     <span asp-validation-for="ClientPhoneNumber2" class="text-danger"></span>
                 </div>
@@ -111,22 +111,24 @@
             </div>
             <hr class="sidebar-divider">
 
-            <div class="form-group p-1">
-                <div class="d-flex justify-content-evenly align-items-center">
-                    <a id="add-product-btn" class="btn btn-outline-success col-2">اضافة منتج</a>
-                    <table class="table table-bordered text-center table-hover col-8">
-                        <thead>
-                            <tr>
-                                <th>اسم المنتج</th>
-                                <th>الكمية</th>
-                                <th>الوزن (جم)</th>
-                                <th>حذف</th>
-                            </tr>
-                        </thead>
-                        <tbody id="products-table-body">
-                        </tbody>
-                    </table>
-                </div>
+
+            <a id="add-product-btn" class="btn btn-outline-success" style="float:right;">اضافة منتج</a>
+            <div class="form-group p-1 col-12" style="clear:both">
+
+       
+                <table class="table table-bordered text-center table-hover col-8">
+                    <thead>
+                        <tr>
+                            <th>اسم المنتج</th>
+                            <th>الكمية</th>
+                            <th>الوزن (جم)</th>
+                            <th>حذف</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-table-body">
+                    </tbody>
+                </table>
+
             </div>
 
 
@@ -142,6 +144,8 @@
                     <span asp-validation-for="OrderCost" class="text-danger"></span>
                 </div>
             </div>
+            <hr class="sidebar-divider bg-black" style="width: 100%;">
+
             <div class="d-flex justify-content-end col-md-12 m-4">
                 <button type="submit" class="btn btn-outline-success mx-2  col-3">إضافة</button>
                 <a asp-controller="Order" asp-action="Index" class="btn btn-secondary col-1 ml-5 ">إلغاء</a>

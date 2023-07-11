@@ -361,7 +361,17 @@ namespace Shipping.Controllers
 
 
         }
-       
+
+        #endregion
+
+
+        #region OrderReceipt
+        public async Task<IActionResult> OrderReicept(int Id)
+        {
+            var orderViewModel = await _orderRepository.OrderViewModelById(Id);
+
+            return View(orderViewModel);
+        }
         #endregion
     }
 }

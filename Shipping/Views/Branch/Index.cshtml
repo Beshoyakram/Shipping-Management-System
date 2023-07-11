@@ -60,7 +60,7 @@
                             @if (AuthorizationService.AuthorizeAsync(User, Permissions.Branches.Edit).Result.Succeeded)
                             {
                                     <a asp-controller="Branch" asp-action="Edit" asp-route-id="@b.Id" class="btn btn-outline-success m-1">
-                                        <i class="fa-solid fa-pen-to-square fa-2x"></i>
+                                        <i class="fa-solid fa-pen-to-square fa-1x"></i>
                                 </a>
                             }
                             @if (AuthorizationService.AuthorizeAsync(User, Permissions.Branches.Delete).Result.Succeeded)
@@ -68,7 +68,7 @@
                                 <form method="post" asp-action="Delete" asp-controller="branch" asp-route-id="@b.Id" style="display:inline">
                                     <span id="DeleteSpan_@b.Id" style="cursor:pointer">
                                         | <a onclick="confirmDelete('@b.Id',true)" class="btn btn-outline-danger m-1">
-                                            <i class="fa-solid fa-trash-can fa-2x"></i>
+                                            <i class="fa-solid fa-trash-can fa-1x"></i>
                                         </a>
                                     </span>
 
