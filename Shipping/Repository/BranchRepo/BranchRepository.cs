@@ -57,7 +57,7 @@ namespace Shipping.Repository.BranchRepo
         }
         public List<String> GetBranchesByStateName(string name)
         {
-            var stateId = _myContext.States.Where(s => s.Name == name).FirstOrDefault().Id;
+            var stateId = _myContext.States.Where(s => s.Name == name && s.IsDeleted == false).FirstOrDefault().Id;
             return _myContext.Branches.Where(c => c.StateId == stateId && c.IsDeleted == false && c.Status == true).Select(c => c.Name).ToList();
         }
     }

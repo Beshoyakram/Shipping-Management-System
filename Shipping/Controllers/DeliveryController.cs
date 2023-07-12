@@ -5,7 +5,9 @@ using Shipping.Constants;
 using Shipping.Models;
 using Shipping.Repository.BranchRepo;
 using Shipping.Repository.DeliveryRepo;
+using Shipping.Repository.StateRepo;
 using Shipping.ViewModels;
+using static Shipping.Constants.Permissions;
 
 namespace Shipping.Controllers
 {
@@ -13,10 +15,14 @@ namespace Shipping.Controllers
     {
         IDeliveryRepository _deliveryRepository;
         IbranchRepository _branchRepository;
-        public DeliveryController(IDeliveryRepository deliveryRepository,IbranchRepository ibranchRepository)
+        IStateRepository _stateRepository;
+      
+        public DeliveryController(IDeliveryRepository deliveryRepository,IbranchRepository ibranchRepository, IStateRepository stateRepository)
         {
             this._deliveryRepository = deliveryRepository;
             this._branchRepository = ibranchRepository;
+            this._stateRepository = stateRepository;
+
         }
 
 
@@ -105,11 +111,13 @@ namespace Shipping.Controllers
                 return View("NotFound");
             }
 
-            var Branchs = _deliveryRepository.GetAllBranches().Where(b => b.Status == true);
-            ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+            
 
-            var States = _deliveryRepository.GetAllStates().Where(s => s.Status == true);
-            ViewBag.StatesList = new SelectList(States, "Name", "Name");
+
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            var stateId = _stateRepository.GetAll().Where(p => p.Name == delivery.Government).Select(p => p.Id).FirstOrDefault();
+         
+            ViewBag.Branches = _branchRepository.GetAll().Where(b => b.Status == true && b.StateId == stateId).ToList();
 
 
             return View(delivery);
