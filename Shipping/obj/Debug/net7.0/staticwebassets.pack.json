@@ -1,987 +1,987 @@
 {
   "Files": [
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css",
       "PackagePath": "staticwebassets\\Shipping.bundle.scp.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.min.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\css\\site.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\favicon.ico",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\all.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\all.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\brands.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\brands.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\regular.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\regular.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\solid.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\solid.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
       "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\all.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\all.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\brands.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\brands.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\regular.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\regular.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\solid.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\solid.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
       "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\brands.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\brands.svg",
       "PackagePath": "staticwebassets\\font-awesome\\sprites\\brands.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\regular.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\regular.svg",
       "PackagePath": "staticwebassets\\font-awesome\\sprites\\regular.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\solid.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\solid.svg",
       "PackagePath": "staticwebassets\\font-awesome\\sprites\\solid.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\home.jpg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\home.jpg",
       "PackagePath": "staticwebassets\\img\\home.jpg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\pioneers.png",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\pioneers.png",
       "PackagePath": "staticwebassets\\img\\pioneers.png"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_posting_photo.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_posting_photo.svg",
       "PackagePath": "staticwebassets\\img\\undraw_posting_photo.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile.svg",
       "PackagePath": "staticwebassets\\img\\undraw_profile.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_1.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_1.svg",
       "PackagePath": "staticwebassets\\img\\undraw_profile_1.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_2.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_2.svg",
       "PackagePath": "staticwebassets\\img\\undraw_profile_2.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_3.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_3.svg",
       "PackagePath": "staticwebassets\\img\\undraw_profile_3.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_rocket.svg",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_rocket.svg",
       "PackagePath": "staticwebassets\\img\\undraw_rocket.svg"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.js",
       "PackagePath": "staticwebassets\\js\\sb-admin-2.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.min.js",
       "PackagePath": "staticwebassets\\js\\sb-admin-2.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\js\\site.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_card.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_card.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_card.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_close.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_close.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_close.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_code.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_code.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_code.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_images.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_images.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_images.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_media.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_media.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_media.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_print.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_print.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_print.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_root.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_root.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_root.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_type.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_type.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_type.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_buttons.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_buttons.scss",
       "PackagePath": "staticwebassets\\scss\\_buttons.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_cards.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_cards.scss",
       "PackagePath": "staticwebassets\\scss\\_cards.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_charts.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_charts.scss",
       "PackagePath": "staticwebassets\\scss\\_charts.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_dropdowns.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_dropdowns.scss",
       "PackagePath": "staticwebassets\\scss\\_dropdowns.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_error.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_error.scss",
       "PackagePath": "staticwebassets\\scss\\_error.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_footer.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_footer.scss",
       "PackagePath": "staticwebassets\\scss\\_footer.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_global.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_global.scss",
       "PackagePath": "staticwebassets\\scss\\_global.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_login.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_login.scss",
       "PackagePath": "staticwebassets\\scss\\_login.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_mixins.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\_mixins.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_navs.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_navs.scss",
       "PackagePath": "staticwebassets\\scss\\_navs.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_utilities.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_utilities.scss",
       "PackagePath": "staticwebassets\\scss\\_utilities.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_variables.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\_variables.scss",
       "PackagePath": "staticwebassets\\scss\\_variables.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_global.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_global.scss",
       "PackagePath": "staticwebassets\\scss\\navs\\_global.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_sidebar.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_sidebar.scss",
       "PackagePath": "staticwebassets\\scss\\navs\\_sidebar.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_topbar.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\navs\\_topbar.scss",
       "PackagePath": "staticwebassets\\scss\\navs\\_topbar.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\sb-admin-2.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\sb-admin-2.scss",
       "PackagePath": "staticwebassets\\scss\\sb-admin-2.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_animation.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_animation.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_animation.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_background.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_background.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_background.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_border.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_border.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_border.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_display.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_display.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_display.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_progress.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_progress.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_progress.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_rotate.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_rotate.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_rotate.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_text.scss",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\scss\\utilities\\_text.scss",
       "PackagePath": "staticwebassets\\scss\\utilities\\_text.scss"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.compatibility.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.compatibility.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-easing\\jquery.easing.compatibility.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-easing\\jquery.easing.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery-easing\\jquery.easing.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.js",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.map",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.min.map"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.js",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.js"
     },
     {
-      "Id": "D:\\ITI\\GRADUATION PROJECT\\AfterLayout\\After After\\New folder\\Before Last\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
+      "Id": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
