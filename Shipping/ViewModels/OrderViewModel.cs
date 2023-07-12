@@ -14,7 +14,7 @@ namespace Shipping.ViewModels
         [RegularExpression(@"^1[0125][0-9]{8}$", ErrorMessage = "ادخل رقم هاتف صحيح كالاتى : 1224479550")]
         public int? ClientPhoneNumber2 { get; set; }
         [Required(ErrorMessage = "يجب ادخال البريد الالكتروني")]
-        [RegularExpression("^\\S+@\\S+\\.\\S+$", ErrorMessage = "ادخل بريد الكتروني صحيح")]
+        [RegularExpression(@"^\S+@\S+\.com$", ErrorMessage = "ادخل بريد الكتروني صحيح")]
         public string ClientEmail { get; set; }
         [Required(ErrorMessage = " يجب ادخال السعر الكلى للطلب ")]
         public int OrderCost { get; set; }
