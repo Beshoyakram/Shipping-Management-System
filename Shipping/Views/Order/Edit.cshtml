@@ -57,7 +57,7 @@
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="StateName">المحافظة : </label>
                     <select id="state" class="form-control" asp-for="StateName">
-                        <option value="">Select a state</option>
+                        
                         @foreach (var state in ViewBag.States)
                         {
                             <option value="@state.Name">@state.Name</option>
@@ -67,7 +67,7 @@
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="CityName">المدينة : </label>
                     <select id="city" asp-for="CityName" class="form-control">
-                        <option value="">Select a city</option>
+                       
                         @foreach (var city in ViewBag.Cities)
                         {
                             <option value="@city">@city</option>
@@ -79,7 +79,7 @@
             <div class="d-flex flex-wrap">
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="BranchName">الفرع : </label>
-                    <select class="form-control" asp-for="BranchName" required>
+                    <select id="branch" class="form-control" asp-for="BranchName" >
                         @foreach (Branch item in ViewBag.Branches)
                         {
                             <option value="@item.Name">@item.Name</option>
@@ -200,6 +200,33 @@
                     success: function (result) {
                         $.each(result, function (index, city) {
                             cityDropdown.append($('<option></option>').val(city).text(city));
+                        });
+                    },
+                    error: function () {
+                        console.log('Failed to retrieve cities.');
+                    }
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var stateDropdown = $('#state');
+            var branchDropdown = $('#branch');
+
+            stateDropdown.on('change', function () {
+                var selectedState = stateDropdown.val();
+
+                branchDropdown.empty();
+
+                $.ajax({
+                    url: '/Order/GetBranchesByState',
+                    type: 'GET',
+                    data: { state: selectedState },
+                    success: function (result) {
+                        $.each(result, function (index, city) {
+                            branchDropdown.append($('<option></option>').val(city).text(city));
                         });
                     },
                     error: function () {

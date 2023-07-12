@@ -149,7 +149,9 @@ namespace Shipping.Controllers
             ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
             return View(orderViewModel);
         }
+        #endregion
 
+        #region  #endregion
         [HttpGet]
         [Authorize(Permissions.Orders.Create)]
         public IActionResult GetCitiesByState(string state)
@@ -238,10 +240,11 @@ namespace Shipping.Controllers
         public async Task<IActionResult> Edit(int Id)
         {
             ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
-            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
+           
 
             var orderViewModel = await _orderRepository.OrderViewModelById(Id);
-
+            var stateId= _stateRepository.GetAll().Where(p=>p.Name== orderViewModel.StateName).Select(p=>p.Id).FirstOrDefault();
+            ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true && b.StateId == stateId);
             ViewBag.Cities = _cityRepository.GetAllByStateName(orderViewModel.StateName).ToList();
 
             return View(orderViewModel);

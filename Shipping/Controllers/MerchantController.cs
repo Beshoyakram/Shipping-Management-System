@@ -121,14 +121,12 @@ namespace Shipping.Controllers
             {
                 return NotFound();
             }
-            var Branchs = _merchantRepo.GetAllBranches().Where(b => b.Status == true);
-            ViewBag.BranchList = new SelectList(Branchs, "Name", "Name");
+            ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+            var stateId = _stateRepository.GetAll().Where(p => p.Name == merchant.Government).Select(p => p.Id).FirstOrDefault();
 
-            var States = _merchantRepo.GetAllStates().Where(b => b.Status == true);
-            ViewBag.StatesList = new SelectList(States, "Name", "Name");
+            ViewBag.Branches = _branchRepository.GetAll().Where(b => b.Status == true && b.StateId == stateId).ToList();
 
-            var Cities = _merchantRepo.GetAllCities().Where(b => b.Status == true);
-            ViewBag.CitiesList = new SelectList(Cities, "Name", "Name");
+            ViewBag.Cities = _cityRepository.GetAllByStateName(merchant.Government).ToList();
 
 
             return View(merchantEditViewModel);
