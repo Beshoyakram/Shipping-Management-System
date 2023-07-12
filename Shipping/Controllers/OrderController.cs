@@ -27,8 +27,9 @@ namespace Shipping.Controllers
         IbranchRepository _branchRepository;
 
         UserManager<ApplicationUser> _userManager;
+        RoleManager<ApplicationRole> _roleManager;
         MyContext _myContext;
-        public OrderController(IStateRepository stateRepository, ICityRepository cityRepository, MyContext myContext, IOrderRepository orderRepository, IDeliveryRepository deliveryRepository, IbranchRepository ibranchRepository, UserManager<ApplicationUser> userManager)
+        public OrderController(IStateRepository stateRepository, ICityRepository cityRepository, MyContext myContext, IOrderRepository orderRepository, IDeliveryRepository deliveryRepository, IbranchRepository ibranchRepository, UserManager<ApplicationUser> userManager,RoleManager<ApplicationRole> roleManager)
         {
             _stateRepository = stateRepository;
             _cityRepository = cityRepository;
@@ -37,7 +38,7 @@ namespace Shipping.Controllers
             _deliveryRepository = deliveryRepository;
             _branchRepository = ibranchRepository;
             _userManager = userManager;
-
+            _roleManager = roleManager;
         }
 
         #region ViewAll
@@ -104,12 +105,12 @@ namespace Shipping.Controllers
 
         #region ChangeStatus
         [HttpPost]
-        [Authorize(Permissions.Orders.Delete)]
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> ChangeStatus(int Id, string status)
         {
             var order = await _orderRepository.GetOrderById(Id);
             _orderRepository.UpdateStatus(order, status);
-            return RedirectToAction("Index");
+            return RedirectToAction("OrderCount");
         }
         #endregion
 
@@ -136,7 +137,7 @@ namespace Shipping.Controllers
             if (ModelState.IsValid)
             {
                 var user = await _userManager.GetUserAsync(User);
-
+                var UserRole = User.FindFirstValue(ClaimTypes.Role);
 
                 _orderRepository.CalcShipping(orderViewModel,user);
 
@@ -148,6 +149,7 @@ namespace Shipping.Controllers
             ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
             return View(orderViewModel);
         }
+
         [HttpGet]
         [Authorize(Permissions.Orders.Create)]
         public IActionResult GetCitiesByState(string state)
@@ -257,7 +259,7 @@ namespace Shipping.Controllers
                 
                 var order = await _orderRepository.GetOrderById(Id);
                 _orderRepository.Edit(order, orderViewModel,user);
-                return Redirect("/order/index");
+                return Redirect("/order/OrderCount");
             }
 
             ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
