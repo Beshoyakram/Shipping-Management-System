@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Shipping.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Shipping.ViewModels
 {
@@ -25,6 +26,8 @@ namespace Shipping.ViewModels
         public int PickUpPrice { get; set; }
         [Required(ErrorMessage = "يجب ادخال نسبة تحمل التاجر للرفض")]
         public int RefuseCostPercent { get; set; }
+        public List<SpecialCitiesPrice>? SpecialCities { get; set; }
+
 
     }
 }

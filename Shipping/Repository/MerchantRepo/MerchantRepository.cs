@@ -11,6 +11,7 @@ namespace Shipping.Repository.MerchantRepo
         private readonly UserManager<ApplicationUser> _userManager;
         //private readonly RoleManager<ApplicationRole> _roleManager;
         MyContext _myContext;
+
         public MerchantRepository(UserManager<ApplicationUser> userManager, MyContext myContext)
         {
             _userManager = userManager;
@@ -124,6 +125,7 @@ namespace Shipping.Repository.MerchantRepo
             var merchant = await _myContext.Merchants
             .Include(m => m.User)
             .Include(m => m.Branch)
+            .Include(m=>m.SpecialCitiesPrices)
             .FirstOrDefaultAsync(m => m.User.Id == id);
 
 
@@ -166,7 +168,8 @@ namespace Shipping.Repository.MerchantRepo
                 Name = merchant.User.Name,
                 Phone = merchant.User.PhoneNumber,
                 PickUpPrice = merchant.PickUpSpecialCost,
-                RefuseCostPercent = merchant.RefusedOrderPercent
+                RefuseCostPercent = merchant.RefusedOrderPercent,
+                SpecialCities = merchant.SpecialCitiesPrices
             };
 
             return merchantEditViewModel;
@@ -178,6 +181,16 @@ namespace Shipping.Repository.MerchantRepo
         #region EditUser
         public async void EditMerchant(Merchant merchant, MerchantEditViewModel merchantEditViewModel)
         {
+            var specialPrices = _myContext.SpecialCitiesPrice.Where(s => s.MerchantId == merchant.Id).ToList();
+
+            if(specialPrices!=null)
+            {
+                foreach (var item in specialPrices)
+                {
+                    _myContext.Remove(item);
+                }
+            }
+
 
             if (merchant != null)
             {
@@ -191,7 +204,7 @@ namespace Shipping.Repository.MerchantRepo
                 merchant.User.Email = merchantEditViewModel.Email;
                 merchant.User.PhoneNumber = merchantEditViewModel.Phone;
                 merchant.User.Name = merchantEditViewModel.Name;
-
+                merchant.SpecialCitiesPrices = merchantEditViewModel.SpecialCities;
 
                 _myContext.SaveChanges();
             }
