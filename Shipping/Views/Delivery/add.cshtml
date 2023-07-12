@@ -6,10 +6,11 @@
 <div class="bg-light rounded my-4 row">
     <h2 class="p-4 fw-bold text-center text-secondary"> إضافة مندوب </h2>
 </div>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <div class="row container bg-light rounded">
     <div class="col-md-12">
         <form asp-action="add" method="post" class="d-flex flex-wrap">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <br />
             <div class="form-group col-md-4 p-3">
                 <label asp-for="Name" class="control-label">الإسم</label>
                 <input asp-for="Name" class="form-control" />
@@ -33,12 +34,8 @@
 
             <div class="form-group col-md-4 p-3">
                 <label asp-for="Government">المحافظة</label>
-                <select id="state" asp-for="Government" class="form-control">
+                <select id="state" asp-for="Government" asp-items="ViewBag.StatesList" class="form-control">
                     <option value="">اختر محافظة</option>
-                    @foreach (var state in ViewBag.States)
-                    {
-                        <option value="@state.Name">@state.Name</option>
-                    }
                 </select>
             </div>
             <div class="form-group col-md-4 p-3">

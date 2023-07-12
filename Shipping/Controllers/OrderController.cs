@@ -261,12 +261,23 @@ namespace Shipping.Controllers
 
                 
                 var order = await _orderRepository.GetOrderById(Id);
-                _orderRepository.Edit(order, orderViewModel,user);
+                string  res = _orderRepository.Edit(order, orderViewModel,user);
+                if(res != "")
+                {
+                    ModelState.AddModelError("", res);
+                    ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
+                    ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
+                    ViewBag.Cities = _cityRepository.GetAllByStateName(orderViewModel.StateName).ToList();
+
+                    return View(orderViewModel);
+                }
                 return Redirect("/order/OrderCount");
             }
 
             ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
             ViewBag.Branches = _myContext.Branches.ToList().Where(b => b.Status == true);
+            ViewBag.Cities = _cityRepository.GetAllByStateName(orderViewModel.StateName).ToList();
+
             return View(orderViewModel);
         }
 

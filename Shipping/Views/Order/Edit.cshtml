@@ -15,10 +15,11 @@
 
 
 
-<div class="row card shadow m-2">
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<div class="row container card shadow m-2">
     <div class="card-body col-md-12 ">
         <form asp-controller="Order" asp-action="Edit" class="" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
             <div id="dataTable_filter" class="card-header">
                 <div class="form-group p-3 d-flex justify-content-center align-items-center">
                     <label asp-for="ShippingType">النوع</label>

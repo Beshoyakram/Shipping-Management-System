@@ -294,8 +294,16 @@ namespace Shipping.Repository.OrderRepo
         #endregion
 
         #region EditOrder
-        public void Edit(Order order, OrderViewModel orderViewModel, ApplicationUser user)
+        public string Edit(Order order, OrderViewModel orderViewModel, ApplicationUser user)
         {
+            var merchanttt = _myContext.Merchants.Where(m => m.UserId == user.Id).FirstOrDefault();
+            if(merchanttt == null)
+            {
+
+                return "لا يمكنك التعديل على الاوردر فقط التاجر هو الذى لدية الصلاحيه";
+                 
+            }
+
             var city = _myContext.Cities.FirstOrDefault(c => c.Name == orderViewModel.CityName);
             if (orderViewModel != null)
             {
@@ -333,14 +341,20 @@ namespace Shipping.Repository.OrderRepo
                 order.ShippingCost = orderViewModel.ShippingCost;
                 _myContext.SaveChanges();
             }
+            return "";
         }
         #endregion
 
         public async void CalcShipping(OrderViewModel orderViewModel, ApplicationUser user)
         {
-
+            int merchantId;
             var userId = user.Id;
-            var merchantId = _myContext.Merchants.Where(m => m.UserId == userId).FirstOrDefault().Id;
+            var merchantt = _myContext.Merchants.Where(m => m.UserId == userId).FirstOrDefault();
+            if(merchantt == null)
+            {
+                return;
+            }
+            else { merchantId = merchantt.Id; }
 
             var specialPrices = _myContext.SpecialCitiesPrice.Where(s => s.MerchantId == merchantId && orderViewModel.CityName == s.City).FirstOrDefault();
 

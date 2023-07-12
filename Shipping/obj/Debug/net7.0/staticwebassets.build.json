@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DPoxVK2FWlJ4Mh4zPQ+L8kF6ndr59yn9gczCNmseY5U=",
+  "Hash": "rJt7oxt4FxTpNjvDlwgl3KCjqNbwsVa4RYyeFLnN/40=",
   "Source": "Shipping",
   "BasePath": "_content/Shipping",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Shipping\\wwwroot",
       "Source": "Shipping",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Shipping.styles.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Shipping.styles.css",
       "SourceId": "Shipping",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "Shipping.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Shipping.styles.css"
+      "OriginalItemSpec": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Shipping.styles.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css",
       "SourceId": "Shipping",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "Shipping.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css"
+      "OriginalItemSpec": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Shipping.bundle.scp.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\css\\sb-admin-2.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "css/sb-admin-2.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\sb-admin-2.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\css\\sb-admin-2.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\sb-admin-2.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "css/sb-admin-2.min.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\sb-admin-2.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\css\\site.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\css\\site.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\favicon.ico",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\favicon.ico",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\all.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/all.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\all.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\all.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\all.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/all.min.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\all.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\brands.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/brands.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\brands.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\brands.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\brands.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/brands.min.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\brands.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/fontawesome.css",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\fontawesome.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/fontawesome.min.css",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\fontawesome.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\regular.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/regular.css",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\regular.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\regular.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\regular.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/regular.min.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\regular.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\solid.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/solid.css",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\solid.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\solid.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\solid.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/solid.min.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\solid.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/svg-with-js.css",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\svg-with-js.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/svg-with-js.min.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\svg-with-js.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v4-font-face.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v4-font-face.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v4-font-face.min.css",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v4-font-face.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v4-shims.css",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v4-shims.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v4-shims.min.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v4-shims.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v5-font-face.css",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v5-font-face.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/css/v5-font-face.min.css",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\css\\v5-font-face.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\all.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/all.js",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\all.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\all.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\all.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/all.min.js",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\all.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\brands.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/brands.js",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\brands.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\brands.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\brands.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/brands.min.js",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\brands.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/conflict-detection.js",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\conflict-detection.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/conflict-detection.min.js",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\conflict-detection.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/fontawesome.js",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\fontawesome.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/fontawesome.min.js",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\fontawesome.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\regular.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/regular.js",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\regular.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\regular.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\regular.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/regular.min.js",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\regular.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\solid.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/solid.js",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\solid.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\solid.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\solid.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/solid.min.js",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\solid.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/v4-shims.js",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\v4-shims.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/js/v4-shims.min.js",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\js\\v4-shims.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\sprites\\brands.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\brands.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/sprites/brands.svg",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\sprites\\brands.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\sprites\\regular.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\regular.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/sprites/regular.svg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\sprites\\regular.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\sprites\\solid.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\sprites\\solid.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/sprites/solid.svg",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\sprites\\solid.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-brands-400.ttf",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-brands-400.woff2",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-regular-400.ttf",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-regular-400.woff2",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-solid-900.ttf",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-solid-900.woff2",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-v4compatibility.ttf",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "font-awesome/webfonts/fa-v4compatibility.woff2",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\home.jpg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\home.jpg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/home.jpg",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\img\\home.jpg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\pioneers.png",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\pioneers.png",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/pioneers.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pioneers.png"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_posting_photo.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_posting_photo.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_posting_photo.svg",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_posting_photo.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_profile.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_profile.svg",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_profile.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_profile_1.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_1.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_profile_1.svg",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_profile_1.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_profile_2.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_2.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_profile_2.svg",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_profile_2.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_profile_3.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_profile_3.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_profile_3.svg",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_profile_3.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\img\\undraw_rocket.svg",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\img\\undraw_rocket.svg",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "img/undraw_rocket.svg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\undraw_rocket.svg"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\js\\sb-admin-2.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "js/sb-admin-2.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\js\\sb-admin-2.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\js\\sb-admin-2.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\sb-admin-2.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "js/sb-admin-2.min.js",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\js\\sb-admin-2.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\js\\site.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\js\\site.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.js",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_alert.scss",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_alert.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_badge.scss",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_badge.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_breadcrumb.scss",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_button-group.scss",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_button-group.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_buttons.scss",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_buttons.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_card.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_card.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_card.scss",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_card.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_carousel.scss",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_carousel.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_close.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_close.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_close.scss",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_close.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_code.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_code.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_code.scss",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_code.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_custom-forms.scss",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_custom-forms.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_dropdown.scss",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_dropdown.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_forms.scss",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_forms.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_functions.scss",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_functions.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_grid.scss",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_grid.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_images.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_images.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_images.scss",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_images.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_input-group.scss",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_input-group.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_jumbotron.scss",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_jumbotron.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_list-group.scss",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_list-group.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_media.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_media.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_media.scss",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_media.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_mixins.scss",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_mixins.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_modal.scss",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_modal.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_nav.scss",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_nav.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_navbar.scss",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_navbar.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_pagination.scss",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_pagination.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_popover.scss",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_popover.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_print.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_print.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_print.scss",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_print.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_progress.scss",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_progress.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_reboot.scss",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_reboot.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_root.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_root.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_root.scss",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_root.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_spinners.scss",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_spinners.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_tables.scss",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tables.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_toasts.scss",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_toasts.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_tooltip.scss",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_tooltip.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_transitions.scss",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_transitions.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_type.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_type.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_type.scss",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_type.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_utilities.scss",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_utilities.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/_variables.scss",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\_variables.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/bootstrap.scss",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/bootstrap-grid.scss",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/bootstrap-reboot.scss",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_alert.scss",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_background-variant.scss",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_background-variant.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_badge.scss",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_badge.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_border-radius.scss",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_box-shadow.scss",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_breakpoints.scss",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_buttons.scss",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_caret.scss",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_clearfix.scss",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_deprecate.scss",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_float.scss",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_float.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_forms.scss",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_gradients.scss",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_grid.scss",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_grid-framework.scss",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_grid-framework.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_hover.scss",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_hover.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_image.scss",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_list-group.scss",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_lists.scss",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_nav-divider.scss",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_nav-divider.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_pagination.scss",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_reset-text.scss",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_resize.scss",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_screen-reader.scss",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_screen-reader.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_size.scss",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_size.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_table-row.scss",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_table-row.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_text-emphasis.scss",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_text-hide.scss",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-hide.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_text-truncate.scss",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_transition.scss",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/mixins/_visibility.scss",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\mixins\\_visibility.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_align.scss",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_align.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_background.scss",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_background.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_borders.scss",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_borders.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_clearfix.scss",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_clearfix.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_display.scss",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_display.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_embed.scss",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_embed.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_flex.scss",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_flex.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_float.scss",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_float.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_interactions.scss",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_interactions.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_overflow.scss",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_overflow.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_position.scss",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_position.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_screenreaders.scss",
       "AssetKind": "All",
@@ -2584,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_screenreaders.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_shadows.scss",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_shadows.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_sizing.scss",
       "AssetKind": "All",
@@ -2618,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_sizing.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_spacing.scss",
       "AssetKind": "All",
@@ -2635,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_spacing.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_stretched-link.scss",
       "AssetKind": "All",
@@ -2652,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_stretched-link.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_text.scss",
       "AssetKind": "All",
@@ -2669,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_text.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/utilities/_visibility.scss",
       "AssetKind": "All",
@@ -2686,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\utilities\\_visibility.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/bootstrap/scss/vendor/_rfs.scss",
       "AssetKind": "All",
@@ -2703,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2720,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2737,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2754,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2771,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2788,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2805,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2822,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2839,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2856,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2873,10 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2890,10 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2907,10 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2941,10 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2958,10 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2975,10 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2992,10 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -3009,10 +3009,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -3026,10 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -3043,10 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -3060,10 +3060,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -3077,10 +3077,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -3094,10 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -3111,10 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -3128,10 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -3145,10 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -3162,10 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -3179,10 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -3196,10 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -3213,10 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -3230,10 +3230,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -3264,10 +3264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -3281,10 +3281,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -3298,10 +3298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -3315,10 +3315,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -3332,10 +3332,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -3349,10 +3349,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -3366,10 +3366,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -3383,10 +3383,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -3400,10 +3400,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -3417,10 +3417,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -3434,10 +3434,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -3451,10 +3451,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3468,10 +3468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3485,10 +3485,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3502,10 +3502,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3519,10 +3519,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3536,10 +3536,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3553,10 +3553,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3570,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3587,10 +3587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3604,10 +3604,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3621,10 +3621,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3638,10 +3638,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3655,10 +3655,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -3672,10 +3672,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.js",
       "AssetKind": "All",
@@ -3689,10 +3689,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.min.js",
       "AssetKind": "All",
@@ -3706,10 +3706,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.min.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.min.map",
       "AssetKind": "All",
@@ -3723,10 +3723,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.min.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.slim.js",
       "AssetKind": "All",
@@ -3740,10 +3740,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.slim.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.slim.min.js",
       "AssetKind": "All",
@@ -3757,10 +3757,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.slim.min.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery\\jquery.slim.min.map",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery/jquery.slim.min.map",
       "AssetKind": "All",
@@ -3774,10 +3774,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.compatibility.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.compatibility.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery-easing/jquery.easing.compatibility.js",
       "AssetKind": "All",
@@ -3791,10 +3791,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery-easing\\jquery.easing.compatibility.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery-easing/jquery.easing.js",
       "AssetKind": "All",
@@ -3808,10 +3808,10 @@
       "OriginalItemSpec": "wwwroot\\vendor\\jquery-easing\\jquery.easing.js"
     },
     {
-      "Identity": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.min.js",
+      "Identity": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\vendor\\jquery-easing\\jquery.easing.min.js",
       "SourceId": "Shipping",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\iti\\shipping managment system Graduation project\\7-12 part2\\Shipping\\wwwroot\\",
+      "ContentRoot": "D:\\ITI\\Graduation project\\Shipping-Management-System\\Shipping\\wwwroot\\",
       "BasePath": "_content/Shipping",
       "RelativePath": "vendor/jquery-easing/jquery.easing.min.js",
       "AssetKind": "All",

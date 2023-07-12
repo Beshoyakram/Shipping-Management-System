@@ -12,7 +12,7 @@ namespace Shipping.Repository.OrderRepo
         void UpdateStatus(Order order, string status);
         void Add(OrderViewModel orderViewModel, ApplicationUser user);
         void Delete(Order order);
-        void Edit(Order order, OrderViewModel orderViewModel, ApplicationUser user);
+        string Edit(Order order, OrderViewModel orderViewModel, ApplicationUser user);
         void UpdateDelivery(Order order, int DeliveryId);
 
         void CalcShipping(OrderViewModel orderViewModel, ApplicationUser user);

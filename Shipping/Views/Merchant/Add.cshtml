@@ -7,11 +7,11 @@
     <h2 class="p-4 fw-bold text-center text-secondary">اضافة تاجر جديد</h2>
 </div>
 
-<div class="row  bg-light rounded my-4">
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="row container bg-light rounded">
     <div class="col-md-12">
 
         <form asp-controller="Merchant" asp-action="Add" method="post" class="d-flex flex-wrap">
-            <div asp-validation-summary="ModelOnly" class="text-danger col-md-12"></div>
 
             <div class="d-flex flex-wrap">
                 <div class="form-group col-md-4 p-3">
