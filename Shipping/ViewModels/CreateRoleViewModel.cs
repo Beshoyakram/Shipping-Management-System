@@ -4,7 +4,7 @@ namespace Shipping.ViewModels
 {
     public class CreateRoleViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "يجب إدخال اسم المجموعه")]
         public string RoleName { get; set; }
     }
 }

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Add New Delivery";
 }
 <div class="bg-light rounded my-4 row">
-<h2 class="p-4 fw-bold text-center text-secondary"> إضافة مندوب </h2>
+    <h2 class="p-4 fw-bold text-center text-secondary"> إضافة مندوب </h2>
 </div>
 <div class="row container bg-light rounded">
     <div class="col-md-12">
@@ -21,9 +21,9 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group col-md-4 p-3">
-                    <label asp-for="Password" class="control-label">الرقم السري</label>
-                    <input asp-for="Password" type="password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
+                <label asp-for="Password" class="control-label">الرقم السري</label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group col-md-4 p-3">
                 <label asp-for="Phone" class="control-label">رقم الهاتف</label>
@@ -48,7 +48,7 @@
                 </select>
                 <span asp-validation-for="BranchName" class="text-danger"></span>
             </div>
- 
+
             <div class="form-group col-md-4 p-3">
                 <label asp-for="Address" class="control-label">العنوان</label>
                 <input asp-for="Address" class="form-control" />
@@ -76,7 +76,9 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script>
         $(document).ready(function () {
             var stateDropdown = $('#state');

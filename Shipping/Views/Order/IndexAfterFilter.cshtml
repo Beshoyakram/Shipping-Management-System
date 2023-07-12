@@ -6,24 +6,20 @@
 }
 
 
-
-<div class="my-4 bg-light py-2 rounded">
-    <div class="row container d-flex">
-        <div class="col-10">عرض الطلبات</div>
-      
+<div class="card shadow mb-4 rounded">
+    <div class="d-sm-flex align-items-center justify-content-between m-4">
+        <h1 class="mb-0 text-gray-800">عرض الطلبات</h1>
     </div>
-
 </div>
-<div class="my-4 bg-light p-2 px-4 rounded">
-  
 
+<div class="my-4 bg-light p-2 px-4 rounded">
     <table class="table table-bordered text-center table-cust" id="dataTable" cellspacing="0">
         <thead>
             <tr style="background-color:#ddd;">
                 <th>#</th>
                 <th>التاريخ</th>
                 <th>بيانات العميل</th>
-                @*                        <th>المحافظة</th>*@
+                @*<th>المحافظة</th>*@
                 <th>المدينة</th>
                 <th>التكلفة الكلية</th>
                 @*<th>تكلفة الشحن</th>*@
@@ -31,7 +27,7 @@
                 {
                     <th>تعديل الطلب</th>
                 }
-                @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Delete).Result.Succeeded)
+                @if (User.IsInRole("المناديب") || User.IsInRole("الموظفين"))
                 {
                     <th>تغيير الحالة</th>
                 }
@@ -72,7 +68,7 @@
                             </a>
                         </td>
                     }
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                    @if (User.IsInRole("المناديب") || User.IsInRole("الموظفين"))
                     {
                         <td>
                             <select id="status_@item.Id" class="form-select-cust" onchange='changeStatus(@item.Id)'>
@@ -95,7 +91,8 @@
                     }
 
                     <td><a asp-action="OrderReicept" asp-route-Id="@item.Id" class="btn btn-outline-secondary"><i class="fa-solid fa-print fa-1x"></i></a></td>
-                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded)
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded
+                        && (!User.IsInRole("التجار") && !User.IsInRole("المناديب")))
                     {
                         <td>
                             <select id="delivery_@item.Id" class="form-select-cust" onchange='AssignDelivery(@item.Id)'>
@@ -110,7 +107,19 @@
                             </select>
                         </td>
                     }
-
+                    @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.Edit).Result.Succeeded
+                        && (User.IsInRole("التجار") || User.IsInRole("المناديب")))
+                    {
+                        <td>
+                                @foreach (var item1 in ViewBag.Delivery)
+                                {
+                                    
+                                        if(item1.OrignalIdOnlyInDeliveryTable == item.DeliveryId)
+                                            @item1.Name
+                                    
+                                }
+                        </td>
+                    }
                 </tr>
             }
         </tbody>

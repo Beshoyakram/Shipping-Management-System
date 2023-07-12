@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "awpac/h2669si9uRZSw2qWLtyxvS6krCFsMUwYPzI9g=",
+  "Hash": "NyGOuiocAVnyfhQzk3zBGCGEGN+XVuWy5Ctb7BsrkZA=",
   "Source": "Shipping",
   "BasePath": "_content/Shipping",
   "Mode": "Default",
@@ -848,6 +848,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Identity": "D:\\Shipping-Management-System\\Shipping\\wwwroot\\img\\home.jpg",
+      "SourceId": "Shipping",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Shipping-Management-System\\Shipping\\wwwroot\\",
+      "BasePath": "_content/Shipping",
+      "RelativePath": "img/home.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\home.jpg"
     },
     {
       "Identity": "D:\\Shipping-Management-System\\Shipping\\wwwroot\\img\\pioneers.png",

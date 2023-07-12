@@ -71,7 +71,7 @@ namespace Shipping.Repository.DeliveryRepo
         }
         #endregion
 
-        #region AddingNewDelivery
+        #region AddDelivery
         public async Task<IdentityResult> AddDelivery(DeliveryViewModel deliveryViewModel)
         {
 

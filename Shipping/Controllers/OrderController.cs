@@ -43,6 +43,8 @@ namespace Shipping.Controllers
         #region ViewAll
         [HttpGet]
         [Authorize(Permissions.Orders.View)]
+        [Authorize(Permissions.Orders.Edit)]
+        [Authorize(Permissions.Orders.Delete)]
         public async Task<IActionResult> Index()
         {
 
@@ -127,7 +129,10 @@ namespace Shipping.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(OrderViewModel orderViewModel)
         {
-
+            if(orderViewModel.orderProducts.Count == 0)
+            {
+                ModelState.AddModelError("", "يجب عليك اضافه منتاجات");
+            }
             if (ModelState.IsValid)
             {
                 var user = await _userManager.GetUserAsync(User);
@@ -136,7 +141,7 @@ namespace Shipping.Controllers
                 _orderRepository.CalcShipping(orderViewModel,user);
 
                 _orderRepository.Add(orderViewModel,user);
-                return Redirect("/order/index");
+                return Redirect("/Order/ordercount");
             }
 
             ViewBag.States = _stateRepository.GetAll().Where(b => b.Status == true);
@@ -321,8 +326,8 @@ namespace Shipping.Controllers
 
         #endregion
 
-        #region related to the count screen
-        [Authorize(Permissions.OrderCount.View)]
+        #region related to the count screen [IndexAfterFilter]
+        [Authorize(Permissions.Orders.View)]
         public async Task<IActionResult> IndexAfterFilter(string query)
         {
             string roleName = User.FindFirstValue(ClaimTypes.Role);

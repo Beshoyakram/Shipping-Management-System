@@ -10,7 +10,6 @@
         Branches,
         Staties,
         Cities,
-        OrderCount,
         WeightSettings
 
     }
@@ -22,11 +21,10 @@
             { "Merchants", "صلاحيات التجار" },
             { "Deliveries", "صلاحيات المناديب" },
             { "Employees", "صلاحيات الموظفين" },
-            { "Orders", "صلاحيات الطلبات" },
+            { "Orders", "صلاحيات عامه على الطلبات" },
             { "Branches", "صلاحيات الافرع" },
             { "Staties", "صلاحيات المحافظات" },
             { "Cities", "صلاحيات المدن" },
-            { "OrderCount", "صلاحيات عدد الطلبات" },
             { "WeightSettings", "صلاحيات اعدادات الوزن " }
 
 

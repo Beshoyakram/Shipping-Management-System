@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group col-md-4 p-1 ">
                     <label asp-for="ClientPhoneNumber1"> رقم العميل : </label>
-                    <input type="text" class="form-control" asp-for="ClientPhoneNumber1">
+                    <input type="tel" class="form-control" asp-for="ClientPhoneNumber1">
                     <span asp-validation-for="ClientPhoneNumber1" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
@@ -62,17 +62,19 @@
                             <option value="@state.Name">@state.Name</option>
                         }
                     </select>
+                    <span asp-validation-for="StateName" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="CityName">المدينة : </label>
                     <select id="city" asp-for="CityName" class="form-control">
                         <option value="">Select a city</option>
                     </select>
+                    <span asp-validation-for="CityName" class="text-danger"></span>
                 </div>
             </div>
             <hr class="sidebar-divider">
             <div class="d-flex flex-wrap">
-                <div class="form-group col-md-4 p-3">
+                <div class="form-group col-md-4 p-1">
                     <label asp-for="BranchName" class="control-label">الفرع</label>
                     <select id="branch" asp-for="BranchName" class="form-select">
                         <option value=""> اختر فرع</option>
@@ -87,7 +89,6 @@
                 <div class="form-group col-md-4 d-flex align-items-center p-4 ">
                     <input class="form-check-input " type="checkbox" asp-for="IsVillage">
                     <label asp-for="IsVillage" class="mr-4 mt-1">التوصيل لقرية</label>
-                    <span asp-validation-for="StreetName" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4 p-1">
                     <label asp-for="PaymentType">نوع الدفع : </label>

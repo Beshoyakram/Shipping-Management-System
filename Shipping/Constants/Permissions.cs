@@ -87,13 +87,6 @@ namespace Shipping.Constants
             public const string Delete = "Permissions.Cities.Delete";
         }
 
-        public static class OrderCount
-        {
-            public const string View = "Permissions.OrderCount.View";
-            public const string Create = "Permissions.OrderCount.Create";
-            public const string Edit = "Permissions.OrderCount.Edit";
-            public const string Delete = "Permissions.OrderCount.Delete";
-        }
         public static class WeightSettings
         {
             public const string View = "Permissions.WeightSettings.View";

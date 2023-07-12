@@ -8,12 +8,11 @@ namespace Shipping.ViewModels
         public string? Id { get; set; }
         [Required(ErrorMessage = "يجب ادخال الاسم")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "يجب ادخال البريد الاليكتروني")]
+        [Required(ErrorMessage = "يجب ادخال البريد الالكتروني")]
         [RegularExpression("^\\S+@\\S+\\.\\S+$", ErrorMessage = "ادخل بريد الكتروني صحيح")]
         public string Email { get; set; }
         [Required(ErrorMessage = "يجب ادخال رقم الهاتف")]
-        [MaxLength(11, ErrorMessage = "يجب ان يتكون رقم الهاتف من 11 رقم"), MinLength(11, ErrorMessage = "يجب ان يتكون رقم الهاتم من 11 رقم")]
-        [RegularExpression("^\\d+$", ErrorMessage = "ادخل رقم صحيح")]
+        [RegularExpression(@"^1[0125][0-9]{8}$", ErrorMessage = "ادخل رقم هاتف صحيح كالاتى : 1224479550")]
         public string Phone { get; set; }
         public bool Status { get; set; }
         public string BranchName { get; set; }

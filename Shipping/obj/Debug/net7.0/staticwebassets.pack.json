@@ -193,6 +193,10 @@
       "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
     },
     {
+      "Id": "D:\\Shipping-Management-System\\Shipping\\wwwroot\\img\\home.jpg",
+      "PackagePath": "staticwebassets\\img\\home.jpg"
+    },
+    {
       "Id": "D:\\Shipping-Management-System\\Shipping\\wwwroot\\img\\pioneers.png",
       "PackagePath": "staticwebassets\\img\\pioneers.png"
     },

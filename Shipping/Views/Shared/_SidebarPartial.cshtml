@@ -3,7 +3,7 @@
 <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion px-2 text-right" dir="rtl" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Order" asp-action="ordercount">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="home" asp-action="index">
         <div class="sidebar-brand-text mx-3">Shipping System</div>
         <div class="sidebar-brand-icon fa-flip-horizontal">
             <i class="fas fa-truck-fast rotate-n-15"></i>
@@ -16,7 +16,7 @@
     <!-- Nav Item - الصفحه الرئيسية -->
     <li class="nav-item active ">
 
-        <a class="nav-link" asp-controller="Order" asp-action="ordercount">
+        <a class="nav-link" asp-controller="home" asp-action="index">
             <i class="fas fa-fw fa-home-lg"></i>
             <span>الصفحة الرئيسية</span>
         </a>
@@ -116,15 +116,22 @@
             </div>
         </li>
 
-        <!-- Nav Item - Charts -->
         <li class="nav-item">
-            @if (AuthorizationService.AuthorizeAsync(User, Permissions.Orders.View).Result.Succeeded)
+            @if (User.IsInRole("Admin") || User.IsInRole("الموظفين"))
             {
                 <a class="nav-link " asp-action="Index" asp-controller="Order">
                     <i class="fas fa-fw fa-box-open"></i>
-                    <span>الطلبات</span>
+                    <span>عرض كل الطلبات</span>
                 </a>
             }
+        </li>
+        <li class="nav-item">
+            
+            <a class="nav-link " asp-action="orderCount" asp-controller="Order">
+                <i class="fas fa-fw fa-box-open"></i>
+                <span>طلباتى</span>
+            </a>
+            
         </li>
 
 

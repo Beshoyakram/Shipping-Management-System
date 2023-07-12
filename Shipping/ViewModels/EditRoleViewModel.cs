@@ -1,4 +1,4 @@
-﻿using Microsoft.Build.Framework;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Shipping.ViewModels
 {
@@ -6,7 +6,7 @@ namespace Shipping.ViewModels
     {
         public string RoleId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "يجب ادخال اسم المجموعه")]
         public string RoleName { get; set; }
         
     }
