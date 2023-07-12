@@ -124,7 +124,7 @@ namespace Shipping.Models
                     ClaimValue = "Permissions.Controls.Create",
                     RoleId = ROLE_ID,
                     ArabicName = "صلاحيات المجموعات"
-                };
+                });
 
             //Add WeightSetting
             modelBuilder.Entity<WeightSetting>().HasData(
